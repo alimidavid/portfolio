@@ -851,8 +851,9 @@
         </div>
 
         <form action="https://formsubmit.co/david.alimi@telecom-paristech.org" method="POST">
-          <input type="hidden" name="_subject" value="New message from david-alimi website">
+          <input type="hidden" name="_subject" value="New message from David Alimi website">
           <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
           <input type="text" name="_honey" style="display:none">
           <label for="name" data-i18n="formName">Name</label>
           <input id="name" name="name" data-placeholder-key="namePlaceholder" placeholder="Your name" required />
@@ -1214,6 +1215,7 @@
         footer: "Tous droits réservés."
       }
     };
+
     function applyLanguage(language) {
       currentLanguage = language;
       document.documentElement.lang = language;
