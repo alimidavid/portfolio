@@ -850,7 +850,7 @@
           <a class="contact-link" href="https://www.linkedin.com/in/davidalimi" target="_blank" rel="noopener">in linkedin.com/in/davidalimi</a>
         </div>
 
-        <form onsubmit="event.preventDefault(); alert(currentLanguage === 'fr' ? 'Formulaire visuel. Il faudra le connecter avant publication.' : 'Visual form. It must be connected before publication.');">
+        <form onsubmit="sendMail(event)">
           <label for="name" data-i18n="formName">Name</label>
           <input id="name" data-placeholder-key="namePlaceholder" placeholder="Your name" />
 
@@ -861,7 +861,7 @@
           <textarea id="message" data-placeholder-key="messagePlaceholder" placeholder="Briefly describe your need"></textarea>
 
           <button class="button primary" style="width:100%;border:none;cursor:pointer;" type="submit" data-i18n="formSubmit">Send message</button>
-          <p class="form-note" data-i18n="formNote">The form is visually ready. It still needs to be connected to an email service before publication.</p>
+          <p class="form-note" data-i18n="formNote">This form opens your email client with a pre-filled message to David Alimi.</p>
         </form>
       </div>
     </section>
@@ -1036,7 +1036,7 @@
         formEmail: "Email",
         formMessage: "Message",
         formSubmit: "Send message",
-        formNote: "The form is visually ready. It still needs to be connected to an email service before publication.",
+        formNote: "This form opens your email client with a pre-filled message to David Alimi.",
         namePlaceholder: "Your name",
         emailPlaceholder: "your@email.com",
         messagePlaceholder: "Briefly describe your need",
@@ -1204,13 +1204,32 @@
         formEmail: "Email",
         formMessage: "Message",
         formSubmit: "Envoyer le message",
-        formNote: "Le formulaire est prêt visuellement. Il faudra encore le connecter à un service d’envoi avant publication.",
+        formNote: "Ce formulaire ouvre votre messagerie avec un message prérempli adressé à David Alimi.",
         namePlaceholder: "Votre nom",
         emailPlaceholder: "votre@email.com",
         messagePlaceholder: "Décrivez brièvement votre besoin",
         footer: "Tous droits réservés."
       }
     };
+
+
+    function sendMail(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      const subject = encodeURIComponent("Website contact from " + (name || "a visitor"));
+
+      const body = encodeURIComponent(
+        "Name: " + (name || "") + "\n" +
+        "Email: " + (email || "") + "\n\n" +
+        "Message:\n" + (message || "")
+      );
+
+      window.location.href = "mailto:david.alimi@telecom-paristech.org?subject=" + subject + "&body=" + body;
+    }
 
     function applyLanguage(language) {
       currentLanguage = language;
