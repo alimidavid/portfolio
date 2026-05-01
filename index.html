@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David Alimi | Interim leadership, B2B growth and transformation</title>
+  <style>
+    :root {
+      --bg: #020617;
+      --panel: rgba(15, 23, 42, 0.92);
+      --panel-soft: rgba(15, 23, 42, 0.72);
+      --soft: rgba(255, 255, 255, 0.08);
+      --line: rgba(255, 255, 255, 0.12);
+      --text: #ffffff;
+      --muted: #cbd5e1;
+      --muted-2: #94a3b8;
+      --accent: #67e8f9;
+      --accent-strong: #22d3ee;
+      --dark-text: #020617;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Inter, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(34, 211, 238, 0.22), transparent 34%),
+        radial-gradient(circle at 90% 35%, rgba(99, 102, 241, 0.2), transparent 30%),
+        radial-gradient(circle at 10% 70%, rgba(14, 165, 233, 0.14), transparent 25%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(2, 6, 23, 0.86);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      max-width: 1180px;
+      margin: auto;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand { color: var(--text); text-decoration: none; min-width: 260px; }
+    .brand strong { display: block; font-size: 24px; line-height: 1.05; letter-spacing: -0.03em; }
+    .brand span { display: block; color: var(--muted); font-size: 15px; line-height: 1.25; margin-top: 4px; }
+
+    .menu { display: flex; gap: 4px; align-items: center; flex-wrap: wrap; justify-content: center; }
+
+    .menu a,
+    .nav-cta,
+    .lang-toggle {
+      color: var(--muted);
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 999px;
+      transition: 0.2s;
+      font-size: 13px;
+      border: 0;
+      font: inherit;
+      white-space: nowrap;
+    }
+
+    .menu a:hover,
+    .lang-toggle:hover { background: var(--soft); color: var(--text); }
+
+    .nav-actions { display: flex; align-items: center; gap: 8px; }
+
+    .lang-toggle {
+      border: 1px solid var(--line);
+      background: transparent;
+      color: white;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .nav-cta {
+      background: var(--accent-strong);
+      color: var(--dark-text);
+      font-weight: 700;
+    }
+
+    .nav-cta:hover { background: var(--accent); }
+
+    main, footer { position: relative; z-index: 1; }
+
+    section {
+      max-width: 1180px;
+      margin: auto;
+      padding: 94px 20px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 46px;
+      align-items: center;
+      padding-top: 110px;
+    }
+
+    .badge, .tag {
+      display: inline-flex;
+      color: #cffafe;
+      background: rgba(103, 232, 249, 0.1);
+      border: 1px solid rgba(103, 232, 249, 0.3);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 74px);
+      line-height: 1.02;
+      letter-spacing: -0.055em;
+      max-width: 900px;
+    }
+
+    h2 {
+      font-size: clamp(34px, 4.8vw, 54px);
+      line-height: 1.1;
+      letter-spacing: -0.045em;
+      margin-top: 14px;
+    }
+
+    h3 { font-size: 24px; line-height: 1.2; margin-bottom: 12px; }
+
+    .lead {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 740px;
+      margin-top: 28px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 13px 20px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .button.primary { background: white; color: var(--dark-text); }
+    .button.primary:hover { background: #e2e8f0; }
+    .button.secondary { color: white; border: 1px solid var(--line); }
+    .button.secondary:hover { background: var(--soft); }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid var(--line);
+      border-radius: 32px;
+      padding: 24px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+    }
+
+    .inner-card {
+      background: var(--panel);
+      border-radius: 24px;
+      padding: 28px;
+    }
+
+    .eyebrow {
+      color: #a5f3fc;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .check-list { margin-top: 28px; display: grid; gap: 14px; }
+
+    .check-item {
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 18px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .check {
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--dark-text);
+      font-weight: 900;
+      flex: 0 0 auto;
+    }
+
+    .wide {
+      max-width: none;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .wide > div { max-width: 1180px; margin: auto; padding: 0 20px; }
+    .intro { max-width: 820px; }
+
+    .grid {
+      margin-top: 46px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .expertise, .case-card, .cap-card, .credential-card {
+      background: rgba(15, 23, 42, 0.86);
+      border: 1px solid var(--line);
+      border-radius: 32px;
+      padding: 28px;
+      transition: 0.2s;
+    }
+
+    .expertise:hover, .case-card:hover, .cap-card:hover, .credential-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(103, 232, 249, 0.35);
+    }
+
+    .icon {
+      height: 52px;
+      width: 52px;
+      border-radius: 18px;
+      background: rgba(103, 232, 249, 0.1);
+      color: #a5f3fc;
+      display: grid;
+      place-items: center;
+      margin-bottom: 22px;
+      font-size: 24px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 0.86fr 1.14fr;
+      gap: 46px;
+      align-items: start;
+    }
+
+    .steps {
+      border: 1px solid var(--line);
+      border-radius: 32px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 12px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 20px;
+      padding: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .step:last-child { border-bottom: none; }
+
+    .number {
+      height: 42px;
+      width: 42px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: var(--dark-text);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+    }
+
+    .stats {
+      max-width: none;
+      background: var(--accent);
+      color: var(--dark-text);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .stats-grid {
+      max-width: 1180px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding: 76px 20px;
+    }
+
+    .stat-value {
+      font-size: 54px;
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      margin-bottom: 14px;
+    }
+
+    .track-note {
+      margin-top: 34px;
+      border: 1px solid rgba(103, 232, 249, 0.24);
+      background: rgba(103, 232, 249, 0.07);
+      border-radius: 28px;
+      padding: 24px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.75;
+      max-width: 980px;
+    }
+
+    .case-grid {
+      margin-top: 46px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .case-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+
+    .case-period {
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .case-role {
+      color: var(--muted-2);
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .metric-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .metric {
+      border: 1px solid rgba(103, 232, 249, 0.28);
+      background: rgba(103, 232, 249, 0.08);
+      color: #cffafe;
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .cap-grid {
+      margin-top: 46px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .cap-card ul, .credential-card ul {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+      color: var(--muted);
+    }
+
+    .cap-card li, .credential-card li {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 10px;
+    }
+
+    .mandate-strip {
+      margin-top: 42px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.08);
+      border-radius: 32px;
+      padding: 24px;
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .pill-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill {
+      background: rgba(15, 23, 42, 0.88);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 9px 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact-box {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 32px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+    }
+
+    .contact-text, form { padding: 44px; }
+
+    .contact-link {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      margin-top: 16px;
+      color: white;
+      text-decoration: none;
+      background: var(--panel);
+      padding: 16px 18px;
+      border-radius: 18px;
+    }
+
+    form { background: var(--panel); }
+
+    label {
+      display: block;
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    input, textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.06);
+      color: white;
+      border-radius: 18px;
+      padding: 13px 14px;
+      outline: none;
+      font: inherit;
+      margin-bottom: 18px;
+    }
+
+    input:focus, textarea:focus { border-color: var(--accent); }
+    textarea { min-height: 130px; resize: vertical; }
+
+    .form-note {
+      color: #94a3b8;
+      font-size: 14px;
+      margin-top: 14px;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      color: #94a3b8;
+      text-align: center;
+      padding: 28px 20px;
+    }
+
+    @media (max-width: 950px) {
+      .hero, .two-col, .contact-box, .grid, .stats-grid, .case-grid, .cap-grid, .mandate-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .menu, .nav-cta { display: none; }
+      section { padding: 72px 20px; }
+      .hero { padding-top: 72px; }
+      .check-list { grid-template-columns: 1fr !important; }
+      .case-top { display: block; }
+      .case-period { display: inline-block; margin-top: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a class="brand" href="#positioning">
+        <strong data-i18n="brand">David Alimi</strong>
+        <span data-i18n="tagline">Interim leadership, B2B growth and transformation</span>
+      </a>
+      <div class="menu">
+        <a href="#positioning" data-i18n="navPositioning">Positioning</a>
+        <a href="#expertise" data-i18n="navExpertise">Expertise</a>
+        <a href="#about" data-i18n="navAbout">About me</a>
+        <a href="#track-record" data-i18n="navTrack">Track record</a>
+        <a href="#capabilities" data-i18n="navCapabilities">Capabilities</a>
+        <a href="#method" data-i18n="navMethod">Method</a>
+        <a href="#credentials" data-i18n="navCredentials">Credentials</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle">FR</button>
+        <a class="nav-cta" href="#contact" data-i18n="navCta">Contact me</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="positioning">
+      <div>
+        <p class="badge" data-i18n="heroBadge">Interim executive · Fractional CMO, CRO, CPO · Strategic programmes</p>
+        <h1 data-i18n="heroTitle">I help organisations turn complex transitions into focused execution and measurable progress.</h1>
+        <p class="lead" data-i18n="heroText">I operate where clarity, pace and senior judgement are needed: temporary executive cover, transformation, go-to-market acceleration, organisational redesign and cross-company strategic programmes.</p>
+        <div class="actions">
+          <a class="button primary" href="#contact" data-i18n="heroPrimary">Discuss a mission</a>
+          <a class="button secondary" href="#track-record" data-i18n="heroSecondary">View selected assignments</a>
+        </div>
+      </div>
+
+      <aside class="card">
+        <div class="inner-card">
+          <p class="eyebrow" data-i18n="approachEyebrow">Operating stance</p>
+          <h3 data-i18n="approachTitle">Clarity, execution, transfer</h3>
+          <p class="lead" style="font-size:16px;margin-top:0;" data-i18n="approachText">A useful mission starts with a grounded reading of the situation. It then moves into a clear operating frame, sound decisions and consistent monitoring of outcomes.</p>
+          <div class="check-list">
+            <div class="check-item"><span class="check">✓</span><span data-i18n="point1">Fast diagnosis</span></div>
+            <div class="check-item"><span class="check">✓</span><span data-i18n="point2">Visible priorities</span></div>
+            <div class="check-item"><span class="check">✓</span><span data-i18n="point3">Measurable execution</span></div>
+            <div class="check-item"><span class="check">✓</span><span data-i18n="point4">Knowledge transfer to teams</span></div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="stats">
+      <div class="stats-grid">
+        <div><div class="stat-value">25+</div><p data-i18n="stat1">years of executive, commercial, product and transformation experience.</p></div>
+        <div><div class="stat-value">CxO</div><p data-i18n="stat2">general management, GTM leadership, product, revenue and strategic programme roles.</p></div>
+        <div><div class="stat-value">Global</div><p data-i18n="stat3">international assignments in multicultural, multi-site and complex environments.</p></div>
+      </div>
+    </section>
+
+    <section class="wide" id="expertise">
+      <div>
+        <div class="intro">
+          <p class="eyebrow" data-i18n="expertiseEyebrow">Expertise</p>
+          <h2 data-i18n="expertiseTitle">Executive support when the business needs clarity, structure and momentum.</h2>
+          <p class="lead" data-i18n="expertiseText">I intervene in moments where the organisation must strengthen operating discipline, accelerate revenue, redesign its model or align strategy, operations and teams.</p>
+        </div>
+
+        <div class="grid">
+          <article class="expertise">
+            <div class="icon">⌖</div>
+            <h3 data-i18n="card1Title">Executive cover</h3>
+            <p data-i18n="card1Text">CEO, CRO, CPO, CMO or strategic programme leadership when a company needs temporary senior capacity.</p>
+          </article>
+
+          <article class="expertise">
+            <div class="icon">↗</div>
+            <h3 data-i18n="card2Title">Growth and GTM</h3>
+            <p data-i18n="card2Text">Go-to-market design, revenue architecture, partner models, enterprise accounts and B2B or B2B2C acceleration.</p>
+          </article>
+
+          <article class="expertise">
+            <div class="icon">▣</div>
+            <h3 data-i18n="card3Title">Transformation and turnaround</h3>
+            <p data-i18n="card3Text">Restructuring, crisis response, operational optimisation, organisation redesign and recovery of execution discipline.</p>
+          </article>
+
+          <article class="expertise">
+            <div class="icon">◌</div>
+            <h3 data-i18n="card4Title">Digital and product leadership</h3>
+            <p data-i18n="card4Text">Product strategy, innovation leadership, digital transformation, collaborative tooling and high-stakes project delivery.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="two-col">
+        <div>
+          <p class="eyebrow" data-i18n="humanEyebrow">About me</p>
+          <h2 data-i18n="humanTitle">A pragmatic executive shaped by business, sport and periods of transition.</h2>
+        </div>
+
+        <div class="card">
+          <div class="inner-card">
+            <p class="lead" style="font-size:18px;margin-top:0;" data-i18n="humanText1">My career has been shaped in demanding, often international environments in which I had to understand quickly, decide with clarity and build trust through action.</p>
+            <p class="lead" style="font-size:18px;margin-top:18px;" data-i18n="humanText2">I have led, sold, structured, transformed and, at times, started again. These experiences have taught me that organisations do not move forward through tools and plans alone. They progress when people understand the direction, their role and the logic behind decisions.</p>
+            <p class="lead" style="font-size:18px;margin-top:18px;" data-i18n="humanText3">As a former elite athlete and ski instructor, I have retained a practical relationship with effort, transmission and progression. This culture shapes the way I support leaders and teams, with high standards, attentive listening and a strong sense of pace.</p>
+
+            <div class="check-list" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+              <div class="check-item"><span class="check">✓</span><span data-i18n="humanPoint1">Executive and entrepreneurial experience</span></div>
+              <div class="check-item"><span class="check">✓</span><span data-i18n="humanPoint2">Grounded execution mindset</span></div>
+              <div class="check-item"><span class="check">✓</span><span data-i18n="humanPoint3">Commitment to mentoring and knowledge transfer</span></div>
+              <div class="check-item"><span class="check">✓</span><span data-i18n="humanPoint4">International perspective</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wide" id="track-record">
+      <div>
+        <div class="intro">
+          <p class="eyebrow" data-i18n="trackEyebrow">Selected assignments</p>
+          <h2 data-i18n="trackTitle">A portfolio of executive roles with measurable outcomes.</h2>
+          <p class="lead" data-i18n="trackText">The following assignments start with the most recent entrepreneurial experience, followed by major executive and transformation roles.</p>
+          <div class="track-note">
+            <p data-i18n="trackAdvisory">Since 2008, my work has combined operational advisory and interim management assignments across technology, telecom, SaaS, digital and industrial environments. I step in when leadership capacity is missing, or when a CEO needs a senior operator to stabilise a situation, redesign a model, accelerate go to market, structure a strategic programme or navigate a sensitive phase. Across mandates such as Trivnet, Convergys, Hot, Intracom, Communithings and Camarai, the same pattern emerges: enter quickly, clarify the issues, align stakeholders, build an executable plan and transfer the method to the organisation.</p>
+          </div>
+        </div>
+
+        <div class="case-grid">
+          <article class="case-card">
+            <div class="case-top">
+              <div>
+                <h3 data-i18n="case6Title">Founder & CEO · ForEve Labs</h3>
+                <p class="case-role" data-i18n="case6Role">Deeptech and life science venture built from vision, product strategy and operational roadmap.</p>
+              </div>
+              <span class="case-period">2023 · 2026</span>
+            </div>
+            <p data-i18n="case6Text">Defined the company vision, built the strategic and operational roadmap, led product strategy and secured initial funding.</p>
+            <div class="metric-row">
+              <span class="metric" data-i18n="case6Metric1">Venture creation</span>
+              <span class="metric" data-i18n="case6Metric2">Product strategy</span>
+              <span class="metric" data-i18n="case6Metric3">Initial funding</span>
+            </div>
+          </article>
+          <article class="case-card">
+            <div class="case-top">
+              <div>
+                <h3 data-i18n="case1Title">General Manager EMEA · Maytronics</h3>
+                <p class="case-role" data-i18n="case1Role">European subsidiary of a global market leader, transformed into a strategic EMEA platform.</p>
+              </div>
+              <span class="case-period">2020 · 2022</span>
+            </div>
+            <p data-i18n="case1Text">Led Maytronics Europe, with more than 200 employees and a 200M+ P&L. Member of the Group Executive Committee.</p>
+            <div class="metric-row">
+              <span class="metric" data-i18n="case1Metric1">+30% revenue growth</span>
+              <span class="metric" data-i18n="case1Metric2">Improved margin</span>
+              <span class="metric" data-i18n="case1Metric3">Regional platform</span>
+            </div>
+          </article>
+          <article class="case-card">
+            <div class="case-top">
+              <div>
+                <h3 data-i18n="case2Title">VP Go-To-Market & Operations EMEA · Netformx</h3>
+                <p class="case-role" data-i18n="case2Role">SaaS company facing deployment issues, high churn and limited partner performance visibility.</p>
+              </div>
+              <span class="case-period">2014 · 2019</span>
+            </div>
+            <p data-i18n="case2Text">Led EMEA go-to-market and operations across UK, Benelux, DACH and France, covering sales, support, account management and digital marketing.</p>
+            <div class="metric-row">
+              <span class="metric" data-i18n="case2Metric1">+15% ARR</span>
+              <span class="metric" data-i18n="case2Metric2">Churn below 10%</span>
+              <span class="metric" data-i18n="case2Metric3">Pilot EMEA model</span>
+            </div>
+          </article>
+          <article class="case-card">
+            <div class="case-top">
+              <div>
+                <h3 data-i18n="case3Title">CEO · Meteor Networks</h3>
+                <p class="case-role" data-i18n="case3Role">Technology SME in WiFi and WiMax with stagnation, governance issues and untapped potential.</p>
+              </div>
+              <span class="case-period">2006 · 2008</span>
+            </div>
+            <p data-i18n="case3Text">Held a full CEO mandate across strategy, organisation, finance, HR, innovation and sales.</p>
+            <div class="metric-row">
+              <span class="metric" data-i18n="case3Metric1">Revenue doubled</span>
+              <span class="metric" data-i18n="case3Metric2">EBITDA x2</span>
+              <span class="metric" data-i18n="case3Metric3">€5.2M funding</span>
+            </div>
+          </article>
+          <article class="case-card">
+            <div class="case-top">
+              <div>
+                <h3 data-i18n="case4Title">Associate VP Global Account · Comverse</h3>
+                <p class="case-role" data-i18n="case4Role">Global telecom group seeking to strengthen the relationship with Orange through integrated account leadership.</p>
+              </div>
+              <span class="case-period">2002 · 2006</span>
+            </div>
+            <p data-i18n="case4Text">Initiated and ran a virtual Global Account Management model, coordinating global account activity and platform deployments.</p>
+            <div class="metric-row">
+              <span class="metric" data-i18n="case4Metric1">$60M revenue</span>
+              <span class="metric" data-i18n="case4Metric2">Global account model</span>
+              <span class="metric" data-i18n="case4Metric3">Reduced internal friction</span>
+            </div>
+          </article>
+          <article class="case-card">
+            <div class="case-top">
+              <div>
+                <h3 data-i18n="case5Title">Marketing Director · ECI Telecom</h3>
+                <p class="case-role" data-i18n="case5Role">International go-to-market leadership across telecom markets, channels and strategic accounts.</p>
+              </div>
+              <span class="case-period">1997 · 2002</span>
+            </div>
+            <p data-i18n="case5Text">Led a global GTM structure across more than 70 countries, supported major accounts and built channel partnerships.</p>
+            <div class="metric-row">
+              <span class="metric" data-i18n="case5Metric1">70+ countries</span>
+              <span class="metric" data-i18n="case5Metric2">60+ partnerships</span>
+              <span class="metric" data-i18n="case5Metric3">Pipeline x2.6</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="capabilities">
+      <div class="intro">
+        <p class="eyebrow" data-i18n="capEyebrow">Capabilities</p>
+        <h2 data-i18n="capTitle">A skill set built for interim leadership and complex execution.</h2>
+        <p class="lead" data-i18n="capText">The portfolio combines functional depth with the behavioural strengths required to lead in uncertain or high-pressure settings.</p>
+      </div>
+
+      <div class="cap-grid">
+        <article class="cap-card">
+          <h3 data-i18n="cap1Title">Core strengths</h3>
+          <ul>
+            <li data-i18n="cap1Item1">Strategic repositioning</li>
+            <li data-i18n="cap1Item2">Multidisciplinary team leadership</li>
+            <li data-i18n="cap1Item3">B2B and B2B2C go-to-market</li>
+            <li data-i18n="cap1Item4">Programme structuring</li>
+          </ul>
+        </article>
+
+        <article class="cap-card">
+          <h3 data-i18n="cap2Title">Specialist areas</h3>
+          <ul>
+            <li data-i18n="cap2Item1">Innovation leadership</li>
+            <li data-i18n="cap2Item2">Product launch and development</li>
+            <li data-i18n="cap2Item3">Digital transformation</li>
+            <li data-i18n="cap2Item4">Operational optimisation</li>
+          </ul>
+        </article>
+
+        <article class="cap-card">
+          <h3 data-i18n="cap3Title">Relationship strengths</h3>
+          <ul>
+            <li data-i18n="cap3Item1">Cross-functional leadership</li>
+            <li data-i18n="cap3Item2">Multi-stakeholder facilitation</li>
+            <li data-i18n="cap3Item3">Crisis management and arbitration</li>
+            <li data-i18n="cap3Item4">Intercultural communication</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="mandate-strip">
+        <div>
+          <p class="eyebrow" data-i18n="mandateEyebrow">Target mandates</p>
+          <h3 data-i18n="mandateTitle">Where I can step in</h3>
+          <p class="lead" style="font-size:16px;margin-top:0;" data-i18n="mandateText">I am best suited to situations requiring senior cover, acceleration, organisational repair or the governance of complex programmes.</p>
+        </div>
+        <div class="pill-cloud">
+          <span class="pill" data-i18n="mandate1">Temporary CEO, CRO, CPO or CMO cover</span>
+          <span class="pill" data-i18n="mandate2">Post-crisis interim leadership</span>
+          <span class="pill" data-i18n="mandate3">Organisational review</span>
+          <span class="pill" data-i18n="mandate4">Rapid scaling support</span>
+          <span class="pill" data-i18n="mandate5">Strategic programme governance</span>
+          <span class="pill" data-i18n="mandate6">Process digitisation</span>
+          <span class="pill" data-i18n="mandate7">Stakeholder coordination</span>
+          <span class="pill" data-i18n="mandate8">Collaborative delivery model setup</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="wide" id="method">
+      <div>
+        <div class="two-col">
+          <div>
+            <p class="eyebrow" data-i18n="methodEyebrow">Method</p>
+            <h2 data-i18n="methodTitle">A clear framework for moving swiftly without sacrificing precision.</h2>
+            <p class="lead" data-i18n="methodText">The approach reduces noise, makes choices intelligible and installs an execution discipline suited to the pace of the business.</p>
+          </div>
+
+          <div class="steps">
+            <div class="step"><div class="number">1</div><div><h3 data-i18n="step1Title">Diagnosis of the real situation</h3><p data-i18n="stepText">Each step is designed to produce a concrete and immediately usable output.</p></div></div>
+            <div class="step"><div class="number">2</div><div><h3 data-i18n="step2Title">Identification of critical priorities</h3><p data-i18n="stepText">Each step is designed to produce a concrete and immediately usable output.</p></div></div>
+            <div class="step"><div class="number">3</div><div><h3 data-i18n="step3Title">Concise and measurable action plan</h3><p data-i18n="stepText">Each step is designed to produce a concrete and immediately usable output.</p></div></div>
+            <div class="step"><div class="number">4</div><div><h3 data-i18n="step4Title">Alignment of key teams</h3><p data-i18n="stepText">Each step is designed to produce a concrete and immediately usable output.</p></div></div>
+            <div class="step"><div class="number">5</div><div><h3 data-i18n="step5Title">Follow-up on decisions and outcomes</h3><p data-i18n="stepText">Each step is designed to produce a concrete and immediately usable output.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="credentials">
+      <div class="intro">
+        <p class="eyebrow" data-i18n="credEyebrow">Credentials</p>
+        <h2 data-i18n="credTitle">A background combining executive practice, technical education and international exposure.</h2>
+      </div>
+
+      <div class="cap-grid">
+        <article class="credential-card">
+          <h3 data-i18n="cred1Title">Education</h3>
+          <ul>
+            <li data-i18n="cred1Item1">Master of Science, Telecommunications & Management, Télécom Paris</li>
+            <li data-i18n="cred1Item2">Master in Business Administration, KEDGE</li>
+          </ul>
+        </article>
+
+        <article class="credential-card">
+          <h3 data-i18n="cred2Title">Languages</h3>
+          <ul>
+            <li data-i18n="cred2Item1">French, native</li>
+            <li data-i18n="cred2Item2">English, fluent professional use</li>
+            <li data-i18n="cred2Item4">Spanish, intermediate</li>
+          </ul>
+        </article>
+
+        <article class="credential-card">
+          <h3 data-i18n="cred3Title">Other markers</h3>
+          <ul>
+            <li data-i18n="cred3Item1">Reserve officer</li>
+            <li data-i18n="cred3Item2">Ski instructor</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-box">
+        <div class="contact-text">
+          <p class="eyebrow" data-i18n="contactEyebrow">Contact</p>
+          <h2 data-i18n="contactTitle">Let’s discuss your situation.</h2>
+          <p class="lead" data-i18n="contactText">An initial conversation helps clarify the context, identify priorities and determine the most appropriate form of support.</p>
+          <a class="contact-link" href="mailto:david.alimi@telecom-paristech.org">✉ david.alimi@telecom-paristech.org</a>
+          <a class="contact-link" href="tel:+33628229174">☎ +33 628 229 174</a>
+          <a class="contact-link" href="https://www.linkedin.com/in/davidalimi" target="_blank" rel="noopener">in linkedin.com/in/davidalimi</a>
+        </div>
+
+        <form onsubmit="event.preventDefault(); alert(currentLanguage === 'fr' ? 'Formulaire visuel. Il faudra le connecter avant publication.' : 'Visual form. It must be connected before publication.');">
+          <label for="name" data-i18n="formName">Name</label>
+          <input id="name" data-placeholder-key="namePlaceholder" placeholder="Your name" />
+
+          <label for="email" data-i18n="formEmail">Email</label>
+          <input id="email" type="email" data-placeholder-key="emailPlaceholder" placeholder="your@email.com" />
+
+          <label for="message" data-i18n="formMessage">Message</label>
+          <textarea id="message" data-placeholder-key="messagePlaceholder" placeholder="Briefly describe your need"></textarea>
+
+          <button class="button primary" style="width:100%;border:none;cursor:pointer;" type="submit" data-i18n="formSubmit">Send message</button>
+          <p class="form-note" data-i18n="formNote">The form is visually ready. It still needs to be connected to an email service before publication.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 <span data-i18n="brand">David Alimi</span>. <span data-i18n="footer">All rights reserved.</span>
+  </footer>
+
+  <script>
+    let currentLanguage = "en";
+
+    const translations = {
+      en: {
+        brand: "David Alimi",
+        tagline: "Interim leadership, B2B growth and transformation",
+        navPositioning: "Positioning",
+        navExpertise: "Expertise",
+        navAbout: "About me",
+        navTrack: "Track record",
+        navCapabilities: "Capabilities",
+        navMethod: "Method",
+        navCredentials: "Credentials",
+        navContact: "Contact",
+        navCta: "Contact me",
+
+        heroBadge: "Interim executive · Fractional CMO, CRO, CPO · Strategic programmes",
+        heroTitle: "I help organisations turn complex transitions into focused execution and measurable progress.",
+        heroText: "I operate where clarity, pace and senior judgement are needed: temporary executive cover, transformation, go-to-market acceleration, organisational redesign and cross-company strategic programmes.",
+        heroPrimary: "Discuss a mission",
+        heroSecondary: "View selected assignments",
+
+        approachEyebrow: "Operating stance",
+        approachTitle: "Clarity, execution, transfer",
+        approachText: "A useful mission starts with a grounded reading of the situation. It then moves into a clear operating frame, sound decisions and consistent monitoring of outcomes.",
+        point1: "Fast diagnosis",
+        point2: "Visible priorities",
+        point3: "Measurable execution",
+        point4: "Knowledge transfer to teams",
+
+        stat1: "years of executive, commercial, product and transformation experience.",
+        stat2: "general management, GTM leadership, product, revenue and strategic programme roles.",
+        stat3: "international assignments in multicultural, multi-site and complex environments.",
+
+        expertiseEyebrow: "Expertise",
+        expertiseTitle: "Executive support when the business needs clarity, structure and momentum.",
+        expertiseText: "I intervene in moments where the organisation must strengthen operating discipline, accelerate revenue, redesign its model or align strategy, operations and teams.",
+        card1Title: "Executive cover",
+        card1Text: "CEO, CRO, CPO, CMO or strategic programme leadership when a company needs temporary senior capacity.",
+        card2Title: "Growth and GTM",
+        card2Text: "Go-to-market design, revenue architecture, partner models, enterprise accounts and B2B or B2B2C acceleration.",
+        card3Title: "Transformation and turnaround",
+        card3Text: "Restructuring, crisis response, operational optimisation, organisation redesign and recovery of execution discipline.",
+        card4Title: "Digital and product leadership",
+        card4Text: "Product strategy, innovation leadership, digital transformation, collaborative tooling and high-stakes project delivery.",
+
+        humanEyebrow: "About me",
+        humanTitle: "A pragmatic executive shaped by business, sport and periods of transition.",
+        humanText1: "My career has been shaped in demanding, often international environments in which I had to understand quickly, decide with clarity and build trust through action.",
+        humanText2: "I have led, sold, structured, transformed and, at times, started again. These experiences have taught me that organisations do not move forward through tools and plans alone. They progress when people understand the direction, their role and the logic behind decisions.",
+        humanText3: "As a former elite athlete and ski instructor, I have retained a practical relationship with effort, transmission and progression. This culture shapes the way I support leaders and teams, with high standards, attentive listening and a strong sense of pace.",
+        humanPoint1: "Executive and entrepreneurial experience",
+        humanPoint2: "Grounded execution mindset",
+        humanPoint3: "Commitment to mentoring and knowledge transfer",
+        humanPoint4: "International perspective",
+
+        trackEyebrow: "Selected assignments",
+        trackTitle: "A portfolio of executive roles with measurable outcomes.",
+        trackText: "The following assignments start with the most recent entrepreneurial experience, followed by major executive and transformation roles.",
+        trackAdvisory: "Since 2008, my work has combined operational advisory and interim management assignments across technology, telecom, SaaS, digital and industrial environments. I step in when leadership capacity is missing, or when a CEO needs a senior operator to stabilise a situation, redesign a model, accelerate go to market, structure a strategic programme or navigate a sensitive phase. Across mandates such as Trivnet, Convergys, Hot, Intracom, Communithings and Camarai, the same pattern emerges: enter quickly, clarify the issues, align stakeholders, build an executable plan and transfer the method to the organisation.",
+
+        case1Title: "General Manager EMEA · Maytronics",
+        case1Role: "European subsidiary of a global market leader, transformed into a strategic EMEA platform.",
+        case1Text: "Led Maytronics Europe, with more than 200 employees and a 200M+ P&L. Member of the Group Executive Committee.",
+        case1Metric1: "+30% revenue growth",
+        case1Metric2: "Improved margin",
+        case1Metric3: "Regional platform",
+
+        case2Title: "VP Go-To-Market & Operations EMEA · Netformx",
+        case2Role: "SaaS company facing deployment issues, high churn and limited partner performance visibility.",
+        case2Text: "Led EMEA go-to-market and operations across UK, Benelux, DACH and France, covering sales, support, account management and digital marketing.",
+        case2Metric1: "+15% ARR",
+        case2Metric2: "Churn below 10%",
+        case2Metric3: "Pilot EMEA model",
+
+        case3Title: "CEO · Meteor Networks",
+        case3Role: "Technology SME in WiFi and WiMax with stagnation, governance issues and untapped potential.",
+        case3Text: "Held a full CEO mandate across strategy, organisation, finance, HR, innovation and sales.",
+        case3Metric1: "Revenue doubled",
+        case3Metric2: "EBITDA x2",
+        case3Metric3: "€5.2M funding",
+
+        case4Title: "Associate VP Global Account · Comverse",
+        case4Role: "Global telecom group seeking to strengthen the relationship with Orange through integrated account leadership.",
+        case4Text: "Initiated and ran a virtual Global Account Management model, coordinating global account activity and platform deployments.",
+        case4Metric1: "$60M revenue",
+        case4Metric2: "Global account model",
+        case4Metric3: "Reduced internal friction",
+
+        case5Title: "Marketing Director · ECI Telecom",
+        case5Role: "International go-to-market leadership across telecom markets, channels and strategic accounts.",
+        case5Text: "Led a global GTM structure across more than 70 countries, supported major accounts and built channel partnerships.",
+        case5Metric1: "70+ countries",
+        case5Metric2: "60+ partnerships",
+        case5Metric3: "Pipeline x2.6",
+
+        case6Title: "Founder & CEO · ForEve Labs",
+        case6Role: "Deeptech and life science venture built from vision, product strategy and operational roadmap.",
+        case6Text: "Defined the company vision, built the strategic and operational roadmap, led product strategy and secured initial funding.",
+        case6Metric1: "Venture creation",
+        case6Metric2: "Product strategy",
+        case6Metric3: "Initial funding",
+
+        capEyebrow: "Capabilities",
+        capTitle: "A skill set built for interim leadership and complex execution.",
+        capText: "The portfolio combines functional depth with the behavioural strengths required to lead in uncertain or high-pressure settings.",
+        cap1Title: "Core strengths",
+        cap1Item1: "Strategic repositioning",
+        cap1Item2: "Multidisciplinary team leadership",
+        cap1Item3: "B2B and B2B2C go-to-market",
+        cap1Item4: "Programme structuring",
+        cap2Title: "Specialist areas",
+        cap2Item1: "Innovation leadership",
+        cap2Item2: "Product launch and development",
+        cap2Item3: "Digital transformation",
+        cap2Item4: "Operational optimisation",
+        cap3Title: "Relationship strengths",
+        cap3Item1: "Cross-functional leadership",
+        cap3Item2: "Multi-stakeholder facilitation",
+        cap3Item3: "Crisis management and arbitration",
+        cap3Item4: "Intercultural communication",
+
+        mandateEyebrow: "Target mandates",
+        mandateTitle: "Where I can step in",
+        mandateText: "I am best suited to situations requiring senior cover, acceleration, organisational repair or the governance of complex programmes.",
+        mandate1: "Temporary CEO, CRO, CPO or CMO cover",
+        mandate2: "Post-crisis interim leadership",
+        mandate3: "Organisational review",
+        mandate4: "Rapid scaling support",
+        mandate5: "Strategic programme governance",
+        mandate6: "Process digitisation",
+        mandate7: "Stakeholder coordination",
+        mandate8: "Collaborative delivery model setup",
+
+        methodEyebrow: "Method",
+        methodTitle: "A clear framework for moving swiftly without sacrificing precision.",
+        methodText: "The approach reduces noise, makes choices intelligible and installs an execution discipline suited to the pace of the business.",
+        step1Title: "Diagnosis of the real situation",
+        step2Title: "Identification of critical priorities",
+        step3Title: "Concise and measurable action plan",
+        step4Title: "Alignment of key teams",
+        step5Title: "Follow-up on decisions and outcomes",
+        stepText: "Each step is designed to produce a concrete and immediately usable output.",
+
+        credEyebrow: "Credentials",
+        credTitle: "A background combining executive practice, technical education and international exposure.",
+        cred1Title: "Education",
+        cred1Item1: "Master of Science, Telecommunications & Management, Télécom Paris",
+        cred1Item2: "Master in Business Administration, KEDGE",
+        cred2Title: "Languages",
+        cred2Item1: "French, native",
+        cred2Item2: "English, fluent professional use",
+        cred2Item4: "Spanish, intermediate",
+        cred3Title: "Other markers",
+        cred3Item1: "Reserve officer",
+        cred3Item2: "Ski instructor",
+
+        contactEyebrow: "Contact",
+        contactTitle: "Let’s discuss your situation.",
+        contactText: "An initial conversation helps clarify the context, identify priorities and determine the most appropriate form of support.",
+        formName: "Name",
+        formEmail: "Email",
+        formMessage: "Message",
+        formSubmit: "Send message",
+        formNote: "The form is visually ready. It still needs to be connected to an email service before publication.",
+        namePlaceholder: "Your name",
+        emailPlaceholder: "your@email.com",
+        messagePlaceholder: "Briefly describe your need",
+        footer: "All rights reserved."
+      },
+
+      fr: {
+        brand: "David Alimi",
+        tagline: "Direction de transition, croissance B2B et transformation",
+        navPositioning: "Positionnement",
+        navExpertise: "Expertises",
+        navAbout: "Qui je suis",
+        navTrack: "Réalisations",
+        navCapabilities: "Compétences",
+        navMethod: "Méthode",
+        navCredentials: "Parcours",
+        navContact: "Contact",
+        navCta: "Me contacter",
+
+        heroBadge: "Manager de transition · Fractional CMO, CRO, CPO · Projets stratégiques",
+        heroTitle: "J’aide les organisations à transformer les périodes complexes en exécution ciblée et en progrès mesurables.",
+        heroText: "J’interviens lorsque l’entreprise a besoin de clarté, de rythme et de jugement senior : direction relais, transformation, accélération go-to-market, réorganisation et pilotage de programmes stratégiques transverses.",
+        heroPrimary: "Discuter d’une mission",
+        heroSecondary: "Voir les réalisations",
+
+        approachEyebrow: "Posture d’intervention",
+        approachTitle: "Clarté, exécution, transmission",
+        approachText: "Une mission utile commence par une lecture concrète de la situation. Elle se poursuit avec un cadre d’action lisible, des décisions assumées et un suivi régulier des résultats.",
+        point1: "Diagnostic rapide",
+        point2: "Priorités visibles",
+        point3: "Exécution mesurable",
+        point4: "Transmission aux équipes",
+
+        stat1: "années d’expérience en direction, commerce, produit et transformation.",
+        stat2: "direction générale, leadership GTM, produit, revenus et programmes stratégiques.",
+        stat3: "interventions internationales dans des environnements multiculturels, multi-sites et complexes.",
+
+        expertiseEyebrow: "Expertises",
+        expertiseTitle: "Un appui de direction quand l’entreprise a besoin de clarté, de structure et de mouvement.",
+        expertiseText: "J’interviens lorsque l’organisation doit renforcer sa discipline d’exécution, accélérer ses revenus, revoir son modèle ou aligner stratégie, opérations et équipes.",
+        card1Title: "Direction relais",
+        card1Text: "DG, CRO, CPO, CMO ou pilotage de programme stratégique quand l’entreprise a besoin d’une capacité senior temporaire.",
+        card2Title: "Croissance et GTM",
+        card2Text: "Design go-to-market, architecture revenus, modèles partenaires, grands comptes et accélération B2B ou B2B2C.",
+        card3Title: "Transformation et redressement",
+        card3Text: "Restructuration, gestion de crise, optimisation opérationnelle, refonte organisationnelle et reprise de la discipline d’exécution.",
+        card4Title: "Digital et produit",
+        card4Text: "Stratégie produit, pilotage de l’innovation, transformation digitale, outils collaboratifs et projets à fort enjeu.",
+
+        humanEyebrow: "Qui je suis",
+        humanTitle: "Un dirigeant pragmatique, construit par l’entreprise, le sport et les transitions.",
+        humanText1: "Mon parcours s’est construit dans des environnements exigeants, souvent internationaux, où il fallait comprendre vite, décider avec lucidité et créer de la confiance dans l’action.",
+        humanText2: "J’ai dirigé, vendu, structuré, transformé et parfois recommencé. Ces expériences m’ont appris qu’une organisation ne progresse pas seulement grâce aux outils ou aux plans. Elle avance quand les personnes comprennent le cap, leur rôle et la logique des décisions.",
+        humanText3: "Ancien sportif de haut niveau, moniteur de ski, je garde un rapport concret à l’effort, à la transmission et à la progression. Cette culture influence ma manière d’accompagner les dirigeants et les équipes, avec exigence, écoute et sens du rythme.",
+        humanPoint1: "Expérience de direction et d’entrepreneuriat",
+        humanPoint2: "Culture du terrain et de l’exécution",
+        humanPoint3: "Goût de la transmission",
+        humanPoint4: "Regard international",
+
+        trackEyebrow: "Réalisations choisies",
+        trackTitle: "Un portefeuille de rôles exécutifs avec résultats mesurables.",
+        trackText: "Ces missions commencent par l’expérience entrepreneuriale la plus récente, puis présentent les principaux rôles de direction, transformation et développement.",
+        trackAdvisory: "Depuis 2008, mon activité combine conseil opérationnel et management de transition auprès d’entreprises technologiques, télécoms, SaaS, digitales et industrielles. J’interviens lorsque la capacité de direction manque, ou lorsqu’un dirigeant doit stabiliser une situation, revoir un modèle, accélérer le go to market, structurer un programme stratégique ou traverser une phase sensible. Des missions menées chez Trivnet, Convergys, Hot, Intracom, Communithings et Camarai ressort un même fil conducteur : entrer vite dans le sujet, clarifier les enjeux, aligner les parties prenantes, construire un plan exécutable et transmettre la méthode à l’organisation.",
+
+        case1Title: "Direction Générale EMEA · Maytronics",
+        case1Role: "Filiale européenne d’un leader mondial, transformée en plateforme stratégique EMEA.",
+        case1Text: "Direction de Maytronics Europe, avec plus de 200 collaborateurs et un P&L supérieur à 200M. Membre du Comité Exécutif Groupe.",
+        case1Metric1: "+30% de croissance CA",
+        case1Metric2: "Marge améliorée",
+        case1Metric3: "Plateforme régionale",
+
+        case2Title: "VP Go-To-Market & Operations EMEA · Netformx",
+        case2Role: "Éditeur SaaS confronté à un modèle de déploiement inadapté, un churn élevé et une faible visibilité partenaires.",
+        case2Text: "Direction du go-to-market et des opérations EMEA, UK, Benelux, DACH et France, avec supervision ventes, support, account management et marketing digital.",
+        case2Metric1: "+15% ARR",
+        case2Metric2: "Churn sous 10%",
+        case2Metric3: "Modèle pilote EMEA",
+
+        case3Title: "Direction générale · Meteor Networks",
+        case3Role: "PME technologique WiFi et WiMax en stagnation, avec gouvernance dysfonctionnelle et potentiel inexploité.",
+        case3Text: "Mandat complet de direction générale couvrant stratégie, organisation, finance, RH, innovation et commercial.",
+        case3Metric1: "CA doublé",
+        case3Metric2: "EBITDA x2",
+        case3Metric3: "5,2M€ levés",
+
+        case4Title: "Associate VP Global Account · Comverse",
+        case4Role: "Groupe international des télécoms cherchant à renforcer la relation avec Orange via un pilotage grands comptes intégré.",
+        case4Text: "Création et animation d’un modèle virtuel de Global Account Management, avec coordination grands comptes et déploiement de plateformes.",
+        case4Metric1: "60M$ revenus",
+        case4Metric2: "Modèle GAM global",
+        case4Metric3: "Frictions réduites",
+
+        case5Title: "Marketing Director · ECI Telecom",
+        case5Role: "Leadership go-to-market international sur marchés télécom, canaux et grands comptes stratégiques.",
+        case5Text: "Pilotage d’une structure GTM mondiale dans plus de 70 pays, soutien aux grands comptes et développement de partenariats canaux.",
+        case5Metric1: "70+ pays",
+        case5Metric2: "60+ partenariats",
+        case5Metric3: "Pipeline x2,6",
+
+        case6Title: "Founder & CEO · ForEve Labs",
+        case6Role: "Venture deeptech et life sciences construite autour d’une vision, d’une stratégie produit et d’une feuille de route opérationnelle.",
+        case6Text: "Définition de la vision, construction de la feuille de route stratégique et opérationnelle, pilotage de la stratégie produit et sécurisation du financement initial.",
+        case6Metric1: "Création venture",
+        case6Metric2: "Stratégie produit",
+        case6Metric3: "Financement initial",
+
+        capEyebrow: "Compétences",
+        capTitle: "Un socle construit pour le management de transition et l’exécution complexe.",
+        capText: "Le portefeuille combine profondeur fonctionnelle et aptitudes comportementales nécessaires aux environnements incertains ou sous pression.",
+        cap1Title: "Forces clés",
+        cap1Item1: "Repositionnement stratégique",
+        cap1Item2: "Leadership d’équipes pluridisciplinaires",
+        cap1Item3: "Go-to-market B2B et B2B2C",
+        cap1Item4: "Structuration de programmes",
+        cap2Title: "Spécialisations",
+        cap2Item1: "Pilotage de l’innovation",
+        cap2Item2: "Développement et lancement produit",
+        cap2Item3: "Transformation digitale",
+        cap2Item4: "Optimisation opérationnelle",
+        cap3Title: "Savoir-faire relationnels",
+        cap3Item1: "Leadership transverse",
+        cap3Item2: "Animation multi-acteurs",
+        cap3Item3: "Gestion de crise et arbitrage",
+        cap3Item4: "Communication interculturelle",
+
+        mandateEyebrow: "Missions cibles",
+        mandateTitle: "Où je peux intervenir",
+        mandateText: "Mon profil convient aux situations qui exigent une direction senior, une accélération, une réparation organisationnelle ou la gouvernance de programmes complexes.",
+        mandate1: "Relais temporaire DG, CRO, CPO ou CMO",
+        mandate2: "Management de transition post-crise",
+        mandate3: "Audit organisationnel",
+        mandate4: "Accompagnement de croissance rapide",
+        mandate5: "Gouvernance de programmes stratégiques",
+        mandate6: "Digitalisation de processus",
+        mandate7: "Coordination multi-acteurs",
+        mandate8: "Mise en place de modèles collaboratifs",
+
+        methodEyebrow: "Méthode",
+        methodTitle: "Un cadre clair pour avancer vite sans perdre en précision.",
+        methodText: "La démarche réduit le bruit, rend les choix intelligibles et installe une discipline d’exécution adaptée au rythme de l’entreprise.",
+        step1Title: "Diagnostic de la situation réelle",
+        step2Title: "Identification des priorités critiques",
+        step3Title: "Plan d’action court et mesurable",
+        step4Title: "Alignement des équipes clés",
+        step5Title: "Suivi des décisions et résultats",
+        stepText: "Chaque étape vise un résultat concret et immédiatement exploitable.",
+
+        credEyebrow: "Parcours",
+        credTitle: "Un socle qui combine pratique exécutive, formation technique et exposition internationale.",
+        cred1Title: "Formation",
+        cred1Item1: "Master of Science, Télécommunications & Management, Télécom Paris",
+        cred1Item2: "Master in Business Administration, KEDGE",
+        cred2Title: "Langues",
+        cred2Item1: "Français, langue maternelle",
+        cred2Item2: "Anglais, usage professionnel courant",
+        cred2Item4: "Espagnol, niveau intermédiaire",
+        cred3Title: "Autres marqueurs",
+        cred3Item1: "Officier de réserve",
+        cred3Item2: "Moniteur de ski",
+
+        contactEyebrow: "Contact",
+        contactTitle: "Parlons de votre situation.",
+        contactText: "Un premier échange permet de clarifier le contexte, identifier les priorités et définir la forme d’intervention la plus adaptée.",
+        formName: "Nom",
+        formEmail: "Email",
+        formMessage: "Message",
+        formSubmit: "Envoyer le message",
+        formNote: "Le formulaire est prêt visuellement. Il faudra encore le connecter à un service d’envoi avant publication.",
+        namePlaceholder: "Votre nom",
+        emailPlaceholder: "votre@email.com",
+        messagePlaceholder: "Décrivez brièvement votre besoin",
+        footer: "Tous droits réservés."
+      }
+    };
+
+    function applyLanguage(language) {
+      currentLanguage = language;
+      document.documentElement.lang = language;
+      document.title = language === "fr"
+        ? "David Alimi | Direction de transition, croissance B2B et transformation"
+        : "David Alimi | Interim leadership, B2B growth and transformation";
+
+      document.querySelectorAll("[data-i18n]").forEach(function(element) {
+        const key = element.getAttribute("data-i18n");
+        if (translations[language][key]) {
+          element.textContent = translations[language][key];
+        }
+      });
+
+      document.querySelectorAll("[data-placeholder-key]").forEach(function(element) {
+        const key = element.getAttribute("data-placeholder-key");
+        if (translations[language][key]) {
+          element.setAttribute("placeholder", translations[language][key]);
+        }
+      });
+
+      document.getElementById("langToggle").textContent = language === "fr" ? "EN" : "FR";
+    }
+
+    document.getElementById("langToggle").addEventListener("click", function() {
+      applyLanguage(currentLanguage === "fr" ? "en" : "fr");
+    });
+
+    applyLanguage("en");
+  </script>
+</body>
+</html>
