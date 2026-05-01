@@ -3,159 +3,203 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>David Alimi | Interim leadership, B2B growth and transformation</title>
+  <title>ForEve Labs | Egg rejuvenation in vitro</title>
+  <meta name="description" content="ForEve Labs is developing a preclinical in vitro egg rejuvenation approach designed to expand women's fertility lifespan and improve viable egg yield in IVF." />
+  <meta property="og:title" content="ForEve Labs | Egg rejuvenation in vitro" />
+  <meta property="og:description" content="A research stage platform focused on reversing key features of oocyte aging, starting with IVF." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/hero-oocyte-rejuvenation.jpg" />
+  <link rel="icon" type="image/png" href="assets/foreve-logo.png" />
   <style>
     :root {
-      --bg: #020617;
-      --panel: rgba(15, 23, 42, 0.92);
-      --panel-soft: rgba(15, 23, 42, 0.72);
-      --soft: rgba(255, 255, 255, 0.08);
-      --line: rgba(255, 255, 255, 0.12);
-      --text: #ffffff;
-      --muted: #cbd5e1;
-      --muted-2: #94a3b8;
-      --accent: #67e8f9;
-      --accent-strong: #22d3ee;
-      --dark-text: #020617;
+      --bg: #fbf8f4;
+      --ink: #142033;
+      --muted: #5f6b7a;
+      --soft: #f1e7df;
+      --soft-2: #eaf8f5;
+      --card: #ffffff;
+      --line: rgba(20, 32, 51, 0.11);
+      --accent: #31c9bd;
+      --accent-dark: #0c7e78;
+      --rose: #d99a8d;
+      --plum: #4f3f8f;
+      --shadow: 0 28px 90px rgba(20, 32, 51, 0.12);
+      --radius-xl: 34px;
+      --radius-lg: 24px;
+      --max: 1180px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
-      font-family: Inter, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at 50% 0%, rgba(34, 211, 238, 0.22), transparent 34%),
-        radial-gradient(circle at 90% 35%, rgba(99, 102, 241, 0.2), transparent 30%),
-        radial-gradient(circle at 10% 70%, rgba(14, 165, 233, 0.14), transparent 25%);
-      pointer-events: none;
-      z-index: 0;
+        radial-gradient(circle at top left, rgba(49, 201, 189, 0.18), transparent 34%),
+        radial-gradient(circle at 86% 12%, rgba(217, 154, 141, 0.20), transparent 30%),
+        var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
     }
 
-    header {
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .site {
+      overflow: hidden;
+    }
+
+    .nav-shell {
       position: sticky;
       top: 0;
-      z-index: 20;
-      background: rgba(2, 6, 23, 0.86);
+      z-index: 40;
+      background: rgba(251, 248, 244, 0.86);
       backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid rgba(20, 32, 51, 0.08);
     }
 
     nav {
-      max-width: 1180px;
-      margin: auto;
-      padding: 16px 20px;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 18px;
+      gap: 22px;
     }
 
-    .brand { color: var(--text); text-decoration: none; min-width: 260px; }
-    .brand strong { display: block; font-size: 24px; line-height: 1.05; letter-spacing: -0.03em; }
-    .brand span { display: block; color: var(--muted); font-size: 15px; line-height: 1.25; margin-top: 4px; }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-    .menu { display: flex; gap: 4px; align-items: center; flex-wrap: wrap; justify-content: center; }
+    .brand-frame {
+      width: 150px;
+      min-height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 22px;
+      padding: 9px 14px;
+      background: linear-gradient(135deg, #101827, #273858);
+      box-shadow: 0 16px 34px rgba(20, 32, 51, 0.18);
+    }
 
-    .menu a,
-    .nav-cta,
-    .lang-toggle {
-      color: var(--muted);
-      text-decoration: none;
-      padding: 8px 12px;
-      border-radius: 999px;
-      transition: 0.2s;
-      font-size: 13px;
-      border: 0;
-      font: inherit;
+    .brand-logo {
+      width: 122px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
       white-space: nowrap;
+      border: 0;
     }
 
-    .menu a:hover,
-    .lang-toggle:hover { background: var(--soft); color: var(--text); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 0.93rem;
+      font-weight: 620;
+    }
 
-    .nav-actions { display: flex; align-items: center; gap: 8px; }
-
-    .lang-toggle {
-      border: 1px solid var(--line);
-      background: transparent;
-      color: white;
-      cursor: pointer;
-      font-weight: 700;
+    .nav-links a:hover {
+      color: var(--accent-dark);
     }
 
     .nav-cta {
-      background: var(--accent-strong);
-      color: var(--dark-text);
-      font-weight: 700;
-    }
-
-    .nav-cta:hover { background: var(--accent); }
-
-    main, footer { position: relative; z-index: 1; }
-
-    section {
-      max-width: 1180px;
-      margin: auto;
-      padding: 94px 20px;
+      padding: 10px 17px;
+      border-radius: 999px;
+      color: var(--ink);
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 30px rgba(20, 32, 51, 0.06);
     }
 
     .hero {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 82px 24px 58px;
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 46px;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 56px;
       align-items: center;
-      padding-top: 110px;
     }
 
-    .badge, .tag {
+    .eyebrow {
       display: inline-flex;
-      color: #cffafe;
-      background: rgba(103, 232, 249, 0.1);
-      border: 1px solid rgba(103, 232, 249, 0.3);
-      padding: 8px 12px;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 14px;
       border-radius: 999px;
-      font-size: 13px;
-      margin-bottom: 22px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(20, 32, 51, 0.10);
+      color: var(--accent-dark);
+      font-weight: 760;
+      font-size: 0.88rem;
+    }
+
+    .eyebrow-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(49, 201, 189, 0.16);
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      letter-spacing: -0.045em;
+      line-height: 1.06;
     }
 
     h1 {
-      font-size: clamp(42px, 7vw, 74px);
-      line-height: 1.02;
-      letter-spacing: -0.055em;
-      max-width: 900px;
+      margin-top: 24px;
+      font-size: clamp(3.25rem, 7.2vw, 6.6rem);
+      max-width: 860px;
     }
 
     h2 {
-      font-size: clamp(34px, 4.8vw, 54px);
-      line-height: 1.1;
-      letter-spacing: -0.045em;
-      margin-top: 14px;
+      font-size: clamp(2.15rem, 4.8vw, 4.05rem);
     }
 
-    h3 { font-size: 24px; line-height: 1.2; margin-bottom: 12px; }
+    h3 {
+      font-size: 1.38rem;
+    }
 
     .lead {
+      margin: 26px 0 0;
       color: var(--muted);
-      font-size: 18px;
-      max-width: 740px;
-      margin-top: 28px;
+      font-size: 1.18rem;
+      max-width: 720px;
     }
 
     .actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 14px;
       margin-top: 34px;
     }
 
@@ -163,1088 +207,943 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      min-height: 50px;
       border-radius: 999px;
       padding: 13px 20px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: 0.2s;
+      font-weight: 780;
+      border: 1px solid transparent;
+      transition: transform 180ms ease, box-shadow 180ms ease;
     }
 
-    .button.primary { background: white; color: var(--dark-text); }
-    .button.primary:hover { background: #e2e8f0; }
-    .button.secondary { color: white; border: 1px solid var(--line); }
-    .button.secondary:hover { background: var(--soft); }
+    .button:hover {
+      transform: translateY(-2px);
+    }
 
-    .card {
-      background: rgba(255, 255, 255, 0.1);
+    .button-primary {
+      color: #fff;
+      background: var(--ink);
+      box-shadow: 0 18px 44px rgba(20, 32, 51, 0.22);
+    }
+
+    .button-secondary {
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.78);
+      border-color: var(--line);
+    }
+
+    .hero-visual {
+      position: relative;
+      border-radius: 46px;
+      min-height: 580px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,0.84);
+      background: #0d1c35;
+    }
+
+    .hero-visual img {
+      width: 100%;
+      height: 100%;
+      min-height: 580px;
+      object-fit: cover;
+      filter: saturate(1.05) contrast(1.03);
+    }
+
+    .hero-visual::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, transparent 35%, rgba(10, 18, 34, 0.64)),
+        radial-gradient(circle at 30% 20%, rgba(255,255,255,0.26), transparent 24%);
+    }
+
+    .visual-card {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      z-index: 2;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.13);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      backdrop-filter: blur(16px);
+      border-radius: 28px;
+      padding: 22px;
+    }
+
+    .visual-card p {
+      margin: 7px 0 0;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .quick-facts {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px 34px;
+    }
+
+    .fact {
+      background: rgba(255,255,255,0.76);
       border: 1px solid var(--line);
-      border-radius: 32px;
-      padding: 24px;
-      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
-    }
-
-    .inner-card {
-      background: var(--panel);
       border-radius: 24px;
-      padding: 28px;
+      padding: 20px;
+      box-shadow: 0 16px 50px rgba(20, 32, 51, 0.06);
     }
 
-    .eyebrow {
-      color: #a5f3fc;
+    .fact strong {
+      display: block;
+      font-size: 1.22rem;
+      letter-spacing: -0.03em;
+      margin-bottom: 4px;
+    }
+
+    .fact span {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    section {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 78px 24px;
+    }
+
+    .section-head {
+      max-width: 790px;
+      margin-bottom: 34px;
+    }
+
+    .kicker {
+      color: var(--accent-dark);
+      font-weight: 820;
       text-transform: uppercase;
-      letter-spacing: 0.24em;
-      font-size: 12px;
-      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+      margin-bottom: 12px;
     }
 
-    .check-list { margin-top: 28px; display: grid; gap: 14px; }
-
-    .check-item {
-      background: rgba(255, 255, 255, 0.06);
-      border-radius: 18px;
-      padding: 14px 16px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
+    .section-head p {
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin: 18px 0 0;
     }
 
-    .check {
-      height: 20px;
-      width: 20px;
-      border-radius: 50%;
-      background: var(--accent);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--dark-text);
-      font-weight: 900;
-      flex: 0 0 auto;
-    }
-
-    .wide {
-      max-width: none;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.03);
-    }
-
-    .wide > div { max-width: 1180px; margin: auto; padding: 0 20px; }
-    .intro { max-width: 820px; }
-
-    .grid {
-      margin-top: 46px;
+    .grid-2 {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
 
-    .expertise, .case-card, .cap-card, .credential-card {
-      background: rgba(15, 23, 42, 0.86);
+    .card {
+      background: rgba(255,255,255,0.78);
       border: 1px solid var(--line);
-      border-radius: 32px;
+      border-radius: var(--radius-xl);
       padding: 28px;
-      transition: 0.2s;
+      box-shadow: 0 18px 60px rgba(20, 32, 51, 0.07);
     }
 
-    .expertise:hover, .case-card:hover, .cap-card:hover, .credential-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(103, 232, 249, 0.35);
+    .card p {
+      color: var(--muted);
+      margin: 12px 0 0;
     }
 
-    .icon {
-      height: 52px;
-      width: 52px;
-      border-radius: 18px;
-      background: rgba(103, 232, 249, 0.1);
-      color: #a5f3fc;
+    .problem-layout {
+      display: grid;
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: 26px;
+      align-items: center;
+    }
+
+    .chart-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .source {
+      color: var(--muted);
+      font-size: 0.84rem;
+      margin: 12px 0 0;
+    }
+
+    .statement {
+      font-size: clamp(1.7rem, 3.2vw, 2.55rem);
+      letter-spacing: -0.04em;
+      line-height: 1.12;
+      margin: 0;
+    }
+
+    .statement span {
+      color: var(--accent-dark);
+    }
+
+    .memo-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .memo-card {
+      background: linear-gradient(150deg, rgba(49,201,189,0.14), rgba(217,154,141,0.17));
+    }
+
+    .thesis-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .thesis-item {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 13px;
+      align-items: start;
+      color: var(--muted);
+    }
+
+    .thesis-num {
+      width: 34px;
+      height: 34px;
+      border-radius: 13px;
       display: grid;
       place-items: center;
-      margin-bottom: 22px;
-      font-size: 24px;
+      background: #fff;
+      color: var(--accent-dark);
+      font-weight: 900;
+      margin-top: 1px;
     }
 
-    .two-col {
+    .soft-band {
+      max-width: none;
+      background: linear-gradient(135deg, #10243a, #211b3f);
+      color: #fff;
+      margin: 42px 0 0;
+      padding: 90px 0;
+    }
+
+    .band-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
       display: grid;
-      grid-template-columns: 0.86fr 1.14fr;
-      gap: 46px;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 42px;
       align-items: start;
     }
 
+    .soft-band .kicker {
+      color: #7ff1e5;
+    }
+
+    .soft-band p {
+      color: rgba(255,255,255,0.73);
+    }
+
     .steps {
-      border: 1px solid var(--line);
-      border-radius: 32px;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 12px;
+      display: grid;
+      gap: 14px;
     }
 
     .step {
       display: grid;
-      grid-template-columns: 42px 1fr;
-      gap: 20px;
+      grid-template-columns: 48px 1fr;
+      gap: 16px;
+      border-radius: 26px;
       padding: 20px;
-      border-bottom: 1px solid var(--line);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
     }
 
-    .step:last-child { border-bottom: none; }
-
-    .number {
-      height: 42px;
-      width: 42px;
-      border-radius: 999px;
-      background: var(--accent);
-      color: var(--dark-text);
+    .step-num {
+      width: 48px;
+      height: 48px;
+      border-radius: 18px;
       display: grid;
       place-items: center;
-      font-weight: 800;
+      color: #7ff1e5;
+      font-weight: 900;
+      background: rgba(255,255,255,0.10);
     }
 
-    .stats {
-      max-width: none;
-      background: var(--accent);
-      color: var(--dark-text);
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
+    .step h3 {
+      font-size: 1.18rem;
+      letter-spacing: -0.03em;
     }
 
-    .stats-grid {
-      max-width: 1180px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      padding: 76px 20px;
+    .step p {
+      margin: 7px 0 0;
     }
 
-    .stat-value {
-      font-size: 54px;
-      line-height: 1;
-      font-weight: 800;
-      letter-spacing: -0.05em;
-      margin-bottom: 14px;
-    }
-
-    .track-note {
-      margin-top: 34px;
-      border: 1px solid rgba(103, 232, 249, 0.24);
-      background: rgba(103, 232, 249, 0.07);
-      border-radius: 28px;
-      padding: 24px;
-      color: var(--muted);
-      font-size: 17px;
-      line-height: 1.75;
-      max-width: 980px;
-    }
-
-    .case-grid {
-      margin-top: 46px;
+    .image-split {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 18px;
+      margin-top: 28px;
     }
 
-    .case-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 18px;
-      margin-bottom: 16px;
+    .image-tile {
+      position: relative;
+      border-radius: 30px;
+      overflow: hidden;
+      min-height: 280px;
+      background: var(--soft);
+      box-shadow: 0 18px 60px rgba(20,32,51,0.10);
     }
 
-    .case-period {
-      color: var(--accent);
-      font-size: 13px;
-      font-weight: 700;
-      white-space: nowrap;
+    .image-tile img {
+      width: 100%;
+      height: 100%;
+      min-height: 280px;
+      object-fit: cover;
     }
 
-    .case-role {
-      color: var(--muted-2);
-      font-size: 14px;
-      margin-bottom: 16px;
+    .caption {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+      border-radius: 18px;
+      padding: 13px 15px;
+      color: #fff;
+      background: rgba(20,32,51,0.60);
+      backdrop-filter: blur(12px);
+      font-weight: 740;
     }
 
-    .metric-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 20px;
-    }
-
-    .metric {
-      border: 1px solid rgba(103, 232, 249, 0.28);
-      background: rgba(103, 232, 249, 0.08);
-      color: #cffafe;
-      border-radius: 999px;
-      padding: 7px 10px;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .cap-grid {
-      margin-top: 46px;
+    .impact-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 24px;
+      align-items: stretch;
     }
 
-    .cap-card ul, .credential-card ul {
-      list-style: none;
+    .highlight {
+      background: linear-gradient(150deg, rgba(49,201,189,0.16), rgba(217,154,141,0.18));
+    }
+
+    .mini-list {
       display: grid;
-      gap: 10px;
+      gap: 12px;
       margin-top: 18px;
+    }
+
+    .mini-item {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 12px;
+      align-items: start;
       color: var(--muted);
     }
 
-    .cap-card li, .credential-card li {
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding-top: 10px;
-    }
-
-    .mandate-strip {
-      margin-top: 42px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.08);
-      border-radius: 32px;
-      padding: 24px;
+    .mini-dot {
+      width: 28px;
+      height: 28px;
+      border-radius: 10px;
+      background: var(--soft-2);
+      color: var(--accent-dark);
       display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
-      gap: 28px;
-      align-items: start;
+      place-items: center;
+      font-weight: 900;
+      font-size: 0.82rem;
+      margin-top: 1px;
     }
 
-    .pill-cloud {
+    .science-visual {
+      margin-top: 28px;
+      border-radius: 34px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      background: #fff;
+    }
+
+    .science-visual img {
+      width: 100%;
+      height: auto;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .person-card {
+      background: rgba(255,255,255,0.82);
+      border: 1px solid var(--line);
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 18px 60px rgba(20, 32, 51, 0.08);
+    }
+
+    .person-photo {
+      height: 280px;
+      background: linear-gradient(135deg, var(--soft-2), var(--soft));
+      overflow: hidden;
+    }
+
+    .person-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .person-body {
+      padding: 24px;
+    }
+
+    .person-body h3 {
+      font-size: 1.28rem;
+    }
+
+    .role {
+      color: var(--accent-dark);
+      font-weight: 820;
+      margin-top: 6px;
+    }
+
+    .person-body p {
+      color: var(--muted);
+      margin: 12px 0 0;
+    }
+
+    .core-team {
+      margin-top: 22px;
+    }
+
+    .advisor-row {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
+      margin-top: 18px;
     }
 
     .pill {
-      background: rgba(15, 23, 42, 0.88);
-      border: 1px solid var(--line);
       border-radius: 999px;
+      background: #fff;
+      border: 1px solid var(--line);
+      color: var(--muted);
       padding: 9px 12px;
-      color: var(--muted);
-      font-size: 14px;
+      font-weight: 680;
+      font-size: 0.9rem;
     }
 
-    .contact-box {
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 32px;
-      overflow: hidden;
+    .roadmap {
       display: grid;
-      grid-template-columns: 1fr 0.9fr;
-      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
-    }
-
-    .contact-text, form { padding: 44px; }
-
-    .contact-link {
-      display: flex;
       gap: 14px;
-      align-items: center;
-      margin-top: 16px;
-      color: white;
-      text-decoration: none;
-      background: var(--panel);
-      padding: 16px 18px;
-      border-radius: 18px;
     }
 
-    form { background: var(--panel); }
-
-    label {
-      display: block;
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 8px;
-    }
-
-    input, textarea {
-      width: 100%;
+    .roadmap-item {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 24px;
+      align-items: start;
+      padding: 24px;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.78);
       border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.06);
-      color: white;
-      border-radius: 18px;
-      padding: 13px 14px;
-      outline: none;
-      font: inherit;
-      margin-bottom: 18px;
+      box-shadow: 0 14px 48px rgba(20,32,51,0.06);
     }
 
-    input:focus, textarea:focus { border-color: var(--accent); }
-    textarea { min-height: 130px; resize: vertical; }
+    .roadmap-time {
+      color: var(--accent-dark);
+      font-weight: 840;
+    }
 
-    .form-note {
-      color: #94a3b8;
-      font-size: 14px;
-      margin-top: 14px;
+    .roadmap-item p {
+      color: var(--muted);
+      margin: 8px 0 0;
+    }
+
+    .contact {
+      max-width: var(--max);
+      margin: 42px auto 0;
+      padding: 56px;
+      border-radius: 44px;
+      background: linear-gradient(135deg, var(--accent-dark), var(--ink));
+      color: #fff;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+
+    .contact p {
+      color: rgba(255,255,255,0.76);
+      max-width: 680px;
+      margin: 16px 0 0;
+    }
+
+    .contact .button {
+      background: #fff;
+      color: var(--ink);
     }
 
     footer {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 46px 24px 58px;
       border-top: 1px solid var(--line);
-      color: #94a3b8;
-      text-align: center;
-      padding: 28px 20px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      font-size: 0.94rem;
     }
 
-    @media (max-width: 950px) {
-      .hero, .two-col, .contact-box, .grid, .stats-grid, .case-grid, .cap-grid, .mandate-strip {
+    @media (max-width: 1020px) {
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 960px) {
+      .hero,
+      .quick-facts,
+      .grid-2,
+      .grid-3,
+      .problem-layout,
+      .memo-grid,
+      .band-inner,
+      .impact-grid,
+      .team-grid,
+      .contact {
         grid-template-columns: 1fr;
       }
 
-      .menu, .nav-cta { display: none; }
-      section { padding: 72px 20px; }
-      .hero { padding-top: 72px; }
-      .check-list { grid-template-columns: 1fr !important; }
-      .case-top { display: block; }
-      .case-period { display: inline-block; margin-top: 6px; }
+      .quick-facts {
+        padding-top: 8px;
+      }
+
+      .hero {
+        padding-top: 58px;
+      }
+
+      .hero-visual,
+      .hero-visual img {
+        min-height: 460px;
+      }
+
+      .person-photo {
+        height: 360px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      nav,
+      .hero,
+      .quick-facts,
+      section,
+      .band-inner,
+      footer {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .brand-frame {
+        width: 132px;
+        min-height: 52px;
+      }
+
+      .brand-logo {
+        width: 106px;
+      }
+
+      h1 {
+        font-size: 3.18rem;
+      }
+
+      .hero-visual,
+      .hero-visual img {
+        min-height: 390px;
+      }
+
+      .image-split {
+        grid-template-columns: 1fr;
+      }
+
+      .roadmap-item {
+        grid-template-columns: 1fr;
+      }
+
+      .contact {
+        padding: 34px;
+        border-radius: 32px;
+      }
+
+      footer {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a class="brand" href="#positioning">
-        <strong data-i18n="brand">David Alimi</strong>
-        <span data-i18n="tagline">Interim leadership, B2B growth and transformation</span>
-      </a>
-      <div class="menu">
-        <a href="#positioning" data-i18n="navPositioning">Positioning</a>
-        <a href="#expertise" data-i18n="navExpertise">Expertise</a>
-        <a href="#about" data-i18n="navAbout">About me</a>
-        <a href="#track-record" data-i18n="navTrack">Track record</a>
-        <a href="#capabilities" data-i18n="navCapabilities">Capabilities</a>
-        <a href="#method" data-i18n="navMethod">Method</a>
-        <a href="#credentials" data-i18n="navCredentials">Credentials</a>
-        <a href="#contact" data-i18n="navContact">Contact</a>
-      </div>
-      <div class="nav-actions">
-        <button class="lang-toggle" id="langToggle">FR</button>
-        <a class="nav-cta" href="#contact" data-i18n="navCta">Contact me</a>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero" id="positioning">
-      <div>
-        <p class="badge" data-i18n="heroBadge">Interim executive · Fractional CMO, CRO, CPO · Strategic programmes</p>
-        <h1 data-i18n="heroTitle">I help organisations turn complex transitions into focused execution and measurable progress.</h1>
-        <p class="lead" data-i18n="heroText">I operate where clarity, pace and senior judgement are needed: temporary executive cover, transformation, go-to-market acceleration, organisational redesign and cross-company strategic programmes.</p>
-        <div class="actions">
-          <a class="button primary" href="#contact" data-i18n="heroPrimary">Discuss a mission</a>
-          <a class="button secondary" href="#track-record" data-i18n="heroSecondary">View selected assignments</a>
+  <div class="site">
+    <header class="nav-shell">
+      <nav aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="ForEve Labs home">
+          <span class="brand-frame">
+            <img class="brand-logo" src="assets/foreve-logo.png" alt="ForEve logo" />
+          </span>
+          <span class="sr-only">ForEve Labs</span>
+        </a>
+        <div class="nav-links">
+          <a href="#problem">IVF challenge</a>
+          <a href="#memo">Memo</a>
+          <a href="#science">Science</a>
+          <a href="#platform">Platform</a>
+          <a href="#team">Team</a>
+          <a class="nav-cta" href="mailto:david@foreve.life">Contact</a>
         </div>
-      </div>
+      </nav>
+    </header>
 
-      <aside class="card">
-        <div class="inner-card">
-          <p class="eyebrow" data-i18n="approachEyebrow">Operating stance</p>
-          <h3 data-i18n="approachTitle">Clarity, execution, transfer</h3>
-          <p class="lead" style="font-size:16px;margin-top:0;" data-i18n="approachText">A useful mission starts with a grounded reading of the situation. It then moves into a clear operating frame, sound decisions and consistent monitoring of outcomes.</p>
-          <div class="check-list">
-            <div class="check-item"><span class="check">✓</span><span data-i18n="point1">Fast diagnosis</span></div>
-            <div class="check-item"><span class="check">✓</span><span data-i18n="point2">Visible priorities</span></div>
-            <div class="check-item"><span class="check">✓</span><span data-i18n="point3">Measurable execution</span></div>
-            <div class="check-item"><span class="check">✓</span><span data-i18n="point4">Knowledge transfer to teams</span></div>
-          </div>
-        </div>
-      </aside>
-    </section>
-
-    <section class="stats">
-      <div class="stats-grid">
-        <div><div class="stat-value">25+</div><p data-i18n="stat1">years of executive, commercial, product and transformation experience.</p></div>
-        <div><div class="stat-value">CxO</div><p data-i18n="stat2">general management, GTM leadership, product, revenue and strategic programme roles.</p></div>
-        <div><div class="stat-value">Global</div><p data-i18n="stat3">international assignments in multicultural, multi-site and complex environments.</p></div>
-      </div>
-    </section>
-
-    <section class="wide" id="expertise">
-      <div>
-        <div class="intro">
-          <p class="eyebrow" data-i18n="expertiseEyebrow">Expertise</p>
-          <h2 data-i18n="expertiseTitle">Executive support when the business needs clarity, structure and momentum.</h2>
-          <p class="lead" data-i18n="expertiseText">I intervene in moments where the organisation must strengthen operating discipline, accelerate revenue, redesign its model or align strategy, operations and teams.</p>
-        </div>
-
-        <div class="grid">
-          <article class="expertise">
-            <div class="icon">⌖</div>
-            <h3 data-i18n="card1Title">Executive cover</h3>
-            <p data-i18n="card1Text">CEO, CRO, CPO, CMO or strategic programme leadership when a company needs temporary senior capacity.</p>
-          </article>
-
-          <article class="expertise">
-            <div class="icon">↗</div>
-            <h3 data-i18n="card2Title">Growth and GTM</h3>
-            <p data-i18n="card2Text">Go-to-market design, revenue architecture, partner models, enterprise accounts and B2B or B2B2C acceleration.</p>
-          </article>
-
-          <article class="expertise">
-            <div class="icon">▣</div>
-            <h3 data-i18n="card3Title">Transformation and turnaround</h3>
-            <p data-i18n="card3Text">Restructuring, crisis response, operational optimisation, organisation redesign and recovery of execution discipline.</p>
-          </article>
-
-          <article class="expertise">
-            <div class="icon">◌</div>
-            <h3 data-i18n="card4Title">Digital and product leadership</h3>
-            <p data-i18n="card4Text">Product strategy, innovation leadership, digital transformation, collaborative tooling and high-stakes project delivery.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="two-col">
+    <main id="top">
+      <section class="hero">
         <div>
-          <p class="eyebrow" data-i18n="humanEyebrow">About me</p>
-          <h2 data-i18n="humanTitle">A pragmatic executive shaped by business, sport and periods of transition.</h2>
-        </div>
-
-        <div class="card">
-          <div class="inner-card">
-            <p class="lead" style="font-size:18px;margin-top:0;" data-i18n="humanText1">My career has been shaped in demanding, often international environments in which I had to understand quickly, decide with clarity and build trust through action.</p>
-            <p class="lead" style="font-size:18px;margin-top:18px;" data-i18n="humanText2">I have led, sold, structured, transformed and, at times, started again. These experiences have taught me that organisations do not move forward through tools and plans alone. They progress when people understand the direction, their role and the logic behind decisions.</p>
-            <p class="lead" style="font-size:18px;margin-top:18px;" data-i18n="humanText3">As a former elite athlete and ski instructor, I have retained a practical relationship with effort, transmission and progression. This culture shapes the way I support leaders and teams, with high standards, attentive listening and a strong sense of pace.</p>
-
-            <div class="check-list" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
-              <div class="check-item"><span class="check">✓</span><span data-i18n="humanPoint1">Executive and entrepreneurial experience</span></div>
-              <div class="check-item"><span class="check">✓</span><span data-i18n="humanPoint2">Grounded execution mindset</span></div>
-              <div class="check-item"><span class="check">✓</span><span data-i18n="humanPoint3">Commitment to mentoring and knowledge transfer</span></div>
-              <div class="check-item"><span class="check">✓</span><span data-i18n="humanPoint4">International perspective</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="wide" id="track-record">
-      <div>
-        <div class="intro">
-          <p class="eyebrow" data-i18n="trackEyebrow">Selected assignments</p>
-          <h2 data-i18n="trackTitle">A portfolio of executive roles with measurable outcomes.</h2>
-          <p class="lead" data-i18n="trackText">The following assignments start with the most recent entrepreneurial experience, followed by major executive and transformation roles.</p>
-          <div class="track-note">
-            <p data-i18n="trackAdvisory">Since 2008, my work has combined operational advisory and interim management assignments across technology, telecom, SaaS, digital and industrial environments. I step in when leadership capacity is missing, or when a CEO needs a senior operator to stabilise a situation, redesign a model, accelerate go to market, structure a strategic programme or navigate a sensitive phase. Across mandates such as Trivnet, Convergys, Hot, Intracom, Communithings and Camarai, the same pattern emerges: enter quickly, clarify the issues, align stakeholders, build an executable plan and transfer the method to the organisation.</p>
+          <div class="eyebrow"><span class="eyebrow-dot"></span>Where cell rejuvenation meets therapeutic power</div>
+          <h1>We rejuvenate women’s eggs.</h1>
+          <p class="lead">
+            ForEve Labs is developing EpicOva, a preclinical in vitro oocyte rejuvenation approach designed to restore egg quality, increase mature egg yield and expand women’s fertility lifespan.
+          </p>
+          <div class="actions">
+            <a class="button button-primary" href="mailto:david@foreve.life">Start a conversation</a>
+            <a class="button button-secondary" href="#science">Explore the science</a>
           </div>
         </div>
 
-        <div class="case-grid">
-          <article class="case-card">
-            <div class="case-top">
-              <div>
-                <h3 data-i18n="case6Title">Founder & CEO · ForEve Labs</h3>
-                <p class="case-role" data-i18n="case6Role">Deeptech and life science venture built from vision, product strategy and operational roadmap.</p>
-              </div>
-              <span class="case-period">2023 · 2026</span>
-            </div>
-            <p data-i18n="case6Text">Defined the company vision, built the strategic and operational roadmap, led product strategy and secured initial funding.</p>
-            <div class="metric-row">
-              <span class="metric" data-i18n="case6Metric1">Venture creation</span>
-              <span class="metric" data-i18n="case6Metric2">Product strategy</span>
-              <span class="metric" data-i18n="case6Metric3">Initial funding</span>
-            </div>
-          </article>
-          <article class="case-card">
-            <div class="case-top">
-              <div>
-                <h3 data-i18n="case1Title">General Manager EMEA · Maytronics</h3>
-                <p class="case-role" data-i18n="case1Role">European subsidiary of a global market leader, transformed into a strategic EMEA platform.</p>
-              </div>
-              <span class="case-period">2020 · 2022</span>
-            </div>
-            <p data-i18n="case1Text">Led Maytronics Europe, with more than 200 employees and a 200M+ P&L. Member of the Group Executive Committee.</p>
-            <div class="metric-row">
-              <span class="metric" data-i18n="case1Metric1">+30% revenue growth</span>
-              <span class="metric" data-i18n="case1Metric2">Improved margin</span>
-              <span class="metric" data-i18n="case1Metric3">Regional platform</span>
-            </div>
-          </article>
-          <article class="case-card">
-            <div class="case-top">
-              <div>
-                <h3 data-i18n="case2Title">VP Go-To-Market & Operations EMEA · Netformx</h3>
-                <p class="case-role" data-i18n="case2Role">SaaS company facing deployment issues, high churn and limited partner performance visibility.</p>
-              </div>
-              <span class="case-period">2014 · 2019</span>
-            </div>
-            <p data-i18n="case2Text">Led EMEA go-to-market and operations across UK, Benelux, DACH and France, covering sales, support, account management and digital marketing.</p>
-            <div class="metric-row">
-              <span class="metric" data-i18n="case2Metric1">+15% ARR</span>
-              <span class="metric" data-i18n="case2Metric2">Churn below 10%</span>
-              <span class="metric" data-i18n="case2Metric3">Pilot EMEA model</span>
-            </div>
-          </article>
-          <article class="case-card">
-            <div class="case-top">
-              <div>
-                <h3 data-i18n="case3Title">CEO · Meteor Networks</h3>
-                <p class="case-role" data-i18n="case3Role">Technology SME in WiFi and WiMax with stagnation, governance issues and untapped potential.</p>
-              </div>
-              <span class="case-period">2006 · 2008</span>
-            </div>
-            <p data-i18n="case3Text">Held a full CEO mandate across strategy, organisation, finance, HR, innovation and sales.</p>
-            <div class="metric-row">
-              <span class="metric" data-i18n="case3Metric1">Revenue doubled</span>
-              <span class="metric" data-i18n="case3Metric2">EBITDA x2</span>
-              <span class="metric" data-i18n="case3Metric3">€5.2M funding</span>
-            </div>
-          </article>
-          <article class="case-card">
-            <div class="case-top">
-              <div>
-                <h3 data-i18n="case4Title">Associate VP Global Account · Comverse</h3>
-                <p class="case-role" data-i18n="case4Role">Global telecom group seeking to strengthen the relationship with Orange through integrated account leadership.</p>
-              </div>
-              <span class="case-period">2002 · 2006</span>
-            </div>
-            <p data-i18n="case4Text">Initiated and ran a virtual Global Account Management model, coordinating global account activity and platform deployments.</p>
-            <div class="metric-row">
-              <span class="metric" data-i18n="case4Metric1">$60M revenue</span>
-              <span class="metric" data-i18n="case4Metric2">Global account model</span>
-              <span class="metric" data-i18n="case4Metric3">Reduced internal friction</span>
-            </div>
-          </article>
-          <article class="case-card">
-            <div class="case-top">
-              <div>
-                <h3 data-i18n="case5Title">Marketing Director · ECI Telecom</h3>
-                <p class="case-role" data-i18n="case5Role">International go-to-market leadership across telecom markets, channels and strategic accounts.</p>
-              </div>
-              <span class="case-period">1997 · 2002</span>
-            </div>
-            <p data-i18n="case5Text">Led a global GTM structure across more than 70 countries, supported major accounts and built channel partnerships.</p>
-            <div class="metric-row">
-              <span class="metric" data-i18n="case5Metric1">70+ countries</span>
-              <span class="metric" data-i18n="case5Metric2">60+ partnerships</span>
-              <span class="metric" data-i18n="case5Metric3">Pipeline x2.6</span>
-            </div>
-          </article>
+        <aside class="hero-visual" aria-label="Oocyte rejuvenation visual">
+          <img src="assets/hero-oocyte-rejuvenation.jpg" alt="Microscopic style rendering of an oocyte treatment process" />
+          <div class="visual-card">
+            <h3>Eggs are gold.</h3>
+            <p>ForEve starts from a simple premise: improving egg quality can change the economics, burden and human experience of IVF.</p>
+          </div>
+        </aside>
+      </section>
+
+      <div class="quick-facts" aria-label="ForEve quick facts">
+        <div class="fact">
+          <strong>Lead product</strong>
+          <span>EpicOva</span>
+        </div>
+        <div class="fact">
+          <strong>Core tech</strong>
+          <span>Heterochromatin restoration</span>
+        </div>
+        <div class="fact">
+          <strong>Workflow</strong>
+          <span>Designed for existing IVF protocols</span>
+        </div>
+        <div class="fact">
+          <strong>Ambition</strong>
+          <span>More mature eggs per cycle</span>
         </div>
       </div>
-    </section>
 
-    <section id="capabilities">
-      <div class="intro">
-        <p class="eyebrow" data-i18n="capEyebrow">Capabilities</p>
-        <h2 data-i18n="capTitle">A skill set built for interim leadership and complex execution.</h2>
-        <p class="lead" data-i18n="capText">The portfolio combines functional depth with the behavioural strengths required to lead in uncertain or high-pressure settings.</p>
-      </div>
+      <section id="problem">
+        <div class="problem-layout">
+          <div class="chart-card">
+            <img src="assets/live-birth-per-intended-egg-retrieval.jpg" alt="Chart showing live birth per intended egg retrieval by age group" />
+            <p class="source">Source shown in the provided material: SART Preliminary National Summary Report for 2022.</p>
+          </div>
 
-      <div class="cap-grid">
-        <article class="cap-card">
-          <h3 data-i18n="cap1Title">Core strengths</h3>
-          <ul>
-            <li data-i18n="cap1Item1">Strategic repositioning</li>
-            <li data-i18n="cap1Item2">Multidisciplinary team leadership</li>
-            <li data-i18n="cap1Item3">B2B and B2B2C go-to-market</li>
-            <li data-i18n="cap1Item4">Programme structuring</li>
-          </ul>
-        </article>
-
-        <article class="cap-card">
-          <h3 data-i18n="cap2Title">Specialist areas</h3>
-          <ul>
-            <li data-i18n="cap2Item1">Innovation leadership</li>
-            <li data-i18n="cap2Item2">Product launch and development</li>
-            <li data-i18n="cap2Item3">Digital transformation</li>
-            <li data-i18n="cap2Item4">Operational optimisation</li>
-          </ul>
-        </article>
-
-        <article class="cap-card">
-          <h3 data-i18n="cap3Title">Relationship strengths</h3>
-          <ul>
-            <li data-i18n="cap3Item1">Cross-functional leadership</li>
-            <li data-i18n="cap3Item2">Multi-stakeholder facilitation</li>
-            <li data-i18n="cap3Item3">Crisis management and arbitration</li>
-            <li data-i18n="cap3Item4">Intercultural communication</li>
-          </ul>
-        </article>
-      </div>
-
-      <div class="mandate-strip">
-        <div>
-          <p class="eyebrow" data-i18n="mandateEyebrow">Target mandates</p>
-          <h3 data-i18n="mandateTitle">Where I can step in</h3>
-          <p class="lead" style="font-size:16px;margin-top:0;" data-i18n="mandateText">I am best suited to situations requiring senior cover, acceleration, organisational repair or the governance of complex programmes.</p>
-        </div>
-        <div class="pill-cloud">
-          <span class="pill" data-i18n="mandate1">Temporary CEO, CRO, CPO or CMO cover</span>
-          <span class="pill" data-i18n="mandate2">Post-crisis interim leadership</span>
-          <span class="pill" data-i18n="mandate3">Organisational review</span>
-          <span class="pill" data-i18n="mandate4">Rapid scaling support</span>
-          <span class="pill" data-i18n="mandate5">Strategic programme governance</span>
-          <span class="pill" data-i18n="mandate6">Process digitisation</span>
-          <span class="pill" data-i18n="mandate7">Stakeholder coordination</span>
-          <span class="pill" data-i18n="mandate8">Collaborative delivery model setup</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="wide" id="method">
-      <div>
-        <div class="two-col">
           <div>
-            <p class="eyebrow" data-i18n="methodEyebrow">Method</p>
-            <h2 data-i18n="methodTitle">A clear framework for moving swiftly without sacrificing precision.</h2>
-            <p class="lead" data-i18n="methodText">The approach reduces noise, makes choices intelligible and installs an execution discipline suited to the pace of the business.</p>
+            <div class="kicker">The IVF challenge</div>
+            <p class="statement">
+              IVF can retrieve, fertilize and transfer. It cannot, by itself, confer <span>competence</span> on an embryo.
+            </p>
+            <p class="lead">
+              The meaningful outcome is live birth per intention to treat, read together with risks, cost, time invested and patient experience. ForEve addresses the upstream biological constraint: age related decline in oocyte quality.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="memo">
+        <div class="section-head">
+          <div class="kicker">Strategic memo</div>
+          <h2>Boost success without breaking the IVF chain.</h2>
+          <p>
+            EpicOva is built as an add on to the fertility clinic workflow. The aim is not to replace IVF, but to improve the biological quality of the starting material before fertilization.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card memo-card">
+            <h3>Better</h3>
+            <p><strong>More mature eggs.</strong> The product thesis is to recover immature or unstable oocytes by improving cellular quality before IVF or ICSI.</p>
+          </article>
+          <article class="card memo-card">
+            <h3>Faster</h3>
+            <p><strong>Shorter IVF journey.</strong> More usable oocytes per retrieval may reduce the need for repeated stimulation and retrieval cycles.</p>
+          </article>
+          <article class="card memo-card">
+            <h3>Cheaper</h3>
+            <p><strong>Lower cost per baby.</strong> The business logic targets time to baby, dollars per baby and life disruption.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="science">
+        <div class="section-head">
+          <div class="kicker">Science</div>
+          <h2>Targeting the root cause of egg aging.</h2>
+          <p>
+            ForEve’s research links oocyte aging to heterochromatin loss, retrotransposon activation and DNA damage. The therapeutic logic is to restore chromatin regulation, repress retrotransposons and improve oocyte function.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Mechanism</h3>
+            <p>With age, oocytes lose heterochromatin structure. This weakens silencing and transcriptional control, which can impair cellular function.</p>
+          </article>
+          <article class="card">
+            <h3>Damage</h3>
+            <p>Retrotransposon activity increases in old oocytes and can contribute to DNA damage and loss of cellular functionality.</p>
+          </article>
+          <article class="card">
+            <h3>Recovery</h3>
+            <p>ForEve’s preclinical work aims to enhance heterochromatin and reduce retrotransposon expression in aged oocytes.</p>
+          </article>
+        </div>
+
+        <div class="science-visual">
+          <img src="assets/science-enhancing-heterochromatin.jpg" alt="ForEve scientific data on enhancing heterochromatin and oocyte recovery" />
+        </div>
+
+        <div class="image-split">
+          <div class="image-tile">
+            <img src="assets/ivf-microscopy.jpg" alt="Microscopy image of IVF cell handling" />
+            <div class="caption">Designed to fit into IVF workflows</div>
+          </div>
+          <div class="image-tile">
+            <img src="assets/embryo-microscopy.jpg" alt="Microscopy image of early embryo development" />
+            <div class="caption">Focused on cellular competence</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="platform" class="soft-band">
+        <div class="band-inner">
+          <div>
+            <div class="kicker">Platform</div>
+            <h2>From EpicOva to an epigenetic cell rejuvenation platform.</h2>
+            <p class="lead">
+              The first program targets oocytes because the unmet need is clear, measurable and deeply human. The broader platform vision extends to T cell augmentation, tissue transplantation and ocular dystrophy after validation of the core rejuvenation logic.
+            </p>
           </div>
 
           <div class="steps">
-            <div class="step"><div class="number">1</div><div><h3 data-i18n="step1Title">Diagnosis of the real situation</h3><p data-i18n="stepText">Each step is designed to produce a concrete and immediately usable output.</p></div></div>
-            <div class="step"><div class="number">2</div><div><h3 data-i18n="step2Title">Identification of critical priorities</h3><p data-i18n="stepText">Each step is designed to produce a concrete and immediately usable output.</p></div></div>
-            <div class="step"><div class="number">3</div><div><h3 data-i18n="step3Title">Concise and measurable action plan</h3><p data-i18n="stepText">Each step is designed to produce a concrete and immediately usable output.</p></div></div>
-            <div class="step"><div class="number">4</div><div><h3 data-i18n="step4Title">Alignment of key teams</h3><p data-i18n="stepText">Each step is designed to produce a concrete and immediately usable output.</p></div></div>
-            <div class="step"><div class="number">5</div><div><h3 data-i18n="step5Title">Follow-up on decisions and outcomes</h3><p data-i18n="stepText">Each step is designed to produce a concrete and immediately usable output.</p></div></div>
+            <article class="step">
+              <div class="step-num">01</div>
+              <div>
+                <h3>Restore heterochromatin</h3>
+                <p>Target epigenetic modifiers to rebuild chromatin organization in aged cells.</p>
+              </div>
+            </article>
+            <article class="step">
+              <div class="step-num">02</div>
+              <div>
+                <h3>Repress retrotransposons</h3>
+                <p>Reduce harmful retrotransposon activity associated with loss of oocyte function.</p>
+              </div>
+            </article>
+            <article class="step">
+              <div class="step-num">03</div>
+              <div>
+                <h3>Improve cell quality</h3>
+                <p>Measure whether treated oocytes show improved maturation and downstream fertilization potential.</p>
+              </div>
+            </article>
+            <article class="step">
+              <div class="step-num">04</div>
+              <div>
+                <h3>Fit existing IVF</h3>
+                <p>Supplement the in vitro maturation culture medium with EpicOva, without disrupting the core clinical chain.</p>
+              </div>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="credentials">
-      <div class="intro">
-        <p class="eyebrow" data-i18n="credEyebrow">Credentials</p>
-        <h2 data-i18n="credTitle">A background combining executive practice, technical education and international exposure.</h2>
-      </div>
-
-      <div class="cap-grid">
-        <article class="credential-card">
-          <h3 data-i18n="cred1Title">Education</h3>
-          <ul>
-            <li data-i18n="cred1Item1">Master of Science, Telecommunications & Management, Télécom Paris</li>
-            <li data-i18n="cred1Item2">Master in Business Administration, KEDGE</li>
-          </ul>
-        </article>
-
-        <article class="credential-card">
-          <h3 data-i18n="cred2Title">Languages</h3>
-          <ul>
-            <li data-i18n="cred2Item1">French, native</li>
-            <li data-i18n="cred2Item2">English, fluent professional use</li>
-            <li data-i18n="cred2Item4">Spanish, intermediate</li>
-          </ul>
-        </article>
-
-        <article class="credential-card">
-          <h3 data-i18n="cred3Title">Other markers</h3>
-          <ul>
-            <li data-i18n="cred3Item1">Reserve officer</li>
-            <li data-i18n="cred3Item2">Ski instructor</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="contact-box">
-        <div class="contact-text">
-          <p class="eyebrow" data-i18n="contactEyebrow">Contact</p>
-          <h2 data-i18n="contactTitle">Let’s discuss your situation.</h2>
-          <p class="lead" data-i18n="contactText">An initial conversation helps clarify the context, identify priorities and determine the most appropriate form of support.</p>
-          <a class="contact-link" href="mailto:david.alimi@telecom-paristech.org">✉ david.alimi@telecom-paristech.org</a>
-          <a class="contact-link" href="tel:+33628229174">☎ +33 628 229 174</a>
-          <a class="contact-link" href="https://www.linkedin.com/in/davidalimi" target="_blank" rel="noopener">in linkedin.com/in/davidalimi</a>
+      <section id="impact">
+        <div class="section-head">
+          <div class="kicker">Potential impact</div>
+          <h2>More viable eggs can change the IVF journey.</h2>
+          <p>
+            ForEve’s first program aims to improve what matters before repeated cycles begin: the quality and availability of oocytes.
+          </p>
         </div>
 
-        <form action="https://formsubmit.co/david.alimi@telecom-paristech.org" method="POST">
-          <input type="hidden" name="_subject" value="New message from David Alimi website">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="text" name="_honey" style="display:none">
-          <label for="name" data-i18n="formName">Name</label>
-          <input id="name" name="name" data-placeholder-key="namePlaceholder" placeholder="Your name" required />
+        <div class="impact-grid">
+          <article class="card highlight">
+            <h3>For patients</h3>
+            <p>A higher number of viable eggs per retrieval may reduce the number of cycles needed, the exposure to repeated drug treatments, the waiting time and the financial pressure of care.</p>
+            <div class="mini-list">
+              <div class="mini-item"><span class="mini-dot">✓</span><span>Potentially fewer retrieval cycles.</span></div>
+              <div class="mini-item"><span class="mini-dot">✓</span><span>Potentially lower treatment burden.</span></div>
+              <div class="mini-item"><span class="mini-dot">✓</span><span>A clearer path toward live birth oriented outcomes.</span></div>
+            </div>
+          </article>
 
-          <label for="email" data-i18n="formEmail">Email</label>
-          <input id="email" name="email" type="email" data-placeholder-key="emailPlaceholder" placeholder="your@email.com" required />
+          <article class="card">
+            <h3>For clinics</h3>
+            <p>The intended product logic is to integrate into existing IVF workflows, rather than force clinics to rebuild their infrastructure.</p>
+            <div class="mini-list">
+              <div class="mini-item"><span class="mini-dot">✓</span><span>Designed around familiar in vitro handling.</span></div>
+              <div class="mini-item"><span class="mini-dot">✓</span><span>Aligned with measurable quality outcomes.</span></div>
+              <div class="mini-item"><span class="mini-dot">✓</span><span>Built for a translational development path.</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
 
-          <label for="message" data-i18n="formMessage">Message</label>
-          <textarea id="message" name="message" data-placeholder-key="messagePlaceholder" placeholder="Briefly describe your need" required></textarea>
+      <section id="team">
+        <div class="section-head">
+          <div class="kicker">Team</div>
+          <h2>Built by founders with science, medicine and execution depth.</h2>
+          <p>
+            ForEve combines epigenetics, reproductive biology, clinical translation and company building, with a core team anchored around HUJI research capabilities and fertility expertise.
+          </p>
+        </div>
 
-          <button class="button primary" style="width:100%;border:none;cursor:pointer;" type="submit" data-i18n="formSubmit">Send message</button>
-          <p class="form-note" data-i18n="formNote">This form sends your message directly to David Alimi by email.</p>
-        </form>
-      </div>
-    </section>
-  </main>
+        <div class="team-grid">
+          <article class="person-card">
+            <div class="person-photo">
+              <img src="assets/team-michael-klutstein.png" alt="Prof. Michael Klutstein" />
+            </div>
+            <div class="person-body">
+              <h3>Prof. Michael Klutstein</h3>
+              <div class="role">CSO and Cofounder</div>
+              <p>Head of the Chromatin and Aging Research Lab at HUJI, with over 20 years of experience in epigenetics and reproduction research.</p>
+            </div>
+          </article>
 
-  <footer>
-    © 2026 <span data-i18n="brand">David Alimi</span>. <span data-i18n="footer">All rights reserved.</span>
-  </footer>
+          <article class="person-card">
+            <div class="person-photo">
+              <img src="assets/team-david-alimi.png" alt="David Alimi" />
+            </div>
+            <div class="person-body">
+              <h3>David Alimi</h3>
+              <div class="role">CEO and Cofounder</div>
+              <p>MSc, MBA, second time founder and three time CEO, with proven execution experience in regulated and complex environments.</p>
+            </div>
+          </article>
+
+          <article class="person-card">
+            <div class="person-photo">
+              <img src="assets/team-peera-wasserzug-pash.jpg" alt="Dr. Peera Wasserzug Pash" />
+            </div>
+            <div class="person-body">
+              <h3>Dr. Peera Wasserzug Pash</h3>
+              <div class="role">Cofounder</div>
+              <p>PhD in reproductive biology, expert in oocyte aging and epigenetics.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="grid-2 core-team">
+          <article class="card">
+            <h3>Core team</h3>
+            <div class="advisor-row">
+              <span class="pill">Dr. Lior Onn Soreq, Principal Investigator</span>
+              <span class="pill">Dr. David Kulack, CMO, TBC</span>
+              <span class="pill">Dr. Sandrine Ben Amram, QC Supervision</span>
+              <span class="pill">Dr. Peera Wasserzug, Consultant</span>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Advisory network, TBC</h3>
+            <div class="advisor-row">
+              <span class="pill">Prof. Howard Cedar</span>
+              <span class="pill">Prof. Sara Eyal</span>
+              <span class="pill">Prof. Francesca E. Duncan</span>
+              <span class="pill">Dr. Tal Inbar</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="roadmap">
+        <div class="section-head">
+          <div class="kicker">Development plan</div>
+          <h2>A staged path to de risk the platform.</h2>
+          <p>
+            ForEve is built around a focused first use case, clear biological validation and disciplined translational planning.
+          </p>
+        </div>
+
+        <div class="roadmap">
+          <article class="roadmap-item">
+            <div class="roadmap-time">Near term</div>
+            <div>
+              <h3>Strengthen proof of concept</h3>
+              <p>Refine the EpicOva treatment protocol, confirm biological markers and measure the impact on oocyte quality.</p>
+            </div>
+          </article>
+          <article class="roadmap-item">
+            <div class="roadmap-time">Next stage</div>
+            <div>
+              <h3>Reach GLP readiness</h3>
+              <p>Prepare the scientific, regulatory and operational basis for a fertility focused development program.</p>
+            </div>
+          </article>
+          <article class="roadmap-item">
+            <div class="roadmap-time">Platform path</div>
+            <div>
+              <h3>Expand to other cell types</h3>
+              <p>Use the oocyte program to validate the broader logic of epigenetic cell rejuvenation across high value applications.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="grid-2">
+          <article class="card">
+            <h3>Scientific partners</h3>
+            <p>ForEve is open to conversations with researchers, clinicians and translational teams working at the intersection of fertility, cell biology and aging.</p>
+          </article>
+          <article class="card">
+            <h3>Investors</h3>
+            <p>ForEve combines a clear clinical entry point, a large human need and a platform ambition in epigenetic cell rejuvenation.</p>
+          </article>
+        </div>
+
+        <div class="contact">
+          <div>
+            <h2>Let’s expand women’s fertility lifespan.</h2>
+            <p>For partnerships, scientific discussions or investor conversations, contact the ForEve Labs team.</p>
+          </div>
+          <a class="button" href="mailto:david@foreve.life">david@foreve.life</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> ForEve Labs. All rights reserved.</div>
+      <div>Research stage technology. Not approved for clinical use.</div>
+    </footer>
+  </div>
 
   <script>
-    let currentLanguage = "en";
-
-    const translations = {
-      en: {
-        brand: "David Alimi",
-        tagline: "Interim leadership, B2B growth and transformation",
-        navPositioning: "Positioning",
-        navExpertise: "Expertise",
-        navAbout: "About me",
-        navTrack: "Track record",
-        navCapabilities: "Capabilities",
-        navMethod: "Method",
-        navCredentials: "Credentials",
-        navContact: "Contact",
-        navCta: "Contact me",
-
-        heroBadge: "Interim executive · Fractional CMO, CRO, CPO · Strategic programmes",
-        heroTitle: "I help organisations turn complex transitions into focused execution and measurable progress.",
-        heroText: "I operate where clarity, pace and senior judgement are needed: temporary executive cover, transformation, go-to-market acceleration, organisational redesign and cross-company strategic programmes.",
-        heroPrimary: "Discuss a mission",
-        heroSecondary: "View selected assignments",
-
-        approachEyebrow: "Operating stance",
-        approachTitle: "Clarity, execution, transfer",
-        approachText: "A useful mission starts with a grounded reading of the situation. It then moves into a clear operating frame, sound decisions and consistent monitoring of outcomes.",
-        point1: "Fast diagnosis",
-        point2: "Visible priorities",
-        point3: "Measurable execution",
-        point4: "Knowledge transfer to teams",
-
-        stat1: "years of executive, commercial, product and transformation experience.",
-        stat2: "general management, GTM leadership, product, revenue and strategic programme roles.",
-        stat3: "international assignments in multicultural, multi-site and complex environments.",
-
-        expertiseEyebrow: "Expertise",
-        expertiseTitle: "Executive support when the business needs clarity, structure and momentum.",
-        expertiseText: "I intervene in moments where the organisation must strengthen operating discipline, accelerate revenue, redesign its model or align strategy, operations and teams.",
-        card1Title: "Executive cover",
-        card1Text: "CEO, CRO, CPO, CMO or strategic programme leadership when a company needs temporary senior capacity.",
-        card2Title: "Growth and GTM",
-        card2Text: "Go-to-market design, revenue architecture, partner models, enterprise accounts and B2B or B2B2C acceleration.",
-        card3Title: "Transformation and turnaround",
-        card3Text: "Restructuring, crisis response, operational optimisation, organisation redesign and recovery of execution discipline.",
-        card4Title: "Digital and product leadership",
-        card4Text: "Product strategy, innovation leadership, digital transformation, collaborative tooling and high-stakes project delivery.",
-
-        humanEyebrow: "About me",
-        humanTitle: "A pragmatic executive shaped by business, sport and periods of transition.",
-        humanText1: "My career has been shaped in demanding, often international environments in which I had to understand quickly, decide with clarity and build trust through action.",
-        humanText2: "I have led, sold, structured, transformed and, at times, started again. These experiences have taught me that organisations do not move forward through tools and plans alone. They progress when people understand the direction, their role and the logic behind decisions.",
-        humanText3: "As a former elite athlete and ski instructor, I have retained a practical relationship with effort, transmission and progression. This culture shapes the way I support leaders and teams, with high standards, attentive listening and a strong sense of pace.",
-        humanPoint1: "Executive and entrepreneurial experience",
-        humanPoint2: "Grounded execution mindset",
-        humanPoint3: "Commitment to mentoring and knowledge transfer",
-        humanPoint4: "International perspective",
-
-        trackEyebrow: "Selected assignments",
-        trackTitle: "A portfolio of executive roles with measurable outcomes.",
-        trackText: "The following assignments start with the most recent entrepreneurial experience, followed by major executive and transformation roles.",
-        trackAdvisory: "Since 2008, my work has combined operational advisory and interim management assignments across technology, telecom, SaaS, digital and industrial environments. I step in when leadership capacity is missing, or when a CEO needs a senior operator to stabilise a situation, redesign a model, accelerate go to market, structure a strategic programme or navigate a sensitive phase. Across mandates such as Trivnet, Convergys, Hot, Intracom, Communithings and Camarai, the same pattern emerges: enter quickly, clarify the issues, align stakeholders, build an executable plan and transfer the method to the organisation.",
-
-        case1Title: "General Manager EMEA · Maytronics",
-        case1Role: "European subsidiary of a global market leader, transformed into a strategic EMEA platform.",
-        case1Text: "Led Maytronics Europe, with more than 200 employees and a 200M+ P&L. Member of the Group Executive Committee.",
-        case1Metric1: "+30% revenue growth",
-        case1Metric2: "Improved margin",
-        case1Metric3: "Regional platform",
-
-        case2Title: "VP Go-To-Market & Operations EMEA · Netformx",
-        case2Role: "SaaS company facing deployment issues, high churn and limited partner performance visibility.",
-        case2Text: "Led EMEA go-to-market and operations across UK, Benelux, DACH and France, covering sales, support, account management and digital marketing.",
-        case2Metric1: "+15% ARR",
-        case2Metric2: "Churn below 10%",
-        case2Metric3: "Pilot EMEA model",
-
-        case3Title: "CEO · Meteor Networks",
-        case3Role: "Technology SME in WiFi and WiMax with stagnation, governance issues and untapped potential.",
-        case3Text: "Held a full CEO mandate across strategy, organisation, finance, HR, innovation and sales.",
-        case3Metric1: "Revenue doubled",
-        case3Metric2: "EBITDA x2",
-        case3Metric3: "€5.2M funding",
-
-        case4Title: "Associate VP Global Account · Comverse",
-        case4Role: "Global telecom group seeking to strengthen the relationship with Orange through integrated account leadership.",
-        case4Text: "Initiated and ran a virtual Global Account Management model, coordinating global account activity and platform deployments.",
-        case4Metric1: "$60M revenue",
-        case4Metric2: "Global account model",
-        case4Metric3: "Reduced internal friction",
-
-        case5Title: "Marketing Director · ECI Telecom",
-        case5Role: "International go-to-market leadership across telecom markets, channels and strategic accounts.",
-        case5Text: "Led a global GTM structure across more than 70 countries, supported major accounts and built channel partnerships.",
-        case5Metric1: "70+ countries",
-        case5Metric2: "60+ partnerships",
-        case5Metric3: "Pipeline x2.6",
-
-        case6Title: "Founder & CEO · ForEve Labs",
-        case6Role: "Deeptech and life science venture built from vision, product strategy and operational roadmap.",
-        case6Text: "Defined the company vision, built the strategic and operational roadmap, led product strategy and secured initial funding.",
-        case6Metric1: "Venture creation",
-        case6Metric2: "Product strategy",
-        case6Metric3: "Initial funding",
-
-        capEyebrow: "Capabilities",
-        capTitle: "A skill set built for interim leadership and complex execution.",
-        capText: "The portfolio combines functional depth with the behavioural strengths required to lead in uncertain or high-pressure settings.",
-        cap1Title: "Core strengths",
-        cap1Item1: "Strategic repositioning",
-        cap1Item2: "Multidisciplinary team leadership",
-        cap1Item3: "B2B and B2B2C go-to-market",
-        cap1Item4: "Programme structuring",
-        cap2Title: "Specialist areas",
-        cap2Item1: "Innovation leadership",
-        cap2Item2: "Product launch and development",
-        cap2Item3: "Digital transformation",
-        cap2Item4: "Operational optimisation",
-        cap3Title: "Relationship strengths",
-        cap3Item1: "Cross-functional leadership",
-        cap3Item2: "Multi-stakeholder facilitation",
-        cap3Item3: "Crisis management and arbitration",
-        cap3Item4: "Intercultural communication",
-
-        mandateEyebrow: "Target mandates",
-        mandateTitle: "Where I can step in",
-        mandateText: "I am best suited to situations requiring senior cover, acceleration, organisational repair or the governance of complex programmes.",
-        mandate1: "Temporary CEO, CRO, CPO or CMO cover",
-        mandate2: "Post-crisis interim leadership",
-        mandate3: "Organisational review",
-        mandate4: "Rapid scaling support",
-        mandate5: "Strategic programme governance",
-        mandate6: "Process digitisation",
-        mandate7: "Stakeholder coordination",
-        mandate8: "Collaborative delivery model setup",
-
-        methodEyebrow: "Method",
-        methodTitle: "A clear framework for moving swiftly without sacrificing precision.",
-        methodText: "The approach reduces noise, makes choices intelligible and installs an execution discipline suited to the pace of the business.",
-        step1Title: "Diagnosis of the real situation",
-        step2Title: "Identification of critical priorities",
-        step3Title: "Concise and measurable action plan",
-        step4Title: "Alignment of key teams",
-        step5Title: "Follow-up on decisions and outcomes",
-        stepText: "Each step is designed to produce a concrete and immediately usable output.",
-
-        credEyebrow: "Credentials",
-        credTitle: "A background combining executive practice, technical education and international exposure.",
-        cred1Title: "Education",
-        cred1Item1: "Master of Science, Telecommunications & Management, Télécom Paris",
-        cred1Item2: "Master in Business Administration, KEDGE",
-        cred2Title: "Languages",
-        cred2Item1: "French, native",
-        cred2Item2: "English, fluent professional use",
-        cred2Item4: "Spanish, intermediate",
-        cred3Title: "Other markers",
-        cred3Item1: "Reserve officer",
-        cred3Item2: "Ski instructor",
-
-        contactEyebrow: "Contact",
-        contactTitle: "Let’s discuss your situation.",
-        contactText: "An initial conversation helps clarify the context, identify priorities and determine the most appropriate form of support.",
-        formName: "Name",
-        formEmail: "Email",
-        formMessage: "Message",
-        formSubmit: "Send message",
-        formNote: "This form sends your message directly to David Alimi by email.",
-        namePlaceholder: "Your name",
-        emailPlaceholder: "your@email.com",
-        messagePlaceholder: "Briefly describe your need",
-        footer: "All rights reserved."
-      },
-
-      fr: {
-        brand: "David Alimi",
-        tagline: "Direction de transition, croissance B2B et transformation",
-        navPositioning: "Positionnement",
-        navExpertise: "Expertises",
-        navAbout: "Qui je suis",
-        navTrack: "Réalisations",
-        navCapabilities: "Compétences",
-        navMethod: "Méthode",
-        navCredentials: "Parcours",
-        navContact: "Contact",
-        navCta: "Me contacter",
-
-        heroBadge: "Manager de transition · Fractional CMO, CRO, CPO · Projets stratégiques",
-        heroTitle: "J’aide les organisations à transformer les périodes complexes en exécution ciblée et en progrès mesurables.",
-        heroText: "J’interviens lorsque l’entreprise a besoin de clarté, de rythme et de jugement senior : direction relais, transformation, accélération go-to-market, réorganisation et pilotage de programmes stratégiques transverses.",
-        heroPrimary: "Discuter d’une mission",
-        heroSecondary: "Voir les réalisations",
-
-        approachEyebrow: "Posture d’intervention",
-        approachTitle: "Clarté, exécution, transmission",
-        approachText: "Une mission utile commence par une lecture concrète de la situation. Elle se poursuit avec un cadre d’action lisible, des décisions assumées et un suivi régulier des résultats.",
-        point1: "Diagnostic rapide",
-        point2: "Priorités visibles",
-        point3: "Exécution mesurable",
-        point4: "Transmission aux équipes",
-
-        stat1: "années d’expérience en direction, commerce, produit et transformation.",
-        stat2: "direction générale, leadership GTM, produit, revenus et programmes stratégiques.",
-        stat3: "interventions internationales dans des environnements multiculturels, multi-sites et complexes.",
-
-        expertiseEyebrow: "Expertises",
-        expertiseTitle: "Un appui de direction quand l’entreprise a besoin de clarté, de structure et de mouvement.",
-        expertiseText: "J’interviens lorsque l’organisation doit renforcer sa discipline d’exécution, accélérer ses revenus, revoir son modèle ou aligner stratégie, opérations et équipes.",
-        card1Title: "Direction relais",
-        card1Text: "DG, CRO, CPO, CMO ou pilotage de programme stratégique quand l’entreprise a besoin d’une capacité senior temporaire.",
-        card2Title: "Croissance et GTM",
-        card2Text: "Design go-to-market, architecture revenus, modèles partenaires, grands comptes et accélération B2B ou B2B2C.",
-        card3Title: "Transformation et redressement",
-        card3Text: "Restructuration, gestion de crise, optimisation opérationnelle, refonte organisationnelle et reprise de la discipline d’exécution.",
-        card4Title: "Digital et produit",
-        card4Text: "Stratégie produit, pilotage de l’innovation, transformation digitale, outils collaboratifs et projets à fort enjeu.",
-
-        humanEyebrow: "Qui je suis",
-        humanTitle: "Un dirigeant pragmatique, construit par l’entreprise, le sport et les transitions.",
-        humanText1: "Mon parcours s’est construit dans des environnements exigeants, souvent internationaux, où il fallait comprendre vite, décider avec lucidité et créer de la confiance dans l’action.",
-        humanText2: "J’ai dirigé, vendu, structuré, transformé et parfois recommencé. Ces expériences m’ont appris qu’une organisation ne progresse pas seulement grâce aux outils ou aux plans. Elle avance quand les personnes comprennent le cap, leur rôle et la logique des décisions.",
-        humanText3: "Ancien sportif de haut niveau, moniteur de ski, je garde un rapport concret à l’effort, à la transmission et à la progression. Cette culture influence ma manière d’accompagner les dirigeants et les équipes, avec exigence, écoute et sens du rythme.",
-        humanPoint1: "Expérience de direction et d’entrepreneuriat",
-        humanPoint2: "Culture du terrain et de l’exécution",
-        humanPoint3: "Goût de la transmission",
-        humanPoint4: "Regard international",
-
-        trackEyebrow: "Réalisations choisies",
-        trackTitle: "Un portefeuille de rôles exécutifs avec résultats mesurables.",
-        trackText: "Ces missions commencent par l’expérience entrepreneuriale la plus récente, puis présentent les principaux rôles de direction, transformation et développement.",
-        trackAdvisory: "Depuis 2008, mon activité combine conseil opérationnel et management de transition auprès d’entreprises technologiques, télécoms, SaaS, digitales et industrielles. J’interviens lorsque la capacité de direction manque, ou lorsqu’un dirigeant doit stabiliser une situation, revoir un modèle, accélérer le go to market, structurer un programme stratégique ou traverser une phase sensible. Des missions menées chez Trivnet, Convergys, Hot, Intracom, Communithings et Camarai ressort un même fil conducteur : entrer vite dans le sujet, clarifier les enjeux, aligner les parties prenantes, construire un plan exécutable et transmettre la méthode à l’organisation.",
-
-        case1Title: "Direction Générale EMEA · Maytronics",
-        case1Role: "Filiale européenne d’un leader mondial, transformée en plateforme stratégique EMEA.",
-        case1Text: "Direction de Maytronics Europe, avec plus de 200 collaborateurs et un P&L supérieur à 200M. Membre du Comité Exécutif Groupe.",
-        case1Metric1: "+30% de croissance CA",
-        case1Metric2: "Marge améliorée",
-        case1Metric3: "Plateforme régionale",
-
-        case2Title: "VP Go-To-Market & Operations EMEA · Netformx",
-        case2Role: "Éditeur SaaS confronté à un modèle de déploiement inadapté, un churn élevé et une faible visibilité partenaires.",
-        case2Text: "Direction du go-to-market et des opérations EMEA, UK, Benelux, DACH et France, avec supervision ventes, support, account management et marketing digital.",
-        case2Metric1: "+15% ARR",
-        case2Metric2: "Churn sous 10%",
-        case2Metric3: "Modèle pilote EMEA",
-
-        case3Title: "Direction générale · Meteor Networks",
-        case3Role: "PME technologique WiFi et WiMax en stagnation, avec gouvernance dysfonctionnelle et potentiel inexploité.",
-        case3Text: "Mandat complet de direction générale couvrant stratégie, organisation, finance, RH, innovation et commercial.",
-        case3Metric1: "CA doublé",
-        case3Metric2: "EBITDA x2",
-        case3Metric3: "5,2M€ levés",
-
-        case4Title: "Associate VP Global Account · Comverse",
-        case4Role: "Groupe international des télécoms cherchant à renforcer la relation avec Orange via un pilotage grands comptes intégré.",
-        case4Text: "Création et animation d’un modèle virtuel de Global Account Management, avec coordination grands comptes et déploiement de plateformes.",
-        case4Metric1: "60M$ revenus",
-        case4Metric2: "Modèle GAM global",
-        case4Metric3: "Frictions réduites",
-
-        case5Title: "Marketing Director · ECI Telecom",
-        case5Role: "Leadership go-to-market international sur marchés télécom, canaux et grands comptes stratégiques.",
-        case5Text: "Pilotage d’une structure GTM mondiale dans plus de 70 pays, soutien aux grands comptes et développement de partenariats canaux.",
-        case5Metric1: "70+ pays",
-        case5Metric2: "60+ partenariats",
-        case5Metric3: "Pipeline x2,6",
-
-        case6Title: "Founder & CEO · ForEve Labs",
-        case6Role: "Venture deeptech et life sciences construite autour d’une vision, d’une stratégie produit et d’une feuille de route opérationnelle.",
-        case6Text: "Définition de la vision, construction de la feuille de route stratégique et opérationnelle, pilotage de la stratégie produit et sécurisation du financement initial.",
-        case6Metric1: "Création venture",
-        case6Metric2: "Stratégie produit",
-        case6Metric3: "Financement initial",
-
-        capEyebrow: "Compétences",
-        capTitle: "Un socle construit pour le management de transition et l’exécution complexe.",
-        capText: "Le portefeuille combine profondeur fonctionnelle et aptitudes comportementales nécessaires aux environnements incertains ou sous pression.",
-        cap1Title: "Forces clés",
-        cap1Item1: "Repositionnement stratégique",
-        cap1Item2: "Leadership d’équipes pluridisciplinaires",
-        cap1Item3: "Go-to-market B2B et B2B2C",
-        cap1Item4: "Structuration de programmes",
-        cap2Title: "Spécialisations",
-        cap2Item1: "Pilotage de l’innovation",
-        cap2Item2: "Développement et lancement produit",
-        cap2Item3: "Transformation digitale",
-        cap2Item4: "Optimisation opérationnelle",
-        cap3Title: "Savoir-faire relationnels",
-        cap3Item1: "Leadership transverse",
-        cap3Item2: "Animation multi-acteurs",
-        cap3Item3: "Gestion de crise et arbitrage",
-        cap3Item4: "Communication interculturelle",
-
-        mandateEyebrow: "Missions cibles",
-        mandateTitle: "Où je peux intervenir",
-        mandateText: "Mon profil convient aux situations qui exigent une direction senior, une accélération, une réparation organisationnelle ou la gouvernance de programmes complexes.",
-        mandate1: "Relais temporaire DG, CRO, CPO ou CMO",
-        mandate2: "Management de transition post-crise",
-        mandate3: "Audit organisationnel",
-        mandate4: "Accompagnement de croissance rapide",
-        mandate5: "Gouvernance de programmes stratégiques",
-        mandate6: "Digitalisation de processus",
-        mandate7: "Coordination multi-acteurs",
-        mandate8: "Mise en place de modèles collaboratifs",
-
-        methodEyebrow: "Méthode",
-        methodTitle: "Un cadre clair pour avancer vite sans perdre en précision.",
-        methodText: "La démarche réduit le bruit, rend les choix intelligibles et installe une discipline d’exécution adaptée au rythme de l’entreprise.",
-        step1Title: "Diagnostic de la situation réelle",
-        step2Title: "Identification des priorités critiques",
-        step3Title: "Plan d’action court et mesurable",
-        step4Title: "Alignement des équipes clés",
-        step5Title: "Suivi des décisions et résultats",
-        stepText: "Chaque étape vise un résultat concret et immédiatement exploitable.",
-
-        credEyebrow: "Parcours",
-        credTitle: "Un socle qui combine pratique exécutive, formation technique et exposition internationale.",
-        cred1Title: "Formation",
-        cred1Item1: "Master of Science, Télécommunications & Management, Télécom Paris",
-        cred1Item2: "Master in Business Administration, KEDGE",
-        cred2Title: "Langues",
-        cred2Item1: "Français, langue maternelle",
-        cred2Item2: "Anglais, usage professionnel courant",
-        cred2Item4: "Espagnol, niveau intermédiaire",
-        cred3Title: "Autres marqueurs",
-        cred3Item1: "Officier de réserve",
-        cred3Item2: "Moniteur de ski",
-
-        contactEyebrow: "Contact",
-        contactTitle: "Parlons de votre situation.",
-        contactText: "Un premier échange permet de clarifier le contexte, identifier les priorités et définir la forme d’intervention la plus adaptée.",
-        formName: "Nom",
-        formEmail: "Email",
-        formMessage: "Message",
-        formSubmit: "Envoyer le message",
-        formNote: "Ce formulaire envoie directement votre message à David Alimi par email.",
-        namePlaceholder: "Votre nom",
-        emailPlaceholder: "votre@email.com",
-        messagePlaceholder: "Décrivez brièvement votre besoin",
-        footer: "Tous droits réservés."
-      }
-    };
-
-    function applyLanguage(language) {
-      currentLanguage = language;
-      document.documentElement.lang = language;
-      document.title = language === "fr"
-        ? "David Alimi | Direction de transition, croissance B2B et transformation"
-        : "David Alimi | Interim leadership, B2B growth and transformation";
-
-      document.querySelectorAll("[data-i18n]").forEach(function(element) {
-        const key = element.getAttribute("data-i18n");
-        if (translations[language][key]) {
-          element.textContent = translations[language][key];
-        }
-      });
-
-      document.querySelectorAll("[data-placeholder-key]").forEach(function(element) {
-        const key = element.getAttribute("data-placeholder-key");
-        if (translations[language][key]) {
-          element.setAttribute("placeholder", translations[language][key]);
-        }
-      });
-
-      document.getElementById("langToggle").textContent = language === "fr" ? "EN" : "FR";
-    }
-
-    document.getElementById("langToggle").addEventListener("click", function() {
-      applyLanguage(currentLanguage === "fr" ? "en" : "fr");
-    });
-
-    applyLanguage("en");
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
