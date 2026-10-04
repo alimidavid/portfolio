@@ -465,6 +465,68 @@
       letter-spacing: 0.03em;
     }
 
+    /* ── TIMELINE (fractional assignments) ── */
+    .timeline-header { margin: 100px 0 54px; }
+    .timeline-header h3 {
+      font-family: 'Cormorant', serif;
+      font-size: clamp(26px, 3vw, 36px);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+    .timeline { position: relative; padding: 10px 0 0; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%; top: 6px; bottom: 6px;
+      width: 1px;
+      background: var(--rule);
+      transform: translateX(-50%);
+    }
+    .timeline-row {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 42px 1fr;
+      column-gap: 26px;
+      align-items: start;
+      margin-bottom: 46px;
+    }
+    .timeline-row:last-child { margin-bottom: 0; }
+    .timeline-node {
+      grid-column: 2;
+      grid-row: 1;
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 1.5px solid var(--bronze);
+      color: var(--bronze);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant', serif;
+      font-size: 16px;
+      font-weight: 600;
+      z-index: 2;
+    }
+    .timeline-row.left .timeline-content { grid-column: 1; grid-row: 1; text-align: right; }
+    .timeline-row.right .timeline-content { grid-column: 3; grid-row: 1; text-align: left; }
+    .timeline-company {
+      font-family: 'Cormorant', serif;
+      font-size: 21px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+    .timeline-company span { color: var(--muted); font-weight: 400; font-size: 15px; }
+    .timeline-role {
+      font-size: 12px;
+      color: var(--bronze);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin: 4px 0 6px;
+    }
+    .timeline-meta { font-size: 11.5px; color: var(--muted); margin-bottom: 10px; }
+    .timeline-text { font-size: 13.5px; color: var(--ink-2); line-height: 1.65; }
+
     /* ── CAPABILITIES ────────────────────── */
     .cap-grid {
       display: grid;
@@ -760,6 +822,17 @@
       .mandate-box { grid-template-columns: 1fr; }
       .contact-text, .contact-form { padding: 36px 24px; }
       footer { padding: 24px 20px; }
+      .timeline::before { left: 19px; }
+      .timeline-row {
+        grid-template-columns: 38px 1fr;
+        column-gap: 16px;
+      }
+      .timeline-node { grid-column: 1; }
+      .timeline-row.left .timeline-content,
+      .timeline-row.right .timeline-content {
+        grid-column: 2;
+        text-align: left;
+      }
     }
   </style>
 </head>
@@ -1032,6 +1105,92 @@
           </div>
         </div>
       </div>
+
+      <div class="timeline-header fade">
+        <p class="eyebrow" data-i18n="timelineEyebrow">Since 2009</p>
+        <h3 data-i18n="timelineTitle">Interim and fractional assignments</h3>
+      </div>
+      <div class="timeline">
+        <div class="timeline-row left fade">
+          <div class="timeline-content">
+            <div class="timeline-company">Camarai <span>(Apple)</span></div>
+            <div class="timeline-role" data-i18n="tl1Role">Strategic Advisor to the CEO</div>
+            <div class="timeline-meta" data-i18n="tl1Meta">18 months · June 2017 – Dec 2018</div>
+            <p class="timeline-text" data-i18n="tl1Text">Advised and supported the CEO in transforming the company, culminating in its acquisition by Apple.</p>
+          </div>
+          <div class="timeline-node">1</div>
+        </div>
+
+        <div class="timeline-row right fade">
+          <div class="timeline-node">2</div>
+          <div class="timeline-content">
+            <div class="timeline-company">Communithings <span>(Orange)</span></div>
+            <div class="timeline-role" data-i18n="tl2Role">Marketing Director</div>
+            <div class="timeline-meta" data-i18n="tl2Meta">7 months · Jan – June 2014</div>
+            <p class="timeline-text" data-i18n="tl2Text">Advised and supported the CEO through the strategic pivot and investor outreach, leading to the funding round with Orange Ventures.</p>
+          </div>
+        </div>
+
+        <div class="timeline-row left fade">
+          <div class="timeline-content">
+            <div class="timeline-company">Intracom</div>
+            <div class="timeline-role" data-i18n="tl3Role">EMEA Sales Director</div>
+            <div class="timeline-meta" data-i18n="tl3Meta">12 months · Aug 2012 – Aug 2013</div>
+            <p class="timeline-text" data-i18n="tl3Text">Built a partnership strategy and proposal to win the HP account, signing an OEM contract within a year.</p>
+          </div>
+          <div class="timeline-node">3</div>
+        </div>
+
+        <div class="timeline-row right fade">
+          <div class="timeline-node">4</div>
+          <div class="timeline-content">
+            <div class="timeline-company">Hot <span>(Altice)</span></div>
+            <div class="timeline-role" data-i18n="tl4Role">Embedded Strategic Operator</div>
+            <div class="timeline-meta" data-i18n="tl4Meta">12 months · July 2011 – July 2012</div>
+            <p class="timeline-text" data-i18n="tl4Text">Oversaw, on behalf of the shareholder, the carve-in integration of the acquired subsidiary (€550M).</p>
+          </div>
+        </div>
+
+        <div class="timeline-row left fade">
+          <div class="timeline-content">
+            <div class="timeline-company">Convergys</div>
+            <div class="timeline-role" data-i18n="tl5Role">Reorganization Implementation Lead</div>
+            <div class="timeline-meta" data-i18n="tl5Meta">5 months · Aug – Dec 2010</div>
+            <p class="timeline-text" data-i18n="tl5Text">Conducted a business-unit assessment and redesigned the sales organization and compensation models.</p>
+          </div>
+          <div class="timeline-node">5</div>
+        </div>
+
+        <div class="timeline-row right fade">
+          <div class="timeline-node">6</div>
+          <div class="timeline-content">
+            <div class="timeline-company">Trivnet <span>(Gemplus)</span></div>
+            <div class="timeline-role" data-i18n="tl6Role">Head of Strategic Pursuits</div>
+            <div class="timeline-meta" data-i18n="tl6Meta">16 months · Jan 2009 – Apr 2010</div>
+            <p class="timeline-text" data-i18n="tl6Text">Coached and supported the CRO in securing Orange as a strategic client, leading to the sale to Gemplus.</p>
+          </div>
+        </div>
+
+        <div class="timeline-row left fade">
+          <div class="timeline-content">
+            <div class="timeline-company">SpeedLingua</div>
+            <div class="timeline-role" data-i18n="tl7Role">Senior Advisor to the CEO</div>
+            <div class="timeline-meta" data-i18n="tl7Meta">4 months · Mar – June 2009</div>
+            <p class="timeline-text" data-i18n="tl7Text">Coached the sales team.</p>
+          </div>
+          <div class="timeline-node">7</div>
+        </div>
+
+        <div class="timeline-row right fade">
+          <div class="timeline-node">8</div>
+          <div class="timeline-content">
+            <div class="timeline-company">eLyon <span>(FDJ)</span></div>
+            <div class="timeline-role" data-i18n="tl8Role">Project Implementation Director</div>
+            <div class="timeline-meta" data-i18n="tl8Meta">6 months · Sep 2009 – Feb 2010</div>
+            <p class="timeline-text" data-i18n="tl8Text">Oversaw the deployment of satellite infrastructure and 2,500 VSATs in Côte d'Ivoire for the launch of the Africa Million.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ── CAPABILITIES ── -->
@@ -1258,7 +1417,7 @@
         trackEyebrow: "Selected assignments",
         trackTitle: "A portfolio of executive roles with measurable outcomes.",
         trackText: "The following assignments illustrate the range of contexts, responsibilities and results across major executive and transformation roles.",
-        trackAdvisory: "Since 2008, my work has combined operational advisory and interim management assignments across technology, telecom, SaaS, digital and industrial environments. I step in when leadership capacity is missing, or when a CEO needs a senior operator to stabilise a situation, redesign a model, accelerate go to market, structure a strategic programme or navigate a sensitive phase. Across mandates such as Trivnet, Convergys, Hot, Intracom, Communithings and Camarai, the same pattern emerges: enter quickly, clarify the issues, align stakeholders, build an executable plan and transfer the method to the organisation.",
+        trackAdvisory: "Since 2008, my work has combined operational advisory and interim management assignments across technology, telecom, SaaS, digital and industrial environments. I step in when leadership capacity is missing, or when a CEO needs a senior operator to stabilise a situation, redesign a model, accelerate go to market, structure a strategic programme or navigate a sensitive phase. Across the assignments below, the same pattern emerges: enter quickly, clarify the issues, align stakeholders, build an executable plan and transfer the method to the organisation.",
 
         case1Title: "Founder &amp; CEO · ForEve Labs",
         case1Role: "Pre-seed biotech venture developing an epigenetic therapy approach to improve egg quality for IVF.",
@@ -1299,6 +1458,33 @@
         case8Role: "Technical sales role supporting major RFP processes for telecom operator accounts.",
         case8Text: "Led the RFP process and negotiation on strategic bids, winning four major contracts worth more than $20M per year in combined annual value.",
         case8Metric1: "4 strategic bids won", case8Metric2: "$20M+/year", case8Metric3: "2 years",
+
+        timelineEyebrow: "Since 2009",
+        timelineTitle: "Interim and fractional assignments",
+        tl1Role: "Strategic Advisor to the CEO",
+        tl1Meta: "18 months · June 2017 – Dec 2018",
+        tl1Text: "Advised and supported the CEO in transforming the company, culminating in its acquisition by Apple.",
+        tl2Role: "Marketing Director",
+        tl2Meta: "7 months · Jan – June 2014",
+        tl2Text: "Advised and supported the CEO through the strategic pivot and investor outreach, leading to the funding round with Orange Ventures.",
+        tl3Role: "EMEA Sales Director",
+        tl3Meta: "12 months · Aug 2012 – Aug 2013",
+        tl3Text: "Built a partnership strategy and proposal to win the HP account, signing an OEM contract within a year.",
+        tl4Role: "Embedded Strategic Operator",
+        tl4Meta: "12 months · July 2011 – July 2012",
+        tl4Text: "Oversaw, on behalf of the shareholder, the carve-in integration of the acquired subsidiary (€550M).",
+        tl5Role: "Reorganization Implementation Lead",
+        tl5Meta: "5 months · Aug – Dec 2010",
+        tl5Text: "Conducted a business-unit assessment and redesigned the sales organization and compensation models.",
+        tl6Role: "Head of Strategic Pursuits",
+        tl6Meta: "16 months · Jan 2009 – Apr 2010",
+        tl6Text: "Coached and supported the CRO in securing Orange as a strategic client, leading to the sale to Gemplus.",
+        tl7Role: "Senior Advisor to the CEO",
+        tl7Meta: "4 months · Mar – June 2009",
+        tl7Text: "Coached the sales team.",
+        tl8Role: "Project Implementation Director",
+        tl8Meta: "6 months · Sep 2009 – Feb 2010",
+        tl8Text: "Oversaw the deployment of satellite infrastructure and 2,500 VSATs in Côte d'Ivoire for the launch of the Africa Million.",
 
         capEyebrow: "Capabilities",
         capTitle: "A skill set built for interim leadership and complex execution.",
@@ -1398,7 +1584,7 @@
         trackEyebrow: "Réalisations choisies",
         trackTitle: "Un portefeuille de rôles exécutifs avec résultats mesurables.",
         trackText: "Ces missions illustrent l'étendue des contextes, responsabilités et résultats dans les principaux rôles de direction et de transformation.",
-        trackAdvisory: "Depuis 2008, mon activité combine conseil opérationnel et management de transition auprès d'entreprises technologiques, télécoms, SaaS, digitales et industrielles. J'interviens lorsque la capacité de direction manque, ou lorsqu'un dirigeant doit stabiliser une situation, revoir un modèle, accélérer le go to market, structurer un programme stratégique ou traverser une phase sensible. Des missions menées chez Trivnet, Convergys, Hot, Intracom, Communithings et Camarai ressort un même fil conducteur : entrer vite dans le sujet, clarifier les enjeux, aligner les parties prenantes, construire un plan exécutable et transmettre la méthode à l'organisation.",
+        trackAdvisory: "Depuis 2008, mon activité combine conseil opérationnel et management de transition auprès d'entreprises technologiques, télécoms, SaaS, digitales et industrielles. J'interviens lorsque la capacité de direction manque, ou lorsqu'un dirigeant doit stabiliser une situation, revoir un modèle, accélérer le go to market, structurer un programme stratégique ou traverser une phase sensible. Des missions ci-dessous ressort un même fil conducteur : entrer vite dans le sujet, clarifier les enjeux, aligner les parties prenantes, construire un plan exécutable et transmettre la méthode à l'organisation.",
 
         case1Title: "Fondateur &amp; Directeur Général · ForEve Labs",
         case1Role: "Start-up biotech pre-seed développant une approche de thérapie épigénétique pour améliorer la qualité des ovocytes en FIV.",
@@ -1439,6 +1625,33 @@
         case8Role: "Rôle commercial technique en soutien des processus d'appels d'offres pour les grands comptes opérateurs télécom.",
         case8Text: "Pilotage du processus de soumission et de négociation de RFP stratégiques, remportant quatre appels d'offres majeurs générant plus de 20M$ par an.",
         case8Metric1: "4 appels d'offres gagnés", case8Metric2: "20M$+/an", case8Metric3: "2 ans",
+
+        timelineEyebrow: "Depuis 2009",
+        timelineTitle: "Missions d'intérim et fractional",
+        tl1Role: "Strategic Advisor to the CEO",
+        tl1Meta: "18 mois · 06/2017 – 12/2018",
+        tl1Text: "Conseille et accompagne le CEO en vue de transformer l'entreprise jusqu'à la cession à Apple.",
+        tl2Role: "Marketing Director",
+        tl2Meta: "7 mois · 01/2014 – 06/2014",
+        tl2Text: "Conseille et accompagne le CEO dans le pivot stratégique et les démarches auprès d'investisseurs jusqu'à la levée de fonds avec Orange Ventures.",
+        tl3Role: "EMEA Sales Director",
+        tl3Meta: "12 mois · 08/2012 – 08/2013",
+        tl3Text: "Construit une stratégie de partenariat et une offre pour pénétrer le compte HP et signe un contrat d'OEM en moins d'un an.",
+        tl4Role: "Embedded Strategic Operator",
+        tl4Meta: "12 mois · 07/2011 – 07/2012",
+        tl4Text: "Supervise pour le compte de l'actionnaire les opérations de rattachement (Carve In) de la filiale acquise (550 M€).",
+        tl5Role: "Reorganization Implementation Lead",
+        tl5Meta: "5 mois · 08/2010 – 12/2010",
+        tl5Text: "Réalise un diagnostic de l'unité d'affaires et reformule l'organisation commerciale et les modèles de rémunération.",
+        tl6Role: "Head of Strategic Pursuits",
+        tl6Meta: "16 mois · 01/2009 – 04/2010",
+        tl6Text: "Coache et accompagne le CRO dans l'acquisition d'Orange comme client stratégique déclenchant la cession à Gemplus.",
+        tl7Role: "Senior Advisor to the CEO",
+        tl7Meta: "4 mois · 03/2009 – 06/2009",
+        tl7Text: "Coaching de l'équipe commerciale.",
+        tl8Role: "Project Implementation Director",
+        tl8Meta: "6 mois · 09/2009 – 02/2010",
+        tl8Text: "Supervise le déploiement de l'infrastructure satellitaire et de 2500 VSAT en Côte d'Ivoire pour le lancement de l'Africa Million.",
 
         capEyebrow: "Compétences",
         capTitle: "Un socle construit pour le management de transition et l'exécution complexe.",
