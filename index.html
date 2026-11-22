@@ -1,9 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>David Alimi | Interim leadership, B2B growth and transformation</title>
+  <title>David Alimi | Manager de transition, DG et COO | Industrie et tech</title>
+  <meta name="description" content="David Alimi, manager de transition. Directeur général et COO de transition pour PME et ETI de l'industrie et de la tech : relais de direction, retournement, transformation. 10 mandats depuis 2006." />
+  <meta name="author" content="David Alimi" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="David Alimi | Manager de transition, DG et COO" />
+  <meta property="og:description" content="Dirigeant de transition pour PME et ETI de l'industrie et de la tech. 10 mandats depuis 2006, jusqu'à 140 M€ de P&amp;L." />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "David Alimi",
+  "jobTitle": "Manager de transition, Directeur général et COO de transition",
+  "description": "Dirigeant de transition pour PME et ETI de l'industrie et de la tech : relais de direction, retournement, transformation, création de BU. 10 mandats de transition et de direction fractionnée depuis 2006.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Marseille",
+    "addressCountry": "FR"
+  },
+  "email": "mailto:alimi.david@gmail.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/davidalimi"
+  ],
+  "knowsLanguage": [
+    "fr",
+    "en",
+    "he",
+    "es"
+  ],
+  "alumniOf": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Télécom Paris"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "KEDGE Business School"
+    }
+  ],
+  "knowsAbout": [
+    "Management de transition",
+    "Direction générale",
+    "Direction des opérations",
+    "Retournement d'entreprise",
+    "Transformation",
+    "Intégration post-acquisition",
+    "Go-to-Market",
+    "S&OP",
+    "Télécoms",
+    "Logiciel SaaS",
+    "Industrie"
+  ]
+}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
@@ -556,7 +610,7 @@
       position: relative;
     }
     .cap-card li::before {
-      content: '—';
+      content: '·'; font-weight: 600; color: var(--bronze);
       position: absolute;
       left: 0;
       color: var(--bronze);
@@ -646,6 +700,7 @@
       border: 1px solid var(--rule);
       margin-top: 50px;
     }
+    .cred-grid.two { grid-template-columns: repeat(2, 1fr); }
     .cred-card {
       padding: 36px;
       border-right: 1px solid var(--rule);
@@ -668,7 +723,7 @@
       position: relative;
     }
     .cred-card li::before {
-      content: '—';
+      content: '·'; font-weight: 600; color: var(--bronze);
       position: absolute;
       left: 0;
       color: var(--bronze);
@@ -772,12 +827,12 @@
     }
 
     /* ── FADE-IN ANIMATIONS ──────────────── */
-    .fade {
+    .js .fade {
       opacity: 0;
       transform: translateY(18px);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
-    .fade.visible { opacity: 1; transform: translateY(0); }
+    .js .fade.visible { opacity: 1; transform: translateY(0); }
     .fade-delay-1 { transition-delay: 0.1s; }
     .fade-delay-2 { transition-delay: 0.2s; }
     .fade-delay-3 { transition-delay: 0.3s; }
@@ -803,7 +858,8 @@
       .contact-inner { grid-template-columns: 1fr; }
       .contact-text { border-right: none; border-bottom: 1px solid var(--rule); }
       .cap-grid,
-      .cred-grid { grid-template-columns: 1fr; }
+      .cred-grid,
+      .cred-grid.two { grid-template-columns: 1fr; }
       .cap-card,
       .cred-card { border-right: none; border-bottom: 1px solid var(--rule); }
       .cap-card:last-child,
@@ -842,281 +898,280 @@
     <nav>
       <a class="brand" href="#positioning">
         <strong data-i18n="brand">David Alimi</strong>
-        <span data-i18n="tagline">Interim leadership, B2B growth and transformation</span>
+        <span data-i18n="tagline">Dirigeant de transition · Industrie et tech</span>
       </a>
       <div class="menu">
-        <a href="#positioning"   data-i18n="navPositioning">Positioning</a>
-        <a href="#expertise"     data-i18n="navExpertise">Expertise</a>
-        <a href="#about"         data-i18n="navAbout">About me</a>
-        <a href="#track-record"  data-i18n="navTrack">Track record</a>
-        <a href="#capabilities"  data-i18n="navCapabilities">Capabilities</a>
-        <a href="#method"        data-i18n="navMethod">Method</a>
-        <a href="#credentials"   data-i18n="navCredentials">Credentials</a>
-        <a href="#contact"       data-i18n="navContact">Contact</a>
+        <a href="#positioning" data-i18n="navPositioning">Positionnement</a>
+        <a href="#expertise" data-i18n="navExpertise">Expertise</a>
+        <a href="#about" data-i18n="navAbout">À propos</a>
+        <a href="#track-record" data-i18n="navTrack">Parcours</a>
+        <a href="#capabilities" data-i18n="navCapabilities">Compétences</a>
+        <a href="#method" data-i18n="navMethod">Méthode</a>
+        <a href="#credentials" data-i18n="navCredentials">Formation</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
       </div>
       <div class="nav-actions">
-        <button class="lang-toggle" id="langToggle">FR</button>
-        <a class="nav-cta" href="#contact" data-i18n="navCta">Contact me</a>
+        <button class="lang-toggle" id="langToggle" aria-label="Switch to English">EN</button>
+        <a class="nav-cta" href="#contact" data-i18n="navCta">Me contacter</a>
       </div>
     </nav>
   </header>
 
   <main>
 
-    <!-- ── HERO ── -->
+    <!-- HERO -->
     <section id="positioning">
-      <p class="hero-badge fade" data-i18n="heroBadge">Transition executive with strong business acuity · COO, CRO, CBO · Strategic programmes for mid-market companies</p>
-      <h1 class="fade fade-delay-1" data-i18n="heroTitle">I help organisations turn complex transitions into <em>focused execution</em> and measurable progress.</h1>
-      <p class="hero-lead fade fade-delay-2" data-i18n="heroText">I operate where clarity, pace and senior judgement are needed: temporary executive cover, transformation, go-to-market acceleration, organisational redesign and cross-company strategic programmes.</p>
+      <p class="hero-badge fade" data-i18n="heroBadge">Manager de transition · Directeur général, COO · PME et ETI</p>
+      <h1 class="fade fade-delay-1" data-i18n="heroTitle">J'interviens comme dirigeant de transition quand une entreprise traverse <em>une période instable.</em></h1>
+      <p class="hero-lead fade fade-delay-2" data-i18n="heroText">Mon impact : reprendre la direction, réaliser un diagnostic rapide et lucide, arbitrer, poser la gouvernance et remobiliser les équipes autour d'un cap clair.</p>
       <div class="hero-actions fade fade-delay-3">
-        <a class="btn-primary"   href="#contact"       data-i18n="heroPrimary">Discuss a mission</a>
-        <a class="btn-secondary" href="#track-record"  data-i18n="heroSecondary">View selected assignments</a>
+        <a class="btn-primary" href="#contact" data-i18n="heroPrimary">Parler d'une mission</a>
+        <a class="btn-secondary" href="#track-record" data-i18n="heroSecondary">Voir le parcours</a>
       </div>
       <div class="stance-strip">
-        <p class="stance-label" data-i18n="approachTitle">Clarity, execution, transfer</p>
+        <p class="stance-label" data-i18n="approachTitle">Clarté, exécution, transmission</p>
         <div class="stance-points">
-          <div class="stance-point"><span class="stance-check">✓</span><span data-i18n="point1">Fast diagnosis</span></div>
-          <div class="stance-point"><span class="stance-check">✓</span><span data-i18n="point2">Visible priorities</span></div>
-          <div class="stance-point"><span class="stance-check">✓</span><span data-i18n="point3">Measurable execution</span></div>
-          <div class="stance-point"><span class="stance-check">✓</span><span data-i18n="point4">Knowledge transfer to teams</span></div>
+          <div class="stance-point"><span class="stance-check">✓</span><span data-i18n="point1">Diagnostic rapide</span></div>
+          <div class="stance-point"><span class="stance-check">✓</span><span data-i18n="point2">Priorités visibles</span></div>
+          <div class="stance-point"><span class="stance-check">✓</span><span data-i18n="point3">Exécution mesurable</span></div>
+          <div class="stance-point"><span class="stance-check">✓</span><span data-i18n="point4">Transmission aux équipes</span></div>
         </div>
       </div>
     </section>
 
-    <!-- ── STATS ── -->
+    <!-- STATS -->
     <div class="stats-section">
       <div class="stats-inner">
         <div class="stat-item fade">
-          <div class="stat-number">25+</div>
-          <p class="stat-text" data-i18n="stat1">years of executive, commercial, product and transformation experience.</p>
+          <div class="stat-number" data-i18n="stat1Num">10</div>
+          <p class="stat-text" data-i18n="stat1">mandats de transition et de direction fractionnée depuis 2006.</p>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item fade fade-delay-1">
-          <div class="stat-number">CxO</div>
-          <p class="stat-text" data-i18n="stat2">general management, GTM leadership, product, revenue and strategic programme roles.</p>
+          <div class="stat-number" data-i18n="stat2Num">140 M€</div>
+          <p class="stat-text" data-i18n="stat2">de P&amp;L dirigé.</p>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item fade fade-delay-2">
-          <div class="stat-number">Global</div>
-          <p class="stat-text" data-i18n="stat3">international assignments in multicultural, multi-site and complex environments.</p>
+          <div class="stat-number" data-i18n="stat3Num">160</div>
+          <p class="stat-text" data-i18n="stat3">personnes encadrées au sein d'une division EMEA.</p>
         </div>
       </div>
     </div>
 
-    <!-- ── EXPERTISE ── -->
+    <!-- EXPERTISE -->
     <section id="expertise">
       <div class="section-header fade">
         <p class="eyebrow" data-i18n="expertiseEyebrow">Expertise</p>
-        <h2 data-i18n="expertiseTitle">Executive support when the business needs clarity, structure and momentum.</h2>
-        <p class="section-lead" data-i18n="expertiseText">I intervene in moments where the organisation must strengthen operating discipline, accelerate revenue, redesign its model or align strategy, operations and teams.</p>
+        <h2 data-i18n="expertiseTitle">Les situations où j'interviens.</h2>
+        <p class="section-lead" data-i18n="expertiseText">Quatre situations reviennent dans mes mandats. Chacune demande d'agir vite et juste.</p>
       </div>
       <div class="expertise-grid">
         <article class="expertise-card fade">
           <span class="exp-num">01</span>
-          <h3 data-i18n="card1Title">Executive cover</h3>
-          <p data-i18n="card1Text">CEO, CRO, CPO, CMO or strategic programme leadership when a company needs temporary senior capacity.</p>
+          <h3 data-i18n="card1Title">Relais de direction</h3>
+          <p data-i18n="card1Text">Direction générale ou des opérations par intérim, quand un dirigeant part ou qu'un poste clé reste vacant.</p>
         </article>
         <article class="expertise-card fade fade-delay-1">
           <span class="exp-num">02</span>
-          <h3 data-i18n="card2Title">Growth and GTM</h3>
-          <p data-i18n="card2Text">Go-to-market design, revenue architecture, partner models, enterprise accounts and B2B or B2B2C acceleration.</p>
+          <h3 data-i18n="card2Title">Retournement et relance</h3>
+          <p data-i18n="card2Text">Diagnostic à 360°, plan de redressement, pilotage de la trésorerie, relance commerciale.</p>
         </article>
         <article class="expertise-card fade fade-delay-2">
           <span class="exp-num">03</span>
-          <h3 data-i18n="card3Title">Transformation and turnaround</h3>
-          <p data-i18n="card3Text">Restructuring, crisis response, operational optimisation, organisation redesign and recovery of execution discipline.</p>
+          <h3 data-i18n="card3Title">Transformation et création de BU</h3>
+          <p data-i18n="card3Text">Unifier des entités, redessiner le modèle opérationnel, installer S&amp;OP et KPI.</p>
         </article>
         <article class="expertise-card fade fade-delay-3">
           <span class="exp-num">04</span>
-          <h3 data-i18n="card4Title">Digital and product leadership</h3>
-          <p data-i18n="card4Text">Product strategy, innovation leadership, digital transformation, collaborative tooling and high-stakes project delivery.</p>
+          <h3 data-i18n="card4Title">Pivot de modèle et croissance</h3>
+          <p data-i18n="card4Text">Repenser le Go-to-Market, passer à l'abonnement, élargir la base de revenus.</p>
         </article>
       </div>
     </section>
 
-    <!-- ── ABOUT ── -->
+    <!-- ABOUT -->
     <section id="about" class="full-bleed">
       <div class="inner">
         <div class="about-inner">
           <div class="about-sticky fade">
-            <p class="eyebrow" data-i18n="humanEyebrow">About me</p>
-            <h2 data-i18n="humanTitle">A pragmatic executive shaped by business, sport and periods of transition.</h2>
+            <p class="eyebrow" data-i18n="humanEyebrow">À propos</p>
+            <h2 data-i18n="humanTitle">Un dirigeant façonné par les grands comptes, puis par les situations fragiles.</h2>
           </div>
           <div class="about-body fade fade-delay-1">
-            <p data-i18n="humanText1">My career has been shaped in demanding, often international environments in which I had to understand quickly, decide with clarity and build trust through action.</p>
-            <p data-i18n="humanText2">I have led, sold, structured, transformed and, at times, started again. These experiences have taught me that organisations do not move forward through tools and plans alone. They progress when people understand the direction, their role and the logic behind decisions.</p>
-            <p data-i18n="humanText3">As a former elite athlete and ski instructor, I have retained a practical relationship with effort, transmission and progression. This culture shapes the way I support leaders and teams, with high standards, attentive listening and a strong sense of pace.</p>
+            <p data-i18n="humanText1">J'ai commencé dans les télécoms en 1997, face aux grands comptes opérateurs. J'y ai appris la négociation au plus haut niveau et la patience des cycles longs.</p>
+            <p data-i18n="humanText2">Puis on m'a confié des situations plus fragiles. Un opérateur Wi-Fi en pertes. Un compte mondial à reconquérir. Une division européenne à créer en pleine crise sanitaire. Une filiale à reprendre au pied levé.</p>
+            <p data-i18n="humanText3">De ces mandats, je retiens une conviction : une organisation avance quand chacun comprend le cap, son rôle et la logique des décisions. Mon métier consiste à rendre ce cap lisible, puis à le tenir.</p>
             <div class="about-points">
-              <div class="about-point" data-i18n="humanPoint1">Executive and entrepreneurial experience</div>
-              <div class="about-point" data-i18n="humanPoint2">Grounded execution mindset</div>
-              <div class="about-point" data-i18n="humanPoint3">Commitment to mentoring and knowledge transfer</div>
-              <div class="about-point" data-i18n="humanPoint4">International perspective</div>
+              <div class="about-point" data-i18n="humanPoint1">Expérience de dirigeant et d'entrepreneur</div>
+              <div class="about-point" data-i18n="humanPoint2">Culture de l'exécution</div>
+              <div class="about-point" data-i18n="humanPoint3">Transmission aux équipes</div>
+              <div class="about-point" data-i18n="humanPoint4">Regard international</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ── TRACK RECORD ── -->
+    <!-- TRACK RECORD -->
     <section id="track-record">
       <div class="section-header fade">
-        <p class="eyebrow" data-i18n="trackEyebrow">Selected assignments</p>
-        <h2 data-i18n="trackTitle">A portfolio of executive roles with measurable outcomes.</h2>
-        <p class="section-lead" data-i18n="trackText">The following assignments illustrate the range of contexts, responsibilities and results across major executive and transformation roles.</p>
+        <p class="eyebrow" data-i18n="trackEyebrow">Parcours</p>
+        <h2 data-i18n="trackTitle">Des mandats de direction, des résultats mesurables.</h2>
       </div>
       <blockquote class="track-note-box fade">
-        <p data-i18n="trackAdvisory">Since 2008, my work has combined operational advisory and interim management assignments across technology, telecom, SaaS, digital and industrial environments. I step in when leadership capacity is missing, or when a CEO needs a senior operator to stabilise a situation, redesign a model, accelerate go to market, structure a strategic programme or navigate a sensitive phase. Across mandates such as Trivnet, Convergys, Hot, Intracom, Communithings and Camarai, the same pattern emerges: enter quickly, clarify the issues, align stakeholders, build an executable plan and transfer the method to the organisation.</p>
+        <p data-i18n="trackAdvisory">Depuis 2006, dix mandats de transition et de direction fractionnée, dans les télécoms, le logiciel, la tech et l'industrie. Le même schéma revient : entrer vite, clarifier les enjeux, aligner les parties prenantes, bâtir un plan exécutable et transmettre la méthode.</p>
       </blockquote>
 
       <div class="case-list">
-        <div class="case-item fade">
+        <article class="case-item fade">
           <div class="case-num">01</div>
           <div class="case-left">
-            <h3 data-i18n="case1Title">Founder &amp; CEO · ForEve Labs</h3>
-            <p class="case-role-text" data-i18n="case1Role">Pre-seed biotech venture developing an epigenetic therapy approach to improve egg quality for IVF.</p>
-            <span class="case-period">2023–2026</span>
+            <h3 data-i18n="case1Title">Fondateur et Directeur Général · ForEve Labs</h3>
+            <p class="case-role-text" data-i18n="case1Role">Start-up de biotechnologie développant une approche épigénétique destinée à améliorer la qualité des ovocytes en FIV.</p>
+            <span class="case-period">2023 – 2026</span>
           </div>
           <div class="case-right">
-            <p data-i18n="case1Text">Diagnosed the scientific opportunity and led the sector analysis, structured the literature review and experimental data under GLP, and defined the preclinical and regulatory pathway (FDA, EMA) toward medical-device classification. Built the strategic plan and R&D roadmap, secured the legal structure and IP with the Technology Transfer Office, and pursued international Life Science investors.</p>
+            <p data-i18n="case1Text">Évalue l'opportunité scientifique et le marché, bâtit le plan stratégique, la feuille de route R&amp;D et le budget. Structure le parcours préclinique et réglementaire (FDA, EMA), sécurise la propriété intellectuelle avec l'université et prospecte des fonds Life Science à l'international.</p>
             <div class="metric-row">
-              <span class="metric" data-i18n="case1Metric1">Development agreement signed</span>
-              <span class="metric" data-i18n="case1Metric2">Public innovation funding</span>
-              <span class="metric" data-i18n="case1Metric3">FDA/EMA pathway defined</span>
+              <span class="metric" data-i18n="case1Metric1">Convention de développement signée</span>
+              <span class="metric" data-i18n="case1Metric2">Financement public à l'innovation</span>
+              <span class="metric" data-i18n="case1Metric3">Parcours FDA/EMA défini</span>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="case-item fade">
+        <article class="case-item fade">
           <div class="case-num">02</div>
           <div class="case-left">
-            <h3 data-i18n="case2Title">General Manager EMEA · Maytronics</h3>
-            <p class="case-role-text" data-i18n="case2Role">Global leader in water treatment, pool covers and pool robots — fragmented European organisation and significant managerial discord.</p>
-            <span class="case-period">2020–2022</span>
+            <h3 data-i18n="case2Title">Directeur Général EMEA · Maytronics</h3>
+            <p class="case-role-text" data-i18n="case2Role">Industriel coté, leader mondial du traitement de l'eau et des robots de piscine. Mission : créer la division EMEA et unifier une organisation européenne fragmentée.</p>
+            <span class="case-period">2020 – 2022</span>
           </div>
           <div class="case-right">
-            <p data-i18n="case2Text">Diagnosed the organisation and tensions between entities, aligned the pan-European go-to-market and distribution strategy with the Group, and created the regional division with governance over production, service and sales. Oversaw three subsidiaries and the partner network, harmonised methods (LEAN), and established S&OP governance to absorb a 30%+ demand increase.</p>
+            <p data-i18n="case2Text">Réunit 4 entités en une division unique, avec un nouveau modèle opérationnel validé par le COMEX. Pilote la crise COVID-19 et l'intégration de Bunger &amp; Frese (Allemagne). Instaure S&amp;OP, OKR et KPI, déploie la distribution sélective et l'omnicanal (D2C, Amazon), modernise l'ERP, le CRM et la BI.</p>
             <div class="metric-row">
-              <span class="metric" data-i18n="case2Metric1">€100M→€140M revenue</span>
-              <span class="metric" data-i18n="case2Metric2">160 FTE, 100% retained</span>
-              <span class="metric" data-i18n="case2Metric3">3 subsidiaries</span>
+              <span class="metric" data-i18n="case2Metric1">CA de 100 à 140 M€</span>
+              <span class="metric" data-i18n="case2Metric2">+24 % de robots livrés</span>
+              <span class="metric" data-i18n="case2Metric3">160 ETP, 100 % des emplois préservés</span>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="case-item fade">
+        <article class="case-item fade">
           <div class="case-num">03</div>
           <div class="case-left">
-            <h3 data-i18n="case3Title">Interim CEO · Maytronics France</h3>
-            <p class="case-role-text" data-i18n="case3Role">Internal interim role within the Group, held in addition to the regional mandate, following the sudden departure of the CEO.</p>
+            <h3 data-i18n="case3Title">Directeur Général par intérim · Maytronics France</h3>
+            <p class="case-role-text" data-i18n="case3Role">Filiale de 90 M€, une centaine de collaborateurs, comité de direction sous tension après le départ soudain du dirigeant. Intérim interne, en cumul du mandat régional.</p>
             <span class="case-period">2021</span>
           </div>
           <div class="case-right">
-            <p data-i18n="case3Text">Took on the role immediately alongside the EMEA mandate, ensured continuity of leadership, led the recruitment of a replacement and organised the handover.</p>
+            <p data-i18n="case3Text">Reprend la direction et conserve toute l'équipe. Responsabilise les cadres, leur confie le budget et le GTM, restaure la confiance. Conduit avec le cabinet Eric Salmon la sélection du successeur et organise la passation.</p>
             <div class="metric-row">
-              <span class="metric" data-i18n="case3Metric1">Dual mandate</span>
-              <span class="metric" data-i18n="case3Metric2">7-month interim</span>
-              <span class="metric" data-i18n="case3Metric3">Continuity secured</span>
+              <span class="metric" data-i18n="case3Metric1">Activité +20 % sur un an</span>
+              <span class="metric" data-i18n="case3Metric2">7 mois d'intérim</span>
+              <span class="metric" data-i18n="case3Metric3">Passation sereine</span>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="case-item fade">
+        <article class="case-item fade">
           <div class="case-num">04</div>
           <div class="case-left">
             <h3 data-i18n="case4Title">General Manager Europe · NetformX</h3>
-            <p class="case-role-text" data-i18n="case4Role">SaaS provider for IT network architecture design and partner incentive programmes (Cisco, EMC, HP), in a capped-growth environment.</p>
-            <span class="case-period">2014–2019</span>
+            <p class="case-role-text" data-i18n="case4Role">Éditeur SaaS de conception et de chiffrage de réseaux et de gestion des programmes partenaires (Cisco, EMC, HP), en croissance plafonnée.</p>
+            <span class="case-period">2014 – 2019</span>
           </div>
           <div class="case-right">
-            <p data-i18n="case4Text">Pivoted the business model toward services and ICP-dedicated subscriptions, defined use cases and workflows, and developed revenue from customisation, integration and maintenance. Oversaw deployment, integration and migration projects, and adapted the GTM and sales model to broaden the revenue base.</p>
+            <p data-i18n="case4Text">Fait pivoter le modèle vers les services et l'abonnement des intégrateurs (OBS, Logicalis, Computacenter). Développe les revenus de customisation, d'intégration et de maintenance. Adapte le GTM, supervise déploiements et migrations.</p>
             <div class="metric-row">
-              <span class="metric" data-i18n="case4Metric1">Net ARR €2M→€6M</span>
-              <span class="metric" data-i18n="case4Metric2">Revenue tripled</span>
-              <span class="metric" data-i18n="case4Metric3">CLTV sustained</span>
+              <span class="metric" data-i18n="case4Metric1">ARR net de 2 à 6 M€</span>
+              <span class="metric" data-i18n="case4Metric2">Pivot vers l'abonnement</span>
+              <span class="metric" data-i18n="case4Metric3">CLTV pérennisée</span>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="case-item fade">
+        <article class="case-item fade">
           <div class="case-num">05</div>
           <div class="case-left">
-            <h3 data-i18n="case5Title">Chief Executive Officer · Meteor Networks</h3>
-            <p class="case-role-text" data-i18n="case5Role">B2B WiFi operator serving the HORECA sector, facing €2.5M in cumulative losses and a strained shareholder base.</p>
-            <span class="case-period">2006–2008</span>
+            <h3 data-i18n="case5Title">Manager de transition, puis Directeur général · Meteor Networks</h3>
+            <p class="case-role-text" data-i18n="case5Role">1er opérateur Wi-Fi alternatif français, n° 2 national en hotspots, en difficulté : 1,4 M€ de pertes cumulées, actionnariat sous tension.</p>
+            <span class="case-period">2006 – 2008</span>
           </div>
           <div class="case-right">
-            <p data-i18n="case5Text">Conducted a 360° diagnostic and ran the turnaround at every level: financial management, cost control, growth strategy and business model rebuild. Launched three restructuring initiatives — sales, IT infrastructure, R&D — secured through strategic client contracts and an equity raise.</p>
+            <p data-i18n="case5Text">Mène un diagnostic à 360° et un plan de redressement sur toutes les fonctions. Reprend le pilotage financier, reconstruit le modèle économique, renouvelle McDonald's et signe La Poste. Co-mène avec Rothschild une levée de 5,2 M€ en moins de 3 mois.</p>
             <div class="metric-row">
-              <span class="metric" data-i18n="case5Metric1">€3.5M→€7M revenue</span>
-              <span class="metric" data-i18n="case5Metric2">EBITDA x2</span>
-              <span class="metric" data-i18n="case5Metric3">€5.2M raised</span>
+              <span class="metric" data-i18n="case5Metric1">CA de 3,5 à 7 M€</span>
+              <span class="metric" data-i18n="case5Metric2">EBITDA x 2</span>
+              <span class="metric" data-i18n="case5Metric3">35 collaborateurs conservés</span>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="case-item fade">
+        <article class="case-item fade">
           <div class="case-num">06</div>
           <div class="case-left">
-            <h3 data-i18n="case6Title">Associate VP &amp; Global Account Manager Orange · Comverse</h3>
-            <p class="case-role-text" data-i18n="case6Role">Global telecom group seeking to regain the strategic Orange account worldwide, with no dedicated account team.</p>
-            <span class="case-period">2002–2006</span>
+            <h3 data-i18n="case6Title">Associate Vice President, Global Account Director Orange · Comverse</h3>
+            <p class="case-role-text" data-i18n="case6Role">Éditeur de logiciels télécoms coté au Nasdaq. Reconquête du compte mondial Orange, où Comverse figurait sur la liste noire des fournisseurs de France Télécom.</p>
+            <span class="case-period">2002 – 2006</span>
           </div>
           <div class="case-right">
-            <p data-i18n="case6Text">Rebuilt the Orange relationship from scratch, bringing together 18 senior executives across countries into a dedicated business unit. Developed proposals with 9 Group subsidiaries and structured cross-functional governance across sales, products and operations.</p>
+            <p data-i18n="case6Text">Fédère 18 cadres seniors de plusieurs pays en une unité d'affaires dédiée. Pilote plus de 20 appels d'offres groupe et co-pilote le programme CRBT avec plus de 9 opérateurs. Assure de mars 2005 à mai 2006 la direction générale par intérim de la filiale française.</p>
             <div class="metric-row">
-              <span class="metric" data-i18n="case6Metric1">$4.9M→$18M revenue</span>
-              <span class="metric" data-i18n="case6Metric2">ARR growth &gt;30%</span>
-              <span class="metric" data-i18n="case6Metric3">QSAT quality recognition</span>
+              <span class="metric" data-i18n="case6Metric1">CA de 4,9 à 18 M$</span>
+              <span class="metric" data-i18n="case6Metric2">Revenus récurrents +30 % par an</span>
+              <span class="metric" data-i18n="case6Metric3">Partenaire stratégique d'Orange</span>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="case-item fade">
+        <article class="case-item fade">
           <div class="case-num">07</div>
           <div class="case-left">
-            <h3 data-i18n="case7Title">Marketing Director · ECI Telecom</h3>
-            <p class="case-role-text" data-i18n="case7Role">International go-to-market leadership for major telecom operator accounts.</p>
-            <span class="case-period">2000–2002</span>
+            <h3 data-i18n="case7Title">Directeur Marketing · ECI Telecom</h3>
+            <p class="case-role-text" data-i18n="case7Role">Stratégie de mise sur le marché auprès des grands comptes opérateurs.</p>
+            <span class="case-period">2000 – 2002</span>
           </div>
           <div class="case-right">
-            <p data-i18n="case7Text">Led the global go-to-market strategy for ECI Telecom's major operator accounts, driving pipeline growth and sales-cycle efficiency.</p>
+            <p data-i18n="case7Text">Restructure les équipes de vente internationales : Global Account Management, modèles de rémunération.</p>
             <div class="metric-row">
-              <span class="metric" data-i18n="case7Metric1">Pipeline x2.6</span>
-              <span class="metric" data-i18n="case7Metric2">Sales cycle −25%</span>
-              <span class="metric" data-i18n="case7Metric3">2 years</span>
+              <span class="metric" data-i18n="case7Metric1">Pipeline x 2,6</span>
+              <span class="metric" data-i18n="case7Metric2">Cycle de vente réduit de 25 %</span>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="case-item fade">
+        <article class="case-item fade">
           <div class="case-num">08</div>
           <div class="case-left">
-            <h3 data-i18n="case8Title">Sales Engineer · ECI Telecom</h3>
-            <p class="case-role-text" data-i18n="case8Role">Technical sales role supporting major RFP processes for telecom operator accounts.</p>
-            <span class="case-period">1997–1999</span>
+            <h3 data-i18n="case8Title">Ingénieur Commercial · ECI Telecom</h3>
+            <p class="case-role-text" data-i18n="case8Role">Couverture du groupe France Télécom face à Alcatel, fournisseur historique.</p>
+            <span class="case-period">1997 – 1999</span>
           </div>
           <div class="case-right">
-            <p data-i18n="case8Text">Led the RFP process and negotiation on strategic bids, winning four major contracts worth more than $20M per year in combined annual value.</p>
+            <p data-i18n="case8Text">Fait adopter l'ADSL d'ECI par France Télécom et prend 50 % du marché à Alcatel, leader mondial.</p>
             <div class="metric-row">
-              <span class="metric" data-i18n="case8Metric1">4 strategic bids won</span>
-              <span class="metric" data-i18n="case8Metric2">$20M+/year</span>
-              <span class="metric" data-i18n="case8Metric3">2 years</span>
+              <span class="metric" data-i18n="case8Metric1">4 appels d'offres sur 4</span>
+              <span class="metric" data-i18n="case8Metric2">4 contrats-cadres</span>
+              <span class="metric" data-i18n="case8Metric3">Plus de 20 M$ par an</span>
             </div>
           </div>
-        </div>
+        </article>
+
       </div>
 
       <div class="timeline-header fade">
-        <p class="eyebrow" data-i18n="timelineEyebrow">Since 2009</p>
-        <h3 data-i18n="timelineTitle">Interim and fractional assignments</h3>
+        <p class="eyebrow" data-i18n="timelineEyebrow">Depuis 2009</p>
+        <h3 data-i18n="timelineTitle">Mandats de transition et de direction fractionnée</h3>
       </div>
       <div class="timeline">
         <div class="timeline-row left fade">
           <div class="timeline-content">
             <div class="timeline-company">Camarai <span>(Apple)</span></div>
-            <div class="timeline-role" data-i18n="tl1Role">Strategic Advisor to the CEO</div>
-            <div class="timeline-meta" data-i18n="tl1Meta">18 months · June 2017 – Dec 2018</div>
-            <p class="timeline-text" data-i18n="tl1Text">Advised and supported the CEO in transforming the company, culminating in its acquisition by Apple.</p>
+            <div class="timeline-role">Strategic Advisor to the CEO</div>
+            <div class="timeline-meta">2017 – 2018</div>
+            <p class="timeline-text" data-i18n="tl1Text">Prépare la cession aux côtés du CEO, jusqu'au rachat par Apple.</p>
           </div>
           <div class="timeline-node">1</div>
         </div>
@@ -1125,18 +1180,18 @@
           <div class="timeline-node">2</div>
           <div class="timeline-content">
             <div class="timeline-company">Communithings <span>(Orange)</span></div>
-            <div class="timeline-role" data-i18n="tl2Role">Marketing Director</div>
-            <div class="timeline-meta" data-i18n="tl2Meta">7 months · Jan – June 2014</div>
-            <p class="timeline-text" data-i18n="tl2Text">Advised and supported the CEO through the strategic pivot and investor outreach, leading to the funding round with Orange Ventures.</p>
+            <div class="timeline-role">Marketing Director</div>
+            <div class="timeline-meta">2014</div>
+            <p class="timeline-text" data-i18n="tl2Text">Pivot stratégique et levée de fonds avec Orange Ventures.</p>
           </div>
         </div>
 
         <div class="timeline-row left fade">
           <div class="timeline-content">
             <div class="timeline-company">Intracom</div>
-            <div class="timeline-role" data-i18n="tl3Role">EMEA Sales Director</div>
-            <div class="timeline-meta" data-i18n="tl3Meta">12 months · Aug 2012 – Aug 2013</div>
-            <p class="timeline-text" data-i18n="tl3Text">Built a partnership strategy and proposal to win the HP account, signing an OEM contract within a year.</p>
+            <div class="timeline-role">Sales Director</div>
+            <div class="timeline-meta">2012 – 2013</div>
+            <p class="timeline-text" data-i18n="tl3Text">Entrée chez HP par une preuve de concept, contrat OEM signé en moins d'un an.</p>
           </div>
           <div class="timeline-node">3</div>
         </div>
@@ -1145,18 +1200,18 @@
           <div class="timeline-node">4</div>
           <div class="timeline-content">
             <div class="timeline-company">Hot <span>(Altice)</span></div>
-            <div class="timeline-role" data-i18n="tl4Role">Embedded Strategic Operator</div>
-            <div class="timeline-meta" data-i18n="tl4Meta">12 months · July 2011 – July 2012</div>
-            <p class="timeline-text" data-i18n="tl4Text">Oversaw, on behalf of the shareholder, the carve-in integration of the acquired subsidiary (€550M).</p>
+            <div class="timeline-role">Embedded Strategic Operator</div>
+            <div class="timeline-meta">2011 – 2012</div>
+            <p class="timeline-text" data-i18n="tl4Text">Bras droit de l'actionnaire sur le lancement d'i24News, l'intégration d'une filiale et la fusion de Hot et de Mirs.</p>
           </div>
         </div>
 
         <div class="timeline-row left fade">
           <div class="timeline-content">
             <div class="timeline-company">Convergys</div>
-            <div class="timeline-role" data-i18n="tl5Role">Reorganization Implementation Lead</div>
-            <div class="timeline-meta" data-i18n="tl5Meta">5 months · Aug – Dec 2010</div>
-            <p class="timeline-text" data-i18n="tl5Text">Conducted a business-unit assessment and redesigned the sales organization and compensation models.</p>
+            <div class="timeline-role">Reorganization Implementation Lead</div>
+            <div class="timeline-meta">2010</div>
+            <p class="timeline-text" data-i18n="tl5Text">Réorganisation de 25 commerciaux et nouvelle rémunération variable.</p>
           </div>
           <div class="timeline-node">5</div>
         </div>
@@ -1164,19 +1219,19 @@
         <div class="timeline-row right fade">
           <div class="timeline-node">6</div>
           <div class="timeline-content">
-            <div class="timeline-company">Trivnet <span>(Gemplus)</span></div>
-            <div class="timeline-role" data-i18n="tl6Role">Head of Strategic Pursuits</div>
-            <div class="timeline-meta" data-i18n="tl6Meta">16 months · Jan 2009 – Apr 2010</div>
-            <p class="timeline-text" data-i18n="tl6Text">Coached and supported the CRO in securing Orange as a strategic client, leading to the sale to Gemplus.</p>
+            <div class="timeline-company">eLyon <span>(FDJ)</span></div>
+            <div class="timeline-role">Project Implementation Director</div>
+            <div class="timeline-meta">2009 – 2010</div>
+            <p class="timeline-text" data-i18n="tl6Text">Station satellite et preuve de concept VSAT en Côte d'Ivoire, en amont du déploiement de 2 500 terminaux.</p>
           </div>
         </div>
 
         <div class="timeline-row left fade">
           <div class="timeline-content">
             <div class="timeline-company">SpeedLingua</div>
-            <div class="timeline-role" data-i18n="tl7Role">Senior Advisor to the CEO</div>
-            <div class="timeline-meta" data-i18n="tl7Meta">4 months · Mar – June 2009</div>
-            <p class="timeline-text" data-i18n="tl7Text">Coached the sales team.</p>
+            <div class="timeline-role">Senior Advisor to the CEO</div>
+            <div class="timeline-meta">2009</div>
+            <p class="timeline-text" data-i18n="tl7Text">Méthodes de vente et coaching de l'équipe.</p>
           </div>
           <div class="timeline-node">7</div>
         </div>
@@ -1184,179 +1239,173 @@
         <div class="timeline-row right fade">
           <div class="timeline-node">8</div>
           <div class="timeline-content">
-            <div class="timeline-company">eLyon <span>(FDJ)</span></div>
-            <div class="timeline-role" data-i18n="tl8Role">Project Implementation Director</div>
-            <div class="timeline-meta" data-i18n="tl8Meta">6 months · Sep 2009 – Feb 2010</div>
-            <p class="timeline-text" data-i18n="tl8Text">Oversaw the deployment of satellite infrastructure and 2,500 VSATs in Côte d'Ivoire for the launch of the Africa Million.</p>
+            <div class="timeline-company">Trivnet <span>(Gemalto)</span></div>
+            <div class="timeline-role">Head of Strategic Pursuits</div>
+            <div class="timeline-meta">2009 – 2010</div>
+            <p class="timeline-text" data-i18n="tl8Text">Contrat-cadre Orange signé, déclencheur du rachat par Gemalto.</p>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- ── CAPABILITIES ── -->
+    <!-- CAPABILITIES -->
     <section id="capabilities" class="full-bleed">
       <div class="inner">
         <div class="section-header fade">
-          <p class="eyebrow" data-i18n="capEyebrow">Capabilities</p>
-          <h2 data-i18n="capTitle">A skill set built for interim leadership and complex execution.</h2>
-          <p class="section-lead" data-i18n="capText">The portfolio combines functional depth with the behavioural strengths required to lead in uncertain or high-pressure settings.</p>
+          <p class="eyebrow" data-i18n="capEyebrow">Compétences</p>
+          <h2 data-i18n="capTitle">Ce que j'apporte à une direction en transition.</h2>
         </div>
         <div class="cap-grid">
           <article class="cap-card fade">
-            <h3 data-i18n="cap1Title">Core strengths</h3>
+            <h3 data-i18n="cap1Title">Fonctions</h3>
             <ul>
-              <li data-i18n="cap1Item1">Strategic repositioning</li>
-              <li data-i18n="cap1Item2">Multidisciplinary team leadership</li>
-              <li data-i18n="cap1Item3">B2B and B2B2C go-to-market</li>
-              <li data-i18n="cap1Item4">Programme structuring</li>
+              <li data-i18n="cap1Item1">Direction générale</li>
+              <li data-i18n="cap1Item2">Direction des opérations (COO)</li>
+              <li data-i18n="cap1Item3">Animation du CODIR et du COMEX</li>
+              <li data-i18n="cap1Item4">Gouvernance et reporting actionnaires</li>
             </ul>
           </article>
           <article class="cap-card fade fade-delay-1">
-            <h3 data-i18n="cap2Title">Specialist areas</h3>
+            <h3 data-i18n="cap2Title">Leviers</h3>
             <ul>
-              <li data-i18n="cap2Item1">Innovation leadership</li>
-              <li data-i18n="cap2Item2">Product launch and development</li>
-              <li data-i18n="cap2Item3">Digital transformation</li>
-              <li data-i18n="cap2Item4">Operational optimisation</li>
+              <li data-i18n="cap2Item1">Diagnostic à 360°</li>
+              <li data-i18n="cap2Item2">Plan de redressement</li>
+              <li data-i18n="cap2Item3">Pilotage du P&amp;L et de la trésorerie</li>
+              <li data-i18n="cap2Item4">S&amp;OP et excellence opérationnelle</li>
+              <li data-i18n="cap2Item5">Go-to-Market et relance commerciale</li>
+              <li data-i18n="cap2Item6">Transformation digitale (ERP, CRM, BI)</li>
             </ul>
           </article>
           <article class="cap-card fade fade-delay-2">
-            <h3 data-i18n="cap3Title">Relationship strengths</h3>
+            <h3 data-i18n="cap3Title">Savoir-être</h3>
             <ul>
-              <li data-i18n="cap3Item1">Cross-functional leadership</li>
-              <li data-i18n="cap3Item2">Multi-stakeholder facilitation</li>
-              <li data-i18n="cap3Item3">Crisis management and arbitration</li>
-              <li data-i18n="cap3Item4">Intercultural communication</li>
+              <li data-i18n="cap3Item1">Lucidité dans l'arbitrage</li>
+              <li data-i18n="cap3Item2">Écoute active</li>
+              <li data-i18n="cap3Item3">Capacité à fédérer sans autorité hiérarchique</li>
+              <li data-i18n="cap3Item4">Communication interculturelle</li>
             </ul>
           </article>
         </div>
         <div class="mandate-box fade">
           <div>
-            <p class="eyebrow" data-i18n="mandateEyebrow">Target mandates</p>
-            <h3 data-i18n="mandateTitle">Where I can step in</h3>
-            <p data-i18n="mandateText">I am best suited to situations requiring senior cover, acceleration, organisational repair or the governance of complex programmes.</p>
+            <p class="eyebrow" data-i18n="mandateEyebrow">Missions visées</p>
+            <h3 data-i18n="mandateTitle">Là où j'interviens</h3>
+            <p data-i18n="mandateText">Missions de 6 à 18 mois, PME et ETI, industrie et tech.</p>
           </div>
           <div class="pill-cloud">
-            <span class="pill" data-i18n="mandate1">Temporary CEO, CRO, CPO or CMO cover</span>
-            <span class="pill" data-i18n="mandate2">Post-crisis interim leadership</span>
-            <span class="pill" data-i18n="mandate3">Organisational review</span>
-            <span class="pill" data-i18n="mandate4">Rapid scaling support</span>
-            <span class="pill" data-i18n="mandate5">Strategic programme governance</span>
-            <span class="pill" data-i18n="mandate6">Process digitisation</span>
-            <span class="pill" data-i18n="mandate7">Stakeholder coordination</span>
-            <span class="pill" data-i18n="mandate8">Collaborative delivery model setup</span>
+            <span class="pill" data-i18n="mandate1">Relais de direction</span>
+            <span class="pill" data-i18n="mandate2">Retournement et relance</span>
+            <span class="pill" data-i18n="mandate3">Création ou unification de BU</span>
+            <span class="pill" data-i18n="mandate4">Pivot de modèle économique</span>
+            <span class="pill" data-i18n="mandate5">Intégration post-acquisition</span>
+            <span class="pill" data-i18n="mandate6">Direction de programme</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ── METHOD ── -->
+    <!-- METHOD -->
     <section id="method">
       <div class="method-inner">
         <div class="method-sticky fade">
-          <p class="eyebrow" data-i18n="methodEyebrow">Method</p>
-          <h2 data-i18n="methodTitle">A clear framework for moving swiftly without sacrificing precision.</h2>
-          <p data-i18n="methodText">The approach reduces noise, makes choices intelligible and installs an execution discipline suited to the pace of the business.</p>
+          <p class="eyebrow" data-i18n="methodEyebrow">Méthode</p>
+          <h2 data-i18n="methodTitle">Aller vite, sans perdre en justesse.</h2>
+          <p data-i18n="methodText">Cinq temps, qui suivent ma façon de prendre une direction.</p>
         </div>
         <div class="steps-list fade fade-delay-1">
           <div class="step">
             <div class="step-num">1</div>
             <div>
-              <h3 data-i18n="step1Title">Diagnosis and strategic analysis</h3>
-              <p data-i18n="step1Text">Read the business, its people and its constraints quickly and without preconception. Diagnose what is working, what is blocking and what is being avoided, then analyse the strategic options available.</p>
+              <h3 data-i18n="step1Title">Reprendre la direction</h3>
+              <p data-i18n="step1Text">Écouter, stabiliser, rassurer les équipes et les actionnaires dès les premiers jours.</p>
             </div>
           </div>
           <div class="step">
             <div class="step-num">2</div>
             <div>
-              <h3 data-i18n="step2Title">Ideation and critical priorities</h3>
-              <p data-i18n="step2Text">Generate and stress-test the possible courses of action. Separate urgent from important, and focus the organisation on the two or three levers that will create the most visible and durable movement.</p>
+              <h3 data-i18n="step2Title">Poser un diagnostic rapide et lucide</h3>
+              <p data-i18n="step2Text">Lire l'entreprise, ses forces, ses blocages et ce que l'on évite de regarder.</p>
             </div>
           </div>
           <div class="step">
             <div class="step-num">3</div>
             <div>
-              <h3 data-i18n="step3Title">Concise and measurable action plan</h3>
-              <p data-i18n="step3Text">Translate priorities into an executable plan with clear owners, defined milestones and indicators that can be tracked without a dashboard committee.</p>
+              <h3 data-i18n="step3Title">Arbitrer</h3>
+              <p data-i18n="step3Text">Séparer l'urgent de l'important et concentrer l'effort sur deux ou trois leviers.</p>
             </div>
           </div>
           <div class="step">
             <div class="step-num">4</div>
             <div>
-              <h3 data-i18n="step4Title">Alignment of key teams</h3>
-              <p data-i18n="step4Text">Make the direction and the logic behind decisions legible to every person who has to act on them. Resistance drops when people understand the reasoning.</p>
+              <h3 data-i18n="step4Title">Poser la gouvernance</h3>
+              <p data-i18n="step4Text">Un plan court, des responsables nommés, des indicateurs suivis sans comité superflu.</p>
             </div>
           </div>
           <div class="step">
             <div class="step-num">5</div>
             <div>
-              <h3 data-i18n="step5Title">Follow-up on decisions and outcomes</h3>
-              <p data-i18n="step5Text">Hold the pace. Review progress regularly, correct course early and transfer methods to the organisation so the gains hold after the mission ends.</p>
+              <h3 data-i18n="step5Title">Remobiliser et transmettre</h3>
+              <p data-i18n="step5Text">Rendre le cap lisible, tenir le rythme, puis transmettre la méthode : les acquis durent après la mission.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ── CREDENTIALS ── -->
+    <!-- CREDENTIALS -->
     <section id="credentials">
       <div class="section-header fade">
-        <p class="eyebrow" data-i18n="credEyebrow">Credentials</p>
-        <h2 data-i18n="credTitle">A background combining executive practice, technical education and international exposure.</h2>
+        <p class="eyebrow" data-i18n="credEyebrow">Formation</p>
+        <h2 data-i18n="credTitle">Formation et langues.</h2>
       </div>
-      <div class="cred-grid">
+      <div class="cred-grid two">
         <article class="cred-card fade">
-          <h3 data-i18n="cred1Title">Education</h3>
+          <h3 data-i18n="cred1Title">Diplômes</h3>
           <ul>
-            <li data-i18n="cred1Item1">Master of Science, Telecommunications &amp; Management, Télécom Paris</li>
-            <li data-i18n="cred1Item2">Master in Business Administration, KEDGE</li>
+            <li data-i18n="cred1Item1">Mastère Spécialisé Architecture Réseaux et Cybersécurité (RNCP 38140), Télécom Paris, 2006</li>
+            <li data-i18n="cred1Item2">Diplôme du Programme Grande École, grade de Master (RNCP 36419), KEDGE Business School, 2026</li>
+            <li data-i18n="cred1Item3">École Supérieure des Dirigeants d'Entreprises, Bachelor en commerce et gestion, 1994</li>
           </ul>
         </article>
         <article class="cred-card fade fade-delay-1">
-          <h3 data-i18n="cred2Title">Languages</h3>
+          <h3 data-i18n="cred2Title">Langues</h3>
           <ul>
-            <li data-i18n="cred2Item1">French, native</li>
-            <li data-i18n="cred2Item2">English, fluent professional use</li>
-            <li data-i18n="cred2Item3">Hebrew, fluent professional use</li>
-            <li data-i18n="cred2Item4">Spanish, intermediate</li>
-          </ul>
-        </article>
-        <article class="cred-card fade fade-delay-2">
-          <h3 data-i18n="cred3Title">Other markers</h3>
-          <ul>
-            <li data-i18n="cred3Item1">Reserve officer</li>
-            <li data-i18n="cred3Item2">Ski instructor</li>
+            <li data-i18n="cred2Item1">Français, langue maternelle</li>
+            <li data-i18n="cred2Item2">Anglais, bilingue</li>
+            <li data-i18n="cred2Item3">Hébreu, bilingue</li>
+            <li data-i18n="cred2Item4">Espagnol, intermédiaire</li>
           </ul>
         </article>
       </div>
     </section>
 
-    <!-- ── CONTACT ── -->
+    <!-- CONTACT -->
     <section id="contact">
       <div class="contact-inner">
         <div class="contact-text">
           <p class="eyebrow" data-i18n="contactEyebrow">Contact</p>
-          <h2 data-i18n="contactTitle">Let's discuss your situation.</h2>
-          <p data-i18n="contactText">An initial conversation helps clarify the context, identify priorities and determine the most appropriate form of support.</p>
+          <h2 data-i18n="contactTitle">Parlons de votre situation.</h2>
+          <p data-i18n="contactText">Un premier échange permet de clarifier le contexte, d'identifier les priorités et de choisir la forme d'intervention la plus juste.</p>
           <div class="contact-links">
             <a class="contact-link" href="mailto:alimi.david@gmail.com">✉&nbsp; alimi.david@gmail.com</a>
-            <a class="contact-link" href="tel:+33628229174">☎&nbsp; +33 628 229 174</a>
+            <a class="contact-link" href="tel:+33628229174">☎&nbsp; +33 6 28 22 91 74</a>
             <a class="contact-link" href="https://www.linkedin.com/in/davidalimi" target="_blank" rel="noopener">in&nbsp; linkedin.com/in/davidalimi</a>
           </div>
         </div>
         <form class="contact-form" action="https://formsubmit.co/alimi.david@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New message from David Alimi website">
+          <input type="hidden" name="_subject" value="Nouveau message depuis le site David Alimi">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="false">
-          <input type="text"   name="_honey"   style="display:none">
-          <label for="name"    data-i18n="formName">Name</label>
-          <input id="name"    name="name"    data-placeholder-key="namePlaceholder"    placeholder="Your name"             required />
-          <label for="email"   data-i18n="formEmail">Email</label>
-          <input id="email"   name="email"   type="email" data-placeholder-key="emailPlaceholder"   placeholder="your@email.com"       required />
+          <input type="text" name="_honey" style="display:none">
+          <label for="name" data-i18n="formName">Nom</label>
+          <input id="name" name="name" data-placeholder-key="namePlaceholder" placeholder="Votre nom" required />
+          <label for="email" data-i18n="formEmail">Email</label>
+          <input id="email" name="email" type="email" data-placeholder-key="emailPlaceholder" placeholder="votre@email.com" required />
           <label for="message" data-i18n="formMessage">Message</label>
-          <textarea id="message" name="message" data-placeholder-key="messagePlaceholder" placeholder="Briefly describe your need" required></textarea>
-          <button class="form-submit" type="submit" data-i18n="formSubmit">Send message</button>
-          <p class="form-note" data-i18n="formNote">This form sends your message directly to David Alimi by email.</p>
+          <textarea id="message" name="message" data-placeholder-key="messagePlaceholder" placeholder="Décrivez brièvement votre besoin" required></textarea>
+          <button class="form-submit" type="submit" data-i18n="formSubmit">Envoyer le message</button>
+          <p class="form-note" data-i18n="formNote">Ce formulaire envoie votre message directement à David Alimi par email.</p>
         </form>
       </div>
     </section>
@@ -1364,389 +1413,401 @@
   </main>
 
   <footer>
-    © 2026 <span data-i18n="brand">David Alimi</span>. <span data-i18n="footer">All rights reserved.</span>
+    © 2026 <span data-i18n="brand">David Alimi</span>. <span data-i18n="footer">Tous droits réservés.</span>
   </footer>
 
   <script>
-    /* ── BILINGUAL SYSTEM ── */
-    let currentLanguage = "en";
-
-    const translations = {
-      en: {
-        brand: "David Alimi",
-        tagline: "Interim leadership, B2B growth and transformation",
-        navPositioning: "Positioning", navExpertise: "Expertise", navAbout: "About me",
-        navTrack: "Track record", navCapabilities: "Capabilities", navMethod: "Method",
-        navCredentials: "Credentials", navContact: "Contact", navCta: "Contact me",
-
-        heroBadge: "Transition executive with strong business acuity · COO, CRO, CBO · Strategic programmes for mid-market companies",
-        heroTitle: "I help organisations turn complex transitions into <em>focused execution</em> and measurable progress.",
-        heroText: "I operate where clarity, pace and senior judgement are needed: temporary executive cover, transformation, go-to-market acceleration, organisational redesign and cross-company strategic programmes.",
-        heroPrimary: "Discuss a mission", heroSecondary: "View selected assignments",
-
-        approachTitle: "Clarity, execution, transfer",
-        point1: "Fast diagnosis", point2: "Visible priorities",
-        point3: "Measurable execution", point4: "Knowledge transfer to teams",
-
-        stat1: "years of executive, commercial, product and transformation experience.",
-        stat2: "general management, GTM leadership, product, revenue and strategic programme roles.",
-        stat3: "international assignments in multicultural, multi-site and complex environments.",
-
-        expertiseEyebrow: "Expertise",
-        expertiseTitle: "Executive support when the business needs clarity, structure and momentum.",
-        expertiseText: "I intervene in moments where the organisation must strengthen operating discipline, accelerate revenue, redesign its model or align strategy, operations and teams.",
-        card1Title: "Executive cover",
-        card1Text: "CEO, CRO, CPO, CMO or strategic programme leadership when a company needs temporary senior capacity.",
-        card2Title: "Growth and GTM",
-        card2Text: "Go-to-market design, revenue architecture, partner models, enterprise accounts and B2B or B2B2C acceleration.",
-        card3Title: "Transformation and turnaround",
-        card3Text: "Restructuring, crisis response, operational optimisation, organisation redesign and recovery of execution discipline.",
-        card4Title: "Digital and product leadership",
-        card4Text: "Product strategy, innovation leadership, digital transformation, collaborative tooling and high-stakes project delivery.",
-
-        humanEyebrow: "About me",
-        humanTitle: "A pragmatic executive shaped by business, sport and periods of transition.",
-        humanText1: "My career has been shaped in demanding, often international environments in which I had to understand quickly, decide with clarity and build trust through action.",
-        humanText2: "I have led, sold, structured, transformed and, at times, started again. These experiences have taught me that organisations do not move forward through tools and plans alone. They progress when people understand the direction, their role and the logic behind decisions.",
-        humanText3: "As a former elite athlete and ski instructor, I have retained a practical relationship with effort, transmission and progression. This culture shapes the way I support leaders and teams, with high standards, attentive listening and a strong sense of pace.",
-        humanPoint1: "Executive and entrepreneurial experience",
-        humanPoint2: "Grounded execution mindset",
-        humanPoint3: "Commitment to mentoring and knowledge transfer",
-        humanPoint4: "International perspective",
-
-        trackEyebrow: "Selected assignments",
-        trackTitle: "A portfolio of executive roles with measurable outcomes.",
-        trackText: "The following assignments illustrate the range of contexts, responsibilities and results across major executive and transformation roles.",
-        trackAdvisory: "Since 2008, my work has combined operational advisory and interim management assignments across technology, telecom, SaaS, digital and industrial environments. I step in when leadership capacity is missing, or when a CEO needs a senior operator to stabilise a situation, redesign a model, accelerate go to market, structure a strategic programme or navigate a sensitive phase. Across the assignments below, the same pattern emerges: enter quickly, clarify the issues, align stakeholders, build an executable plan and transfer the method to the organisation.",
-
-        case1Title: "Founder &amp; CEO · ForEve Labs",
-        case1Role: "Pre-seed biotech venture developing an epigenetic therapy approach to improve egg quality for IVF.",
-        case1Text: "Diagnosed the scientific opportunity and led the sector analysis, structured the literature review and experimental data under GLP, and defined the preclinical and regulatory pathway (FDA, EMA) toward medical-device classification. Built the strategic plan and R&D roadmap, secured the legal structure and IP with the Technology Transfer Office, and pursued international Life Science investors.",
-        case1Metric1: "Development agreement signed", case1Metric2: "Public innovation funding", case1Metric3: "FDA/EMA pathway defined",
-
-        case2Title: "General Manager EMEA · Maytronics",
-        case2Role: "Global leader in water treatment, pool covers and pool robots — fragmented European organisation and significant managerial discord.",
-        case2Text: "Diagnosed the organisation and tensions between entities, aligned the pan-European go-to-market and distribution strategy with the Group, and created the regional division with governance over production, service and sales. Oversaw three subsidiaries and the partner network, harmonised methods (LEAN), and established S&OP governance to absorb a 30%+ demand increase.",
-        case2Metric1: "€100M→€140M revenue", case2Metric2: "160 FTE, 100% retained", case2Metric3: "3 subsidiaries",
-
-        case3Title: "Interim CEO · Maytronics France",
-        case3Role: "Internal interim role within the Group, held in addition to the regional mandate, following the sudden departure of the CEO.",
-        case3Text: "Took on the role immediately alongside the EMEA mandate, ensured continuity of leadership, led the recruitment of a replacement and organised the handover.",
-        case3Metric1: "Dual mandate", case3Metric2: "7-month interim", case3Metric3: "Continuity secured",
-
-        case4Title: "General Manager Europe · NetformX",
-        case4Role: "SaaS provider for IT network architecture design and partner incentive programmes (Cisco, EMC, HP), in a capped-growth environment.",
-        case4Text: "Pivoted the business model toward services and ICP-dedicated subscriptions, defined use cases and workflows, and developed revenue from customisation, integration and maintenance. Oversaw deployment, integration and migration projects, and adapted the GTM and sales model to broaden the revenue base.",
-        case4Metric1: "Net ARR €2M→€6M", case4Metric2: "Revenue tripled", case4Metric3: "CLTV sustained",
-
-        case5Title: "Chief Executive Officer · Meteor Networks",
-        case5Role: "B2B WiFi operator serving the HORECA sector, facing €2.5M in cumulative losses and a strained shareholder base.",
-        case5Text: "Conducted a 360° diagnostic and ran the turnaround at every level: financial management, cost control, growth strategy and business model rebuild. Launched three restructuring initiatives — sales, IT infrastructure, R&D — secured through strategic client contracts and an equity raise.",
-        case5Metric1: "€3.5M→€7M revenue", case5Metric2: "EBITDA x2", case5Metric3: "€5.2M raised",
-
-        case6Title: "Associate VP &amp; Global Account Manager Orange · Comverse",
-        case6Role: "Global telecom group seeking to regain the strategic Orange account worldwide, with no dedicated account team.",
-        case6Text: "Rebuilt the Orange relationship from scratch, bringing together 18 senior executives across countries into a dedicated business unit. Developed proposals with 9 Group subsidiaries and structured cross-functional governance across sales, products and operations.",
-        case6Metric1: "$4.9M→$18M revenue", case6Metric2: "ARR growth &gt;30%", case6Metric3: "QSAT quality recognition",
-
-        case7Title: "Marketing Director · ECI Telecom",
-        case7Role: "International go-to-market leadership for major telecom operator accounts.",
-        case7Text: "Led the global go-to-market strategy for ECI Telecom's major operator accounts, driving pipeline growth and sales-cycle efficiency.",
-        case7Metric1: "Pipeline x2.6", case7Metric2: "Sales cycle −25%", case7Metric3: "2 years",
-
-        case8Title: "Sales Engineer · ECI Telecom",
-        case8Role: "Technical sales role supporting major RFP processes for telecom operator accounts.",
-        case8Text: "Led the RFP process and negotiation on strategic bids, winning four major contracts worth more than $20M per year in combined annual value.",
-        case8Metric1: "4 strategic bids won", case8Metric2: "$20M+/year", case8Metric3: "2 years",
-
-        timelineEyebrow: "Since 2009",
-        timelineTitle: "Interim and fractional assignments",
-        tl1Role: "Strategic Advisor to the CEO",
-        tl1Meta: "18 months · June 2017 – Dec 2018",
-        tl1Text: "Advised and supported the CEO in transforming the company, culminating in its acquisition by Apple.",
-        tl2Role: "Marketing Director",
-        tl2Meta: "7 months · Jan – June 2014",
-        tl2Text: "Advised and supported the CEO through the strategic pivot and investor outreach, leading to the funding round with Orange Ventures.",
-        tl3Role: "EMEA Sales Director",
-        tl3Meta: "12 months · Aug 2012 – Aug 2013",
-        tl3Text: "Built a partnership strategy and proposal to win the HP account, signing an OEM contract within a year.",
-        tl4Role: "Embedded Strategic Operator",
-        tl4Meta: "12 months · July 2011 – July 2012",
-        tl4Text: "Oversaw, on behalf of the shareholder, the carve-in integration of the acquired subsidiary (€550M).",
-        tl5Role: "Reorganization Implementation Lead",
-        tl5Meta: "5 months · Aug – Dec 2010",
-        tl5Text: "Conducted a business-unit assessment and redesigned the sales organization and compensation models.",
-        tl6Role: "Head of Strategic Pursuits",
-        tl6Meta: "16 months · Jan 2009 – Apr 2010",
-        tl6Text: "Coached and supported the CRO in securing Orange as a strategic client, leading to the sale to Gemplus.",
-        tl7Role: "Senior Advisor to the CEO",
-        tl7Meta: "4 months · Mar – June 2009",
-        tl7Text: "Coached the sales team.",
-        tl8Role: "Project Implementation Director",
-        tl8Meta: "6 months · Sep 2009 – Feb 2010",
-        tl8Text: "Oversaw the deployment of satellite infrastructure and 2,500 VSATs in Côte d'Ivoire for the launch of the Africa Million.",
-
-        capEyebrow: "Capabilities",
-        capTitle: "A skill set built for interim leadership and complex execution.",
-        capText: "The portfolio combines functional depth with the behavioural strengths required to lead in uncertain or high-pressure settings.",
-        cap1Title: "Core strengths",
-        cap1Item1: "Strategic repositioning", cap1Item2: "Multidisciplinary team leadership",
-        cap1Item3: "B2B and B2B2C go-to-market", cap1Item4: "Programme structuring",
-        cap2Title: "Specialist areas",
-        cap2Item1: "Innovation leadership", cap2Item2: "Product launch and development",
-        cap2Item3: "Digital transformation", cap2Item4: "Operational optimisation",
-        cap3Title: "Relationship strengths",
-        cap3Item1: "Cross-functional leadership", cap3Item2: "Multi-stakeholder facilitation",
-        cap3Item3: "Crisis management and arbitration", cap3Item4: "Intercultural communication",
-
-        mandateEyebrow: "Target mandates", mandateTitle: "Where I can step in",
-        mandateText: "I am best suited to situations requiring senior cover, acceleration, organisational repair or the governance of complex programmes.",
-        mandate1: "Temporary CEO, CRO, CPO or CMO cover", mandate2: "Post-crisis interim leadership",
-        mandate3: "Organisational review", mandate4: "Rapid scaling support",
-        mandate5: "Strategic programme governance", mandate6: "Process digitisation",
-        mandate7: "Stakeholder coordination", mandate8: "Collaborative delivery model setup",
-
-        methodEyebrow: "Method",
-        methodTitle: "A clear framework for moving swiftly without sacrificing precision.",
-        methodText: "The approach reduces noise, makes choices intelligible and installs an execution discipline suited to the pace of the business.",
-        step1Title: "Diagnosis and strategic analysis",
-        step1Text: "Read the business, its people and its constraints quickly and without preconception. Diagnose what is working, what is blocking and what is being avoided, then analyse the strategic options available.",
-        step2Title: "Ideation and critical priorities",
-        step2Text: "Generate and stress-test the possible courses of action. Separate urgent from important, and focus the organisation on the two or three levers that will create the most visible and durable movement.",
-        step3Title: "Concise and measurable action plan",
-        step3Text: "Translate priorities into an executable plan with clear owners, defined milestones and indicators that can be tracked without a dashboard committee.",
-        step4Title: "Alignment of key teams",
-        step4Text: "Make the direction and the logic behind decisions legible to every person who has to act on them. Resistance drops when people understand the reasoning.",
-        step5Title: "Follow-up on decisions and outcomes",
-        step5Text: "Hold the pace. Review progress regularly, correct course early and transfer methods to the organisation so the gains hold after the mission ends.",
-
-        credEyebrow: "Credentials",
-        credTitle: "A background combining executive practice, technical education and international exposure.",
-        cred1Title: "Education",
-        cred1Item1: "Master of Science, Telecommunications & Management, Télécom Paris",
-        cred1Item2: "Master in Business Administration, KEDGE",
-        cred2Title: "Languages",
-        cred2Item1: "French, native", cred2Item2: "English, fluent professional use",
-        cred2Item3: "Hebrew, fluent professional use", cred2Item4: "Spanish, intermediate",
-        cred3Title: "Other markers", cred3Item1: "Reserve officer", cred3Item2: "Ski instructor",
-
-        contactEyebrow: "Contact", contactTitle: "Let's discuss your situation.",
-        contactText: "An initial conversation helps clarify the context, identify priorities and determine the most appropriate form of support.",
-        formName: "Name", formEmail: "Email", formMessage: "Message",
-        formSubmit: "Send message",
-        formNote: "This form sends your message directly to David Alimi by email.",
-        namePlaceholder: "Your name", emailPlaceholder: "your@email.com",
-        messagePlaceholder: "Briefly describe your need",
-        footer: "All rights reserved."
-      },
-
-      fr: {
-        brand: "David Alimi",
-        tagline: "Direction de transition, croissance B2B et transformation",
-        navPositioning: "Positionnement", navExpertise: "Expertises", navAbout: "Qui je suis",
-        navTrack: "Réalisations", navCapabilities: "Compétences", navMethod: "Méthode",
-        navCredentials: "Parcours", navContact: "Contact", navCta: "Me contacter",
-
-        heroBadge: "Dirigeant de transition à forte acuité business · DG/DGA, COO, CRO, CBO · Projets stratégiques pour PME/ETI",
-        heroTitle: "J'aide les organisations à transformer les périodes complexes en <em>exécution ciblée</em> et en progrès mesurables.",
-        heroText: "J'interviens lorsque l'entreprise a besoin de clarté, de rythme et de jugement senior : direction relais, transformation, accélération go-to-market, réorganisation et pilotage de programmes stratégiques transverses.",
-        heroPrimary: "Discuter d'une mission", heroSecondary: "Voir les réalisations",
-
-        approachTitle: "Clarté, exécution, transmission",
-        point1: "Diagnostic rapide", point2: "Priorités visibles",
-        point3: "Exécution mesurable", point4: "Transmission aux équipes",
-
-        stat1: "années d'expérience en direction, commerce, produit et transformation.",
-        stat2: "direction générale, leadership GTM, produit, revenus et programmes stratégiques.",
-        stat3: "interventions internationales dans des environnements multiculturels, multi-sites et complexes.",
-
-        expertiseEyebrow: "Expertises",
-        expertiseTitle: "Un appui de direction quand l'entreprise a besoin de clarté, de structure et de mouvement.",
-        expertiseText: "J'interviens lorsque l'organisation doit renforcer sa discipline d'exécution, accélérer ses revenus, revoir son modèle ou aligner stratégie, opérations et équipes.",
-        card1Title: "Direction relais",
-        card1Text: "DG, CRO, CPO, CMO ou pilotage de programme stratégique quand l'entreprise a besoin d'une capacité senior temporaire.",
-        card2Title: "Croissance et GTM",
-        card2Text: "Design go-to-market, architecture revenus, modèles partenaires, grands comptes et accélération B2B ou B2B2C.",
-        card3Title: "Transformation et redressement",
-        card3Text: "Restructuration, gestion de crise, optimisation opérationnelle, refonte organisationnelle et reprise de la discipline d'exécution.",
-        card4Title: "Digital et produit",
-        card4Text: "Stratégie produit, pilotage de l'innovation, transformation digitale, outils collaboratifs et projets à fort enjeu.",
-
-        humanEyebrow: "Qui je suis",
-        humanTitle: "Un dirigeant pragmatique, construit par l'entreprise, le sport et les transitions.",
-        humanText1: "Mon parcours s'est construit dans des environnements exigeants, souvent internationaux, où il fallait comprendre vite, décider avec lucidité et créer de la confiance dans l'action.",
-        humanText2: "J'ai dirigé, vendu, structuré, transformé et parfois recommencé. Ces expériences m'ont appris qu'une organisation ne progresse pas seulement grâce aux outils ou aux plans. Elle avance quand les personnes comprennent le cap, leur rôle et la logique des décisions.",
-        humanText3: "Ancien sportif de haut niveau, moniteur de ski, je garde un rapport concret à l'effort, à la transmission et à la progression. Cette culture influence ma manière d'accompagner les dirigeants et les équipes, avec exigence, écoute et sens du rythme.",
-        humanPoint1: "Expérience de direction et d'entrepreneuriat",
-        humanPoint2: "Culture du terrain et de l'exécution",
-        humanPoint3: "Goût de la transmission", humanPoint4: "Regard international",
-
-        trackEyebrow: "Réalisations choisies",
-        trackTitle: "Un portefeuille de rôles exécutifs avec résultats mesurables.",
-        trackText: "Ces missions illustrent l'étendue des contextes, responsabilités et résultats dans les principaux rôles de direction et de transformation.",
-        trackAdvisory: "Depuis 2008, mon activité combine conseil opérationnel et management de transition auprès d'entreprises technologiques, télécoms, SaaS, digitales et industrielles. J'interviens lorsque la capacité de direction manque, ou lorsqu'un dirigeant doit stabiliser une situation, revoir un modèle, accélérer le go to market, structurer un programme stratégique ou traverser une phase sensible. Des missions ci-dessous ressort un même fil conducteur : entrer vite dans le sujet, clarifier les enjeux, aligner les parties prenantes, construire un plan exécutable et transmettre la méthode à l'organisation.",
-
-        case1Title: "Fondateur &amp; Directeur Général · ForEve Labs",
-        case1Role: "Start-up biotech pre-seed développant une approche de thérapie épigénétique pour améliorer la qualité des ovocytes en FIV.",
-        case1Text: "Diagnostic de l'opportunité scientifique et analyse sectorielle, structuration de la recherche bibliographique et des données expérimentales sous logique GLP, définition du parcours préclinique et réglementaire (FDA, EMA) vers la classification dispositif médical. Élaboration du plan stratégique et de la feuille de route R&D, sécurisation de la structure juridique et de la propriété intellectuelle avec le TTO, prospection de fonds d'investissement Life Science à l'international.",
-        case1Metric1: "Convention de développement signée", case1Metric2: "Financement public obtenu", case1Metric3: "Trajectoire FDA/EMA définie",
-
-        case2Title: "Directeur Général EMEA · Maytronics",
-        case2Role: "Leader mondial du traitement de l'eau, des couvertures et robots de piscine — organisation européenne fragmentée et fortes dissensions managériales.",
-        case2Text: "Diagnostic de l'organisation et des tensions inter-entités, alignement de la stratégie de mise en marché et de distribution paneuropéenne avec le groupe, création de la division régionale avec gouvernance sur production, service et commercialisation. Supervision de trois filiales et du réseau partenaire, harmonisation des méthodes (LEAN), mise en place de la gouvernance S&OP pour absorber une hausse de la demande de plus de 30%.",
-        case2Metric1: "100M€→140M€ de CA", case2Metric2: "160 ETP, 100% conservés", case2Metric3: "3 filiales",
-
-        case3Title: "Directeur Général par intérim · Maytronics France",
-        case3Role: "Intérim interne au groupe, en cumul du mandat régional, à la suite du départ soudain du dirigeant.",
-        case3Text: "Prise de fonction immédiate en cumul avec le mandat EMEA, assure la continuité de la direction, conduit le recrutement d'un remplaçant et organise la passation.",
-        case3Metric1: "Double mandat", case3Metric2: "Intérim de 7 mois", case3Metric3: "Continuité assurée",
-
-        case4Title: "General Manager Europe · NetformX",
-        case4Role: "Éditeur SaaS pour la conception d'architectures réseaux IT et la gestion de programmes de rémunération partenaires (Cisco, EMC, HP), en croissance plafonnée.",
-        case4Text: "Pivot du modèle économique vers les services et les abonnements dédiés ICP, définition des cas d'usage et workflows, développement des revenus issus de la personnalisation, l'intégration et la maintenance. Supervision des projets de déploiement, d'intégration et de migration, adaptation du GTM et du modèle de vente pour élargir la base de revenus.",
-        case4Metric1: "ARR net 2M€→6M€", case4Metric2: "CA multiplié par 3", case4Metric3: "CLTV pérennisée",
-
-        case5Title: "Directeur Général · Meteor Networks",
-        case5Role: "Opérateur WiFi B2B au service du secteur HORECA, avec 2,5M€ de pertes cumulées et un actionnariat sous tension.",
-        case5Text: "Diagnostic 360° et pilotage du redressement à tous les niveaux : gestion financière, maîtrise des coûts, stratégie de croissance et refonte du modèle économique. Lancement de trois chantiers de restructuration — commerce, infrastructure IT, R&D — sécurisés par des contrats clients stratégiques et une levée de fonds propres.",
-        case5Metric1: "CA 3,5M€→7M€", case5Metric2: "EBITDA x2", case5Metric3: "5,2M€ levés",
-
-        case6Title: "Directeur Exécutif et Responsable du Compte Global Orange · Comverse",
-        case6Role: "Groupe télécom international cherchant à reconquérir le compte stratégique Orange au niveau mondial, sans équipe dédiée.",
-        case6Text: "Reconstruction de la relation Orange à partir de zéro, en réunissant 18 cadres seniors multipays au sein d'une unité d'affaires dédiée. Développement d'offres avec 9 filiales du groupe et mise en place d'une gouvernance transverse entre ventes, produits et opérations.",
-        case6Metric1: "4,9M$→18M$ de revenus", case6Metric2: "ARR en hausse de 30%+", case6Metric3: "Reconnaissance qualité QSAT",
-
-        case7Title: "Directeur Marketing · ECI Telecom",
-        case7Role: "Leadership go-to-market international auprès des grands comptes opérateurs télécom.",
-        case7Text: "Pilotage de la stratégie globale de mise sur le marché pour les grands comptes opérateurs d'ECI Telecom, avec développement du pipeline et amélioration de l'efficacité du cycle de vente.",
-        case7Metric1: "Pipeline x2,6", case7Metric2: "Cycle de vente −25%", case7Metric3: "2 ans",
-
-        case8Title: "Ingénieur Commercial · ECI Telecom",
-        case8Role: "Rôle commercial technique en soutien des processus d'appels d'offres pour les grands comptes opérateurs télécom.",
-        case8Text: "Pilotage du processus de soumission et de négociation de RFP stratégiques, remportant quatre appels d'offres majeurs générant plus de 20M$ par an.",
-        case8Metric1: "4 appels d'offres gagnés", case8Metric2: "20M$+/an", case8Metric3: "2 ans",
-
-        timelineEyebrow: "Depuis 2009",
-        timelineTitle: "Missions d'intérim et fractional",
-        tl1Role: "Strategic Advisor to the CEO",
-        tl1Meta: "18 mois · 06/2017 – 12/2018",
-        tl1Text: "Conseille et accompagne le CEO en vue de transformer l'entreprise jusqu'à la cession à Apple.",
-        tl2Role: "Marketing Director",
-        tl2Meta: "7 mois · 01/2014 – 06/2014",
-        tl2Text: "Conseille et accompagne le CEO dans le pivot stratégique et les démarches auprès d'investisseurs jusqu'à la levée de fonds avec Orange Ventures.",
-        tl3Role: "EMEA Sales Director",
-        tl3Meta: "12 mois · 08/2012 – 08/2013",
-        tl3Text: "Construit une stratégie de partenariat et une offre pour pénétrer le compte HP et signe un contrat d'OEM en moins d'un an.",
-        tl4Role: "Embedded Strategic Operator",
-        tl4Meta: "12 mois · 07/2011 – 07/2012",
-        tl4Text: "Supervise pour le compte de l'actionnaire les opérations de rattachement (Carve In) de la filiale acquise (550 M€).",
-        tl5Role: "Reorganization Implementation Lead",
-        tl5Meta: "5 mois · 08/2010 – 12/2010",
-        tl5Text: "Réalise un diagnostic de l'unité d'affaires et reformule l'organisation commerciale et les modèles de rémunération.",
-        tl6Role: "Head of Strategic Pursuits",
-        tl6Meta: "16 mois · 01/2009 – 04/2010",
-        tl6Text: "Coache et accompagne le CRO dans l'acquisition d'Orange comme client stratégique déclenchant la cession à Gemplus.",
-        tl7Role: "Senior Advisor to the CEO",
-        tl7Meta: "4 mois · 03/2009 – 06/2009",
-        tl7Text: "Coaching de l'équipe commerciale.",
-        tl8Role: "Project Implementation Director",
-        tl8Meta: "6 mois · 09/2009 – 02/2010",
-        tl8Text: "Supervise le déploiement de l'infrastructure satellitaire et de 2500 VSAT en Côte d'Ivoire pour le lancement de l'Africa Million.",
-
-        capEyebrow: "Compétences",
-        capTitle: "Un socle construit pour le management de transition et l'exécution complexe.",
-        capText: "Le portefeuille combine profondeur fonctionnelle et aptitudes comportementales nécessaires aux environnements incertains ou sous pression.",
-        cap1Title: "Forces clés",
-        cap1Item1: "Repositionnement stratégique", cap1Item2: "Leadership d'équipes pluridisciplinaires",
-        cap1Item3: "Go-to-market B2B et B2B2C", cap1Item4: "Structuration de programmes",
-        cap2Title: "Spécialisations",
-        cap2Item1: "Pilotage de l'innovation", cap2Item2: "Développement et lancement produit",
-        cap2Item3: "Transformation digitale", cap2Item4: "Optimisation opérationnelle",
-        cap3Title: "Savoir-faire relationnels",
-        cap3Item1: "Leadership transverse", cap3Item2: "Animation multi-acteurs",
-        cap3Item3: "Gestion de crise et arbitrage", cap3Item4: "Communication interculturelle",
-
-        mandateEyebrow: "Missions cibles", mandateTitle: "Où je peux intervenir",
-        mandateText: "Mon profil convient aux situations qui exigent une direction senior, une accélération, une réparation organisationnelle ou la gouvernance de programmes complexes.",
-        mandate1: "Relais temporaire DG, CRO, CPO ou CMO", mandate2: "Management de transition post-crise",
-        mandate3: "Audit organisationnel", mandate4: "Accompagnement de croissance rapide",
-        mandate5: "Gouvernance de programmes stratégiques", mandate6: "Digitalisation de processus",
-        mandate7: "Coordination multi-acteurs", mandate8: "Mise en place de modèles collaboratifs",
-
-        methodEyebrow: "Méthode",
-        methodTitle: "Un cadre clair pour avancer vite sans perdre en précision.",
-        methodText: "La démarche réduit le bruit, rend les choix intelligibles et installe une discipline d'exécution adaptée au rythme de l'entreprise.",
-        step1Title: "Diagnostic et analyse stratégique",
-        step1Text: "Lire l'entreprise, ses personnes et ses contraintes rapidement, sans préjugé. Diagnostiquer ce qui fonctionne, ce qui bloque et ce qui est évité, puis analyser stratégiquement les options disponibles.",
-        step2Title: "Idéation et priorités critiques",
-        step2Text: "Générer et éprouver les pistes d'action possibles. Séparer l'urgent de l'important et concentrer l'organisation sur les deux ou trois leviers qui produiront le mouvement le plus visible et le plus durable.",
-        step3Title: "Plan d'action court et mesurable",
-        step3Text: "Traduire les priorités en plan exécutable avec des responsables clairs, des jalons définis et des indicateurs suivis sans comité tableau de bord.",
-        step4Title: "Alignement des équipes clés",
-        step4Text: "Rendre la direction et la logique des décisions lisibles pour chaque personne qui doit agir. La résistance diminue quand les gens comprennent le raisonnement.",
-        step5Title: "Suivi des décisions et résultats",
-        step5Text: "Tenir le rythme. Revoir l'avancement régulièrement, corriger tôt et transmettre les méthodes à l'organisation pour que les acquis perdurent après la mission.",
-
-        credEyebrow: "Parcours",
-        credTitle: "Un socle qui combine pratique exécutive, formation technique et exposition internationale.",
-        cred1Title: "Formation",
-        cred1Item1: "Master of Science, Télécommunications & Management, Télécom Paris",
-        cred1Item2: "Master in Business Administration, KEDGE",
-        cred2Title: "Langues",
-        cred2Item1: "Français, langue maternelle", cred2Item2: "Anglais, usage professionnel courant",
-        cred2Item3: "Hébreu, usage professionnel courant", cred2Item4: "Espagnol, niveau intermédiaire",
-        cred3Title: "Autres marqueurs", cred3Item1: "Officier de réserve", cred3Item2: "Moniteur de ski",
-
-        contactEyebrow: "Contact", contactTitle: "Parlons de votre situation.",
-        contactText: "Un premier échange permet de clarifier le contexte, identifier les priorités et définir la forme d'intervention la plus adaptée.",
-        formName: "Nom", formEmail: "Email", formMessage: "Message",
-        formSubmit: "Envoyer le message",
-        formNote: "Ce formulaire envoie directement votre message à David Alimi par email.",
-        namePlaceholder: "Votre nom", emailPlaceholder: "votre@email.com",
-        messagePlaceholder: "Décrivez brièvement votre besoin",
-        footer: "Tous droits réservés."
-      }
+    /* ── BILINGUAL SYSTEM (French by default, English on toggle) ── */
+    let currentLanguage = "fr";
+    const titles = {
+      fr: "David Alimi | Manager de transition, DG et COO | Industrie et tech",
+      en: "David Alimi | Interim executive, Managing Director and COO | Industry and tech"
     };
+    const translations = { fr: {
+"brand": "David Alimi",
+"tagline": "Dirigeant de transition · Industrie et tech",
+"navPositioning": "Positionnement",
+"navExpertise": "Expertise",
+"navAbout": "À propos",
+"navTrack": "Parcours",
+"navCapabilities": "Compétences",
+"navMethod": "Méthode",
+"navCredentials": "Formation",
+"navContact": "Contact",
+"navCta": "Me contacter",
+"heroBadge": "Manager de transition · Directeur général, COO · PME et ETI",
+"heroTitle": "J'interviens comme dirigeant de transition quand une entreprise traverse <em>une période instable.</em>",
+"heroText": "Mon impact : reprendre la direction, réaliser un diagnostic rapide et lucide, arbitrer, poser la gouvernance et remobiliser les équipes autour d'un cap clair.",
+"heroPrimary": "Parler d'une mission",
+"heroSecondary": "Voir le parcours",
+"approachTitle": "Clarté, exécution, transmission",
+"point1": "Diagnostic rapide",
+"point2": "Priorités visibles",
+"point3": "Exécution mesurable",
+"point4": "Transmission aux équipes",
+"stat1Num": "10",
+"stat1": "mandats de transition et de direction fractionnée depuis 2006.",
+"stat2Num": "140 M€",
+"stat2": "de P&amp;L dirigé.",
+"stat3Num": "160",
+"stat3": "personnes encadrées au sein d'une division EMEA.",
+"expertiseEyebrow": "Expertise",
+"expertiseTitle": "Les situations où j'interviens.",
+"expertiseText": "Quatre situations reviennent dans mes mandats. Chacune demande d'agir vite et juste.",
+"card1Title": "Relais de direction",
+"card1Text": "Direction générale ou des opérations par intérim, quand un dirigeant part ou qu'un poste clé reste vacant.",
+"card2Title": "Retournement et relance",
+"card2Text": "Diagnostic à 360°, plan de redressement, pilotage de la trésorerie, relance commerciale.",
+"card3Title": "Transformation et création de BU",
+"card3Text": "Unifier des entités, redessiner le modèle opérationnel, installer S&amp;OP et KPI.",
+"card4Title": "Pivot de modèle et croissance",
+"card4Text": "Repenser le Go-to-Market, passer à l'abonnement, élargir la base de revenus.",
+"humanEyebrow": "À propos",
+"humanTitle": "Un dirigeant façonné par les grands comptes, puis par les situations fragiles.",
+"humanText1": "J'ai commencé dans les télécoms en 1997, face aux grands comptes opérateurs. J'y ai appris la négociation au plus haut niveau et la patience des cycles longs.",
+"humanText2": "Puis on m'a confié des situations plus fragiles. Un opérateur Wi-Fi en pertes. Un compte mondial à reconquérir. Une division européenne à créer en pleine crise sanitaire. Une filiale à reprendre au pied levé.",
+"humanText3": "De ces mandats, je retiens une conviction : une organisation avance quand chacun comprend le cap, son rôle et la logique des décisions. Mon métier consiste à rendre ce cap lisible, puis à le tenir.",
+"humanPoint1": "Expérience de dirigeant et d'entrepreneur",
+"humanPoint2": "Culture de l'exécution",
+"humanPoint3": "Transmission aux équipes",
+"humanPoint4": "Regard international",
+"trackEyebrow": "Parcours",
+"trackTitle": "Des mandats de direction, des résultats mesurables.",
+"trackAdvisory": "Depuis 2006, dix mandats de transition et de direction fractionnée, dans les télécoms, le logiciel, la tech et l'industrie. Le même schéma revient : entrer vite, clarifier les enjeux, aligner les parties prenantes, bâtir un plan exécutable et transmettre la méthode.",
+"timelineEyebrow": "Depuis 2009",
+"timelineTitle": "Mandats de transition et de direction fractionnée",
+"capEyebrow": "Compétences",
+"capTitle": "Ce que j'apporte à une direction en transition.",
+"mandateEyebrow": "Missions visées",
+"mandateTitle": "Là où j'interviens",
+"mandateText": "Missions de 6 à 18 mois, PME et ETI, industrie et tech.",
+"methodEyebrow": "Méthode",
+"methodTitle": "Aller vite, sans perdre en justesse.",
+"methodText": "Cinq temps, qui suivent ma façon de prendre une direction.",
+"credEyebrow": "Formation",
+"credTitle": "Formation et langues.",
+"contactEyebrow": "Contact",
+"contactTitle": "Parlons de votre situation.",
+"contactText": "Un premier échange permet de clarifier le contexte, d'identifier les priorités et de choisir la forme d'intervention la plus juste.",
+"formName": "Nom",
+"formEmail": "Email",
+"formMessage": "Message",
+"formSubmit": "Envoyer le message",
+"formNote": "Ce formulaire envoie votre message directement à David Alimi par email.",
+"namePlaceholder": "Votre nom",
+"emailPlaceholder": "votre@email.com",
+"messagePlaceholder": "Décrivez brièvement votre besoin",
+"footer": "Tous droits réservés.",
+"case1Title": "Fondateur et Directeur Général · ForEve Labs",
+"case1Role": "Start-up de biotechnologie développant une approche épigénétique destinée à améliorer la qualité des ovocytes en FIV.",
+"case1Text": "Évalue l'opportunité scientifique et le marché, bâtit le plan stratégique, la feuille de route R&amp;D et le budget. Structure le parcours préclinique et réglementaire (FDA, EMA), sécurise la propriété intellectuelle avec l'université et prospecte des fonds Life Science à l'international.",
+"case1Metric1": "Convention de développement signée",
+"case1Metric2": "Financement public à l'innovation",
+"case1Metric3": "Parcours FDA/EMA défini",
+"case2Title": "Directeur Général EMEA · Maytronics",
+"case2Role": "Industriel coté, leader mondial du traitement de l'eau et des robots de piscine. Mission : créer la division EMEA et unifier une organisation européenne fragmentée.",
+"case2Text": "Réunit 4 entités en une division unique, avec un nouveau modèle opérationnel validé par le COMEX. Pilote la crise COVID-19 et l'intégration de Bunger &amp; Frese (Allemagne). Instaure S&amp;OP, OKR et KPI, déploie la distribution sélective et l'omnicanal (D2C, Amazon), modernise l'ERP, le CRM et la BI.",
+"case2Metric1": "CA de 100 à 140 M€",
+"case2Metric2": "+24 % de robots livrés",
+"case2Metric3": "160 ETP, 100 % des emplois préservés",
+"case3Title": "Directeur Général par intérim · Maytronics France",
+"case3Role": "Filiale de 90 M€, une centaine de collaborateurs, comité de direction sous tension après le départ soudain du dirigeant. Intérim interne, en cumul du mandat régional.",
+"case3Text": "Reprend la direction et conserve toute l'équipe. Responsabilise les cadres, leur confie le budget et le GTM, restaure la confiance. Conduit avec le cabinet Eric Salmon la sélection du successeur et organise la passation.",
+"case3Metric1": "Activité +20 % sur un an",
+"case3Metric2": "7 mois d'intérim",
+"case3Metric3": "Passation sereine",
+"case4Title": "General Manager Europe · NetformX",
+"case4Role": "Éditeur SaaS de conception et de chiffrage de réseaux et de gestion des programmes partenaires (Cisco, EMC, HP), en croissance plafonnée.",
+"case4Text": "Fait pivoter le modèle vers les services et l'abonnement des intégrateurs (OBS, Logicalis, Computacenter). Développe les revenus de customisation, d'intégration et de maintenance. Adapte le GTM, supervise déploiements et migrations.",
+"case4Metric1": "ARR net de 2 à 6 M€",
+"case4Metric2": "Pivot vers l'abonnement",
+"case4Metric3": "CLTV pérennisée",
+"case5Title": "Manager de transition, puis Directeur général · Meteor Networks",
+"case5Role": "1er opérateur Wi-Fi alternatif français, n° 2 national en hotspots, en difficulté : 1,4 M€ de pertes cumulées, actionnariat sous tension.",
+"case5Text": "Mène un diagnostic à 360° et un plan de redressement sur toutes les fonctions. Reprend le pilotage financier, reconstruit le modèle économique, renouvelle McDonald's et signe La Poste. Co-mène avec Rothschild une levée de 5,2 M€ en moins de 3 mois.",
+"case5Metric1": "CA de 3,5 à 7 M€",
+"case5Metric2": "EBITDA x 2",
+"case5Metric3": "35 collaborateurs conservés",
+"case6Title": "Associate Vice President, Global Account Director Orange · Comverse",
+"case6Role": "Éditeur de logiciels télécoms coté au Nasdaq. Reconquête du compte mondial Orange, où Comverse figurait sur la liste noire des fournisseurs de France Télécom.",
+"case6Text": "Fédère 18 cadres seniors de plusieurs pays en une unité d'affaires dédiée. Pilote plus de 20 appels d'offres groupe et co-pilote le programme CRBT avec plus de 9 opérateurs. Assure de mars 2005 à mai 2006 la direction générale par intérim de la filiale française.",
+"case6Metric1": "CA de 4,9 à 18 M$",
+"case6Metric2": "Revenus récurrents +30 % par an",
+"case6Metric3": "Partenaire stratégique d'Orange",
+"case7Title": "Directeur Marketing · ECI Telecom",
+"case7Role": "Stratégie de mise sur le marché auprès des grands comptes opérateurs.",
+"case7Text": "Restructure les équipes de vente internationales : Global Account Management, modèles de rémunération.",
+"case7Metric1": "Pipeline x 2,6",
+"case7Metric2": "Cycle de vente réduit de 25 %",
+"case8Title": "Ingénieur Commercial · ECI Telecom",
+"case8Role": "Couverture du groupe France Télécom face à Alcatel, fournisseur historique.",
+"case8Text": "Fait adopter l'ADSL d'ECI par France Télécom et prend 50 % du marché à Alcatel, leader mondial.",
+"case8Metric1": "4 appels d'offres sur 4",
+"case8Metric2": "4 contrats-cadres",
+"case8Metric3": "Plus de 20 M$ par an",
+"tl1Text": "Prépare la cession aux côtés du CEO, jusqu'au rachat par Apple.",
+"tl2Text": "Pivot stratégique et levée de fonds avec Orange Ventures.",
+"tl3Text": "Entrée chez HP par une preuve de concept, contrat OEM signé en moins d'un an.",
+"tl4Text": "Bras droit de l'actionnaire sur le lancement d'i24News, l'intégration d'une filiale et la fusion de Hot et de Mirs.",
+"tl5Text": "Réorganisation de 25 commerciaux et nouvelle rémunération variable.",
+"tl6Text": "Station satellite et preuve de concept VSAT en Côte d'Ivoire, en amont du déploiement de 2 500 terminaux.",
+"tl7Text": "Méthodes de vente et coaching de l'équipe.",
+"tl8Text": "Contrat-cadre Orange signé, déclencheur du rachat par Gemalto.",
+"cap1Title": "Fonctions",
+"cap1Item1": "Direction générale",
+"cap1Item2": "Direction des opérations (COO)",
+"cap1Item3": "Animation du CODIR et du COMEX",
+"cap1Item4": "Gouvernance et reporting actionnaires",
+"cap2Title": "Leviers",
+"cap2Item1": "Diagnostic à 360°",
+"cap2Item2": "Plan de redressement",
+"cap2Item3": "Pilotage du P&amp;L et de la trésorerie",
+"cap2Item4": "S&amp;OP et excellence opérationnelle",
+"cap2Item5": "Go-to-Market et relance commerciale",
+"cap2Item6": "Transformation digitale (ERP, CRM, BI)",
+"cap3Title": "Savoir-être",
+"cap3Item1": "Lucidité dans l'arbitrage",
+"cap3Item2": "Écoute active",
+"cap3Item3": "Capacité à fédérer sans autorité hiérarchique",
+"cap3Item4": "Communication interculturelle",
+"mandate1": "Relais de direction",
+"mandate2": "Retournement et relance",
+"mandate3": "Création ou unification de BU",
+"mandate4": "Pivot de modèle économique",
+"mandate5": "Intégration post-acquisition",
+"mandate6": "Direction de programme",
+"step1Title": "Reprendre la direction",
+"step1Text": "Écouter, stabiliser, rassurer les équipes et les actionnaires dès les premiers jours.",
+"step2Title": "Poser un diagnostic rapide et lucide",
+"step2Text": "Lire l'entreprise, ses forces, ses blocages et ce que l'on évite de regarder.",
+"step3Title": "Arbitrer",
+"step3Text": "Séparer l'urgent de l'important et concentrer l'effort sur deux ou trois leviers.",
+"step4Title": "Poser la gouvernance",
+"step4Text": "Un plan court, des responsables nommés, des indicateurs suivis sans comité superflu.",
+"step5Title": "Remobiliser et transmettre",
+"step5Text": "Rendre le cap lisible, tenir le rythme, puis transmettre la méthode : les acquis durent après la mission.",
+"cred1Title": "Diplômes",
+"cred1Item1": "Mastère Spécialisé Architecture Réseaux et Cybersécurité (RNCP 38140), Télécom Paris, 2006",
+"cred1Item2": "Diplôme du Programme Grande École, grade de Master (RNCP 36419), KEDGE Business School, 2026",
+"cred1Item3": "École Supérieure des Dirigeants d'Entreprises, Bachelor en commerce et gestion, 1994",
+"cred2Title": "Langues",
+"cred2Item1": "Français, langue maternelle",
+"cred2Item2": "Anglais, bilingue",
+"cred2Item3": "Hébreu, bilingue",
+"cred2Item4": "Espagnol, intermédiaire"
+}, en: {
+"brand": "David Alimi",
+"tagline": "Interim executive · Industry and tech",
+"navPositioning": "Positioning",
+"navExpertise": "Expertise",
+"navAbout": "About",
+"navTrack": "Track record",
+"navCapabilities": "Capabilities",
+"navMethod": "Method",
+"navCredentials": "Education",
+"navContact": "Contact",
+"navCta": "Contact me",
+"heroBadge": "Interim executive · Managing Director, COO · SMEs and mid-caps",
+"heroTitle": "I step in as an interim executive when a company goes through <em>an unstable period.</em>",
+"heroText": "My impact: take the lead, deliver a fast and lucid diagnosis, make the calls, set up governance and rally teams around a clear direction.",
+"heroPrimary": "Discuss a mission",
+"heroSecondary": "View track record",
+"approachTitle": "Clarity, execution, transfer",
+"point1": "Fast diagnosis",
+"point2": "Visible priorities",
+"point3": "Measurable execution",
+"point4": "Knowledge transfer to teams",
+"stat1Num": "10",
+"stat1": "interim and fractional executive mandates since 2006.",
+"stat2Num": "€140M",
+"stat2": "P&amp;L led.",
+"stat3Num": "160",
+"stat3": "people led within an EMEA division.",
+"expertiseEyebrow": "Expertise",
+"expertiseTitle": "The situations where I step in.",
+"expertiseText": "Four situations recur across my mandates. Each one calls for fast and accurate action.",
+"card1Title": "Leadership relay",
+"card1Text": "Interim general management or operations leadership when an executive leaves or a key role stays vacant.",
+"card2Title": "Turnaround and relaunch",
+"card2Text": "360° diagnosis, recovery plan, cash management, commercial relaunch.",
+"card3Title": "Transformation and BU creation",
+"card3Text": "Bring entities together, redesign the operating model, install S&amp;OP and KPIs.",
+"card4Title": "Business model pivot and growth",
+"card4Text": "Rethink go-to-market, move to subscription, broaden the revenue base.",
+"humanEyebrow": "About",
+"humanTitle": "An executive shaped by key accounts, then by fragile situations.",
+"humanText1": "I started in telecoms in 1997, facing major operator accounts. There I learned negotiation at the highest level and the patience of long cycles.",
+"humanText2": "Then I was entrusted with more fragile situations. A Wi-Fi operator making losses. A global account to win back. A European division to build in the middle of a health crisis. A subsidiary to take over at a moment's notice.",
+"humanText3": "From these mandates I keep one conviction: an organisation moves forward when everyone understands the direction, their role and the logic behind decisions. My job is to make that direction clear, then hold it.",
+"humanPoint1": "Executive and entrepreneurial experience",
+"humanPoint2": "Execution culture",
+"humanPoint3": "Knowledge transfer to teams",
+"humanPoint4": "International perspective",
+"trackEyebrow": "Track record",
+"trackTitle": "Executive mandates, measurable results.",
+"trackAdvisory": "Since 2006, ten interim and fractional executive mandates across telecoms, software, tech and industry. The same pattern returns: enter quickly, clarify the issues, align stakeholders, build an executable plan and transfer the method.",
+"timelineEyebrow": "Since 2009",
+"timelineTitle": "Interim and fractional mandates",
+"capEyebrow": "Capabilities",
+"capTitle": "What I bring to a leadership in transition.",
+"mandateEyebrow": "Target mandates",
+"mandateTitle": "Where I step in",
+"mandateText": "Six- to eighteen-month assignments, SMEs and mid-caps, industry and tech.",
+"methodEyebrow": "Method",
+"methodTitle": "Moving fast without losing accuracy.",
+"methodText": "Five steps, following the way I take on a leadership role.",
+"credEyebrow": "Education",
+"credTitle": "Education and languages.",
+"contactEyebrow": "Contact",
+"contactTitle": "Let's discuss your situation.",
+"contactText": "An initial conversation helps clarify the context, identify priorities and choose the most suitable form of support.",
+"formName": "Name",
+"formEmail": "Email",
+"formMessage": "Message",
+"formSubmit": "Send message",
+"formNote": "This form sends your message directly to David Alimi by email.",
+"namePlaceholder": "Your name",
+"emailPlaceholder": "your@email.com",
+"messagePlaceholder": "Briefly describe your need",
+"footer": "All rights reserved.",
+"case1Title": "Founder &amp; CEO · ForEve Labs",
+"case1Role": "Biotech start-up developing an epigenetic approach to improve egg quality in IVF.",
+"case1Text": "Assessed the scientific opportunity and the market, built the strategic plan, the R&amp;D roadmap and the budget. Structured the preclinical and regulatory pathway (FDA, EMA), secured the intellectual property with the university and approached Life Science investors internationally.",
+"case1Metric1": "Development agreement signed",
+"case1Metric2": "Public innovation funding",
+"case1Metric3": "FDA/EMA pathway defined",
+"case2Title": "General Manager EMEA · Maytronics",
+"case2Role": "Listed industrial group, world leader in water treatment and pool robots. Mission: create the EMEA division and unify a fragmented European organisation.",
+"case2Text": "Brought 4 entities together into a single division, with a new operating model approved by the executive committee. Steered the COVID-19 crisis and the integration of Bunger &amp; Frese (Germany). Introduced S&amp;OP, OKRs and KPIs, rolled out selective distribution and omnichannel (D2C, Amazon), modernised ERP, CRM and BI.",
+"case2Metric1": "Revenue €100M → €140M",
+"case2Metric2": "+24% robots delivered",
+"case2Metric3": "160 FTE, 100% of jobs preserved",
+"case3Title": "Interim Managing Director · Maytronics France",
+"case3Role": "€90M subsidiary, around a hundred employees, leadership team under strain after the sudden departure of its head. Internal interim, alongside the regional mandate.",
+"case3Text": "Took over leadership and kept the whole team. Empowered managers, entrusted them with the budget and the GTM, restored trust. Led the selection of the successor with Eric Salmon and organised the handover.",
+"case3Metric1": "Business +20% year on year",
+"case3Metric2": "7-month interim",
+"case3Metric3": "Smooth handover",
+"case4Title": "General Manager Europe · NetformX",
+"case4Role": "SaaS publisher for network design and quoting and partner programme management (Cisco, EMC, HP), with capped growth.",
+"case4Text": "Pivoted the model toward services and integrator subscriptions (OBS, Logicalis, Computacenter). Grew customisation, integration and maintenance revenue. Adapted the GTM, oversaw deployments and migrations.",
+"case4Metric1": "Net ARR €2M → €6M",
+"case4Metric2": "Shift to subscription",
+"case4Metric3": "CLTV sustained",
+"case5Title": "Interim Manager, then Managing Director · Meteor Networks",
+"case5Role": "France's leading alternative Wi-Fi operator, no. 2 nationally by hotspots, in difficulty: €1.4M in cumulative losses, shareholders under strain.",
+"case5Text": "Ran a 360° diagnosis and a recovery plan across every function. Took back financial control, rebuilt the business model, renewed McDonald's and signed La Poste. Co-led with Rothschild a €5.2M fundraise in under 3 months.",
+"case5Metric1": "Revenue €3.5M → €7M",
+"case5Metric2": "EBITDA x2",
+"case5Metric3": "35 employees retained",
+"case6Title": "Associate Vice President, Global Account Director Orange · Comverse",
+"case6Role": "Nasdaq-listed telecom software vendor. Win-back of the global Orange account, where Comverse was blacklisted as a France Télécom supplier.",
+"case6Text": "Brought 18 senior managers from several countries into a dedicated business unit. Led more than 20 group tenders and co-led the CRBT programme with more than 9 operators. Served as interim managing director of the French subsidiary from March 2005 to May 2006.",
+"case6Metric1": "Revenue $4.9M → $18M",
+"case6Metric2": "Recurring revenue +30% a year",
+"case6Metric3": "Orange strategic partner",
+"case7Title": "Marketing Director · ECI Telecom",
+"case7Role": "Go-to-market strategy for major operator accounts.",
+"case7Text": "Restructured the international sales teams: Global Account Management and compensation models.",
+"case7Metric1": "Pipeline x2.6",
+"case7Metric2": "Sales cycle cut by 25%",
+"case8Title": "Sales Engineer · ECI Telecom",
+"case8Role": "Coverage of the France Télécom group against Alcatel, the incumbent supplier.",
+"case8Text": "Got France Télécom to adopt ECI's ADSL and took 50% of the market from Alcatel, the world leader.",
+"case8Metric1": "4 tenders out of 4",
+"case8Metric2": "4 framework agreements",
+"case8Metric3": "$20M+ a year",
+"tl1Text": "Prepared the sale alongside the CEO, through to the acquisition by Apple.",
+"tl2Text": "Strategic pivot and funding round with Orange Ventures.",
+"tl3Text": "Entry into HP through a proof of concept, OEM contract signed in under a year.",
+"tl4Text": "Right hand to the shareholder on the launch of i24News, the integration of a subsidiary and the merger of Hot and Mirs.",
+"tl5Text": "Reorganised 25 salespeople and introduced a new variable pay scheme.",
+"tl6Text": "Satellite station and VSAT proof of concept in Côte d'Ivoire, ahead of a 2,500-terminal roll-out.",
+"tl7Text": "Sales methods and team coaching.",
+"tl8Text": "Orange framework agreement signed, trigger for the acquisition by Gemalto.",
+"cap1Title": "Functions",
+"cap1Item1": "General management",
+"cap1Item2": "Operations leadership (COO)",
+"cap1Item3": "Leading management and executive committees",
+"cap1Item4": "Shareholder governance and reporting",
+"cap2Title": "Levers",
+"cap2Item1": "360° diagnosis",
+"cap2Item2": "Recovery plan",
+"cap2Item3": "P&amp;L and cash management",
+"cap2Item4": "S&amp;OP and operational excellence",
+"cap2Item5": "Go-to-market and commercial relaunch",
+"cap2Item6": "Digital transformation (ERP, CRM, BI)",
+"cap3Title": "Behaviours",
+"cap3Item1": "Clear-headed decision-making",
+"cap3Item2": "Active listening",
+"cap3Item3": "Rallying people without line authority",
+"cap3Item4": "Intercultural communication",
+"mandate1": "Leadership relay",
+"mandate2": "Turnaround and relaunch",
+"mandate3": "BU creation or unification",
+"mandate4": "Business model pivot",
+"mandate5": "Post-acquisition integration",
+"mandate6": "Programme leadership",
+"step1Title": "Take the lead",
+"step1Text": "Listen, stabilise, reassure teams and shareholders from the very first days.",
+"step2Title": "Deliver a fast, lucid diagnosis",
+"step2Text": "Read the business, its strengths, its blockages and what people avoid looking at.",
+"step3Title": "Make the calls",
+"step3Text": "Separate urgent from important and focus effort on two or three levers.",
+"step4Title": "Set up governance",
+"step4Text": "A short plan, named owners, indicators tracked without needless committees.",
+"step5Title": "Rally and transfer",
+"step5Text": "Make the direction clear, hold the pace, then hand over the method so the gains last after the mission.",
+"cred1Title": "Degrees",
+"cred1Item1": "Advanced Master's in Network Architecture and Cybersecurity (RNCP 38140), Télécom Paris, 2006",
+"cred1Item2": "MBA, KEDGE Business School, 2026",
+"cred1Item3": "École Supérieure des Dirigeants d'Entreprises, Bachelor's degree in Business and Management, 1994",
+"cred2Title": "Languages",
+"cred2Item1": "French, native",
+"cred2Item2": "English, bilingual",
+"cred2Item3": "Hebrew, bilingual",
+"cred2Item4": "Spanish, intermediate"
+} };
 
     function applyLanguage(lang) {
       currentLanguage = lang;
       document.documentElement.lang = lang;
-      document.title = lang === "fr"
-        ? "David Alimi | Direction de transition, croissance B2B et transformation"
-        : "David Alimi | Interim leadership, B2B growth and transformation";
-
+      document.title = titles[lang];
       document.querySelectorAll("[data-i18n]").forEach(el => {
         const key = el.getAttribute("data-i18n");
-        if (translations[lang][key] !== undefined) {
-          el.innerHTML = translations[lang][key];
-        }
+        if (translations[lang][key] !== undefined) el.innerHTML = translations[lang][key];
       });
       document.querySelectorAll("[data-placeholder-key]").forEach(el => {
         const key = el.getAttribute("data-placeholder-key");
         if (translations[lang][key]) el.setAttribute("placeholder", translations[lang][key]);
       });
-      document.getElementById("langToggle").textContent = lang === "fr" ? "EN" : "FR";
+      const btn = document.getElementById("langToggle");
+      btn.textContent = lang === "fr" ? "EN" : "FR";
+      btn.setAttribute("aria-label", lang === "fr" ? "Switch to English" : "Passer en français");
+      try { localStorage.setItem("lang", lang); } catch (e) {}
     }
 
     document.getElementById("langToggle").addEventListener("click", () => {
       applyLanguage(currentLanguage === "fr" ? "en" : "fr");
     });
 
-    applyLanguage("en");
+    let saved = null;
+    try { saved = localStorage.getItem("lang"); } catch (e) {}
+    if (saved === "en") applyLanguage("en");
 
-    /* ── SCROLL FADE-IN ── */
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.08 });
-
-    document.querySelectorAll(".fade").forEach(el => {
-      observer.observe(el);
-    });
+    /* ── SCROLL FADE-IN (content stays visible without JavaScript) ── */
+    if ("IntersectionObserver" in window) {
+      document.documentElement.classList.add("js");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll(".fade").forEach(el => observer.observe(el));
+    }
   </script>
 </body>
 </html>
